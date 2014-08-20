@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+  	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+	
+	
+<!--============================== Draggable Tables ==============================-->
+	
+	
+		<ThingDef ParentName="BuildingBase">
+		<defName>TableShort_Wood</defName>
+		<eType>BuildingInert</eType>
+		<label>Draggable Wood Table</label>
+		<thingClass>Building</thingClass>
+		<linkDrawerType>Basic</linkDrawerType>
+		<texturePath>Things/Building/SCFurniture/Tables/TableWood_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCFurniture/Tables/TableWood_Icon</uiIconPath>
+		<linkFlags>
+			<li>Sandbags</li>
+		</linkFlags>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>30</maxHealth>
+		<Beauty>Neutral</Beauty>
+		<flammability>1.0</flammability>
+		<description>Draggable Wood Table.  A place for your colonists to sit and eat.
+Beauty:  Neutral</description>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<building>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<allowances>
+					<categories>
+						<li>FoodMeals</li>
+					</categories>
+				</allowances>
+			</fixedStorageSettings> 
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationCategory>Furniture</designationCategory>
+		<itemSurface>true</itemSurface>
+	</ThingDef>
+	
+		<ThingDef ParentName="BuildingBase">
+		<defName>TableLong_Wood</defName>
+		<eType>BuildingInert</eType>
+		<label>Draggable Metal Table</label>
+		<thingClass>Building</thingClass>
+		<linkDrawerType>Basic</linkDrawerType>
+		<texturePath>Things/Building/SCFurniture/Tables/TableMetal_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCFurniture/Tables/TableMetal_Icon</uiIconPath>
+		<linkFlags>
+			<li>Sandbags</li>
+		</linkFlags>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>30</maxHealth>
+		<Beauty>Neutral</Beauty>
+		<flammability>1.0</flammability>
+		<description>Draggable Metal Table.  A place for your colonists to sit and eat.
+Beauty:  Neutral</description>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<designationCategory>Furniture</designationCategory>
+		<itemSurface>true</itemSurface>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+		<ThingDef ParentName="BuildingBase">
+		<defName>TableShort_Metal</defName>
+		<eType>BuildingInert</eType>
+		<label>Draggable Stone Table</label>
+		<thingClass>Building</thingClass>
+		<linkDrawerType>Basic</linkDrawerType>
+		<texturePath>Things/Building/SCFurniture/Tables/TableStone_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCFurniture/Tables/TableStone_Icon</uiIconPath>
+		<linkFlags>
+			<li>Sandbags</li>
+		</linkFlags>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>30</maxHealth>
+		<Beauty>NiceTiny</Beauty>
+		<flammability>1.0</flammability>
+		<description>Draggable Stone Table.  A place for your colonists to sit and eat.
+Beauty:  Nice"Tiny"</description>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<designationCategory>Furniture</designationCategory>
+		<itemSurface>true</itemSurface>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>TableLong_Metal</defName>
+		<eType>BuildingInert</eType>
+		<label>Draggable Glass Table</label>
+		<thingClass>Building</thingClass>
+		<linkDrawerType>Basic</linkDrawerType>
+		<texturePath>Things/Building/SCFurniture/Tables/TableGlass_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCFurniture/Tables/TableGlass_Icon</uiIconPath>
+		<linkFlags>
+			<li>Sandbags</li>
+		</linkFlags>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>30</maxHealth>
+		<Beauty>Nice</Beauty>
+		<flammability>1.0</flammability>
+		<description>Draggable Glass Table.  A place for your colonists to sit and eat.
+Beauty:  Nice</description>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>10</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<designationCategory>Furniture</designationCategory>
+		<itemSurface>true</itemSurface>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+<!--============================== Draggable Serving Table ==============================-->
+
+		<!--ThingDef ParentName="BuildingBase">
+		<defName>TableShort_Wood</defName>
+		<eType>BuildingInert</eType>
+		<label>Draggable Wood Table</label>
+		<thingClass>Building_Storage</thingClass>
+		<linkDrawerType>Basic</linkDrawerType>
+		<texturePath>Things/Building/SCFurniture/Tables/TableWood_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCFurniture/Tables/TableWood_Icon</uiIconPath>
+		<linkFlags>
+			<li>Sandbags</li>
+		</linkFlags>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>30</maxHealth>
+		<Beauty>Neutral</Beauty>
+		<flammability>1.0</flammability>
+		<description>Draggable Wood Table.  A place for your colonists to sit and eat.
+Beauty:  Neutral</description>
+		<size>(1,1)</size>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<building>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<allowances>
+					<categories>
+						<li>FoodMeals</li>
+					</categories>
+				</allowances>
+			</fixedStorageSettings> 
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationCategory>Furniture</designationCategory>
+		<itemSurface>true</itemSurface>
+	</ThingDef-->
+	
+	
+</Buildings>

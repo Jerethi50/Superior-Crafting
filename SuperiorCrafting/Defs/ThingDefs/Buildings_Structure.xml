@@ -163,7 +163,7 @@
 		<defName>DoorBlast</defName>
 		<label>Blast Door</label>
 		<description>A powered blast door that allows people to move through the door without slowing down.
-		Max Health:  150</description>
+		Max Health:  500</description>
 		<workToBuild>2000</workToBuild>
 		<maxHealth>500</maxHealth>
 		<texturePath>Things/Building/SCDoors/DoorBlast_Mover</texturePath>
@@ -284,7 +284,7 @@
 		<uiIconPath>Things/Building/Linked/WallWood_MenuIcon</uiIconPath>
 		<maxHealth>150</maxHealth>
 		<flammability>1</flammability>
-		<description>A wall made of wooden planks with a built-in power conduit. Cheap and fast-building, but weak.
+		<description>A wall made of wooden planks.  It does not transmit power. Cheap and fast-building, but weak.
 		Max Health:  150</description>
 		<workToBuild>150</workToBuild>
 		<designationHotKey>V</designationHotKey>

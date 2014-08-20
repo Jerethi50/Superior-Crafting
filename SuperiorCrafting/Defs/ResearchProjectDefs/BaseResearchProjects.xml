@@ -93,10 +93,7 @@
 			<targetFieldName>maxHealth</targetFieldName>
 			<targetValInt>900</targetValInt>
 		</li>
-			<li>
-			<specialAction>SuperiorCrafting.SCUpgrades.ConstructionIV</specialAction>
-			</li>
-    </researchMods>
+		</researchMods>
 		<prerequisites>
 			<li>ConstructionIII</li>
 		</prerequisites>

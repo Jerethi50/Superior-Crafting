@@ -6,6 +6,7 @@
     <defName>DoctorFeed</defName>
     <giverClass>WorkGiver_FeedIncapped</giverClass>
     <workType>Doctor</workType>
+	<priorityInType>100</priorityInType>
     <verb>treat</verb>
     <gerund>treating</gerund>
   </WorkGiverDef>
@@ -242,8 +243,8 @@
   <WorkGiverDef>
     <defName>DoBillsChemlab</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Crafting</workType>
-    <priorityInType>100</priorityInType>
+    <workType>Doctor</workType>
+    <priorityInType>50</priorityInType>
     <workTableDef>TableChemlab</workTableDef>
     <verb>work on</verb>
     <gerund>working on</gerund>
