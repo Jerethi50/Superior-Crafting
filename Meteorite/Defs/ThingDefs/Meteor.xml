@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>MeteorIncoming</defName>
+		<eType>ItemSkyFalling</eType>
+		<label>Meteor (incoming)</label>
+		<thingClass>MeteorIncoming</thingClass>
+		<fillPercent>0.5</fillPercent>
+		<category>Ethereal</category>
+		<tickerType>Normal</tickerType>
+		<texturePath>Things/Buildings/StoneMeteor</texturePath>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompGlower</compClass>
+				<overlightRadius>3.1</overlightRadius>
+				<glowRadius>6</glowRadius>
+				<glowColor>(370,370,370,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<useStandardHealth>false</useStandardHealth>
+		<baseMaterialType>CutoutFlying</baseMaterialType>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>Thing_MeteorSpawner</defName>
+		<thingClass>Thing_MeteorSpawner</thingClass>
+				<texturePath>Meteor/entityspawn</texturePath>
+		<tickerType>Rare</tickerType>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Meteor</defName>
+		<label>Meteor</label>
+		<eType>DropPod</eType>
+		<thingClass>Meteor</thingClass>
+		<fillPercent>0.50</fillPercent>
+		<tickerType>Normal</tickerType>
+		<texturePath>Things/Buildings/StoneMeteor</texturePath>
+		<overdraw>false</overdraw>
+		<altitudeLayer>Waist</altitudeLayer>
+		<useStandardHealth>true</useStandardHealth>
+		<maxHealth>500</maxHealth>
+		<selectable>true</selectable>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>StoneBoulder</defName>
+		<label>Stone Meteorite</label>
+		<thingClass>Mineable</thingClass>
+		<texturePath>Things/Buildings/StoneMeteor</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<coversFloor>true</coversFloor>
+		<maxHealth>1000</maxHealth>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<pathCost>88</pathCost>
+		<overdraw>false</overdraw>
+		<description>A Meteorite Mineable for stone.</description>
+		<building>
+			<mineableThing>ChunkRock</mineableThing>
+			<mineableYield>1</mineableYield>
+			<mineableNonMinedEfficiency>0.8</mineableNonMinedEfficiency>
+		</building>
+		<mineable>true</mineable>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>1</count>
+			</li>
+		</filthLeavings>
+		<SurfaceNeeded>SmoothableStone</SurfaceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<ConstructionEffect>ConstructDig</ConstructionEffect>
+		<blockLight>false</blockLight>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>MineralBoulder</defName>
+		<label>Mineral Meteorite</label>
+		<thingClass>Mineable</thingClass>
+		<texturePath>Things/Buildings/MetalMeteor</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<coversFloor>true</coversFloor>
+		<maxHealth>2000</maxHealth>
+		<neverMultiSelect>true</neverMultiSelect>
+		<description>A Meteorite Containing trace amounts of Mineral ore.</description>
+		<building>
+			<mineableThing>Metal</mineableThing>
+			<mineableYield>75</mineableYield>
+			<mineableNonMinedEfficiency>0.8</mineableNonMinedEfficiency>
+		</building>
+		<mineable>true</mineable>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<SurfaceNeeded>SmoothableStone</SurfaceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<ConstructionEffect>ConstructDig</ConstructionEffect>
+		<blockLight>false</blockLight>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>SilverBoulder</defName>
+		<label>Silver Meteorite</label>
+		<thingClass>Mineable</thingClass>
+		<texturePath>Things/Buildings/SilverMeteor</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<coversFloor>true</coversFloor>
+		<maxHealth>1000</maxHealth>
+		<neverMultiSelect>true</neverMultiSelect>
+		<description>A Meteorite Containing trace amounts of Silver Ore.</description>
+		<building>
+			<mineableThing>Silver</mineableThing>
+			<mineableYield>100</mineableYield>
+			<mineableNonMinedEfficiency>0.8</mineableNonMinedEfficiency>
+		</building>
+		<mineable>true</mineable>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<SurfaceNeeded>SmoothableStone</SurfaceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<ConstructionEffect>ConstructDig</ConstructionEffect>
+		<blockLight>false</blockLight>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>UraniumBoulder</defName>
+		<label>Uranium Meteorite</label>
+		<thingClass>Mineable</thingClass>
+		<texturePath>Things/Buildings/UraniumMeteor</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<coversFloor>true</coversFloor>
+		<maxHealth>3000</maxHealth>
+		<neverMultiSelect>true</neverMultiSelect>
+		<description>A Meteorite Containing trace amounts of uranium ore.</description>
+		<building>
+			<mineableThing>Uranium</mineableThing>
+			<mineableYield>75</mineableYield>
+			<mineableNonMinedEfficiency>0.8</mineableNonMinedEfficiency>
+		</building>
+		<mineable>true</mineable>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<SurfaceNeeded>SmoothableStone</SurfaceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<ConstructionEffect>ConstructDig</ConstructionEffect>
+		<blockLight>false</blockLight>
+	</ThingDef>
+
+</Buildings>

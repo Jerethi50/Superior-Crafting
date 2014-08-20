@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+	<!--========================= Doors =============================-->
+	
+	
+	<ThingDef ParentName="BuildingBase" Name="DoorBase" Abstract="True">
+		<eType>Door</eType>
+		<thingClass>Building_Door</thingClass>
+		<blueprintClass>Blueprint_Door</blueprintClass>
+		<category>Building</category>
+		<drawMat>null</drawMat>
+		<blueprintTexturePath>Things/Building/Door/Door_Blueprint</blueprintTexturePath>
+		<altitudeLayer>DoorMoveable</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<useStandardHealth>true</useStandardHealth>
+		<maxHealth>150</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<rotatable>false</rotatable>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Structure</designationCategory>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<drawerType>RealtimeOnly</drawerType>
+		<building>
+			<soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+			<soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+			<soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual> 
+			<soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+	</ThingDef>
+	
+	<ThingDef ParentName="DoorBase">
+		<defName>DoorLog</defName>
+		<label>Log Door</label>
+		<description>A strong log door that must be manually opened and closed, which slows people down.
+		Max Health:  150</description>
+		<workToBuild>200</workToBuild>
+		<maxHealth>150</maxHealth>
+		<texturePath>Things/Building/SCDoors/DoorLog_Mover</texturePath>
+		<uiIconPath>Things/Building/SCDoors/DoorLog_MenuIcon</uiIconPath>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodLog</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<designationHotKey>P</designationHotKey>
+	</ThingDef>
+
+	<ThingDef ParentName="DoorBase">
+		<defName>DoorWood</defName>
+		<label>Wooden Door</label>
+		<description>A wooden door that must be manually opened and closed, which slows people down.
+		Max Health:  75</description>
+		<workToBuild>600</workToBuild>
+		<maxHealth>75</maxHealth>
+		<texturePath>Things/Building/Door/DoorWood_Mover</texturePath>
+		<uiIconPath>Things/Building/Door/DoorWood_MenuIcon</uiIconPath>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<designationHotKey>P</designationHotKey>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="DoorBase">
+		<defName>DoorWoodPowered</defName>
+		<label>Wooden Door (Powered)</label>
+		<description>A powered wooden door that allows people to move through the door without slowing down.
+		Max Health:  75</description>
+		<workToBuild>660</workToBuild>
+		<maxHealth>75</maxHealth>
+		<texturePath>Things/Building/Door/DoorWood_Mover</texturePath>
+		<uiIconPath>Things/Building/Door/DoorWood_MenuIcon</uiIconPath>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<basePowerConsumption>25</basePowerConsumption>
+			</li>
+		</comps>
+		<researchPrerequisite>ConstructionII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="DoorBase">
+		<defName>DoorMetal</defName>
+		<label>Metal Door</label>
+		<description>A metal door that must be manually opened and closed, which slows people down.
+		Max Health:  150</description>
+		<workToBuild>1000</workToBuild>
+		<texturePath>Things/Building/SCDoors/DoorMetal_Mover</texturePath>
+		<uiIconPath>Things/Building/SCDoors/DoorMetal_MenuIcon</uiIconPath>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+    <designationHotKey>O</designationHotKey>
+	<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="DoorBase">
+		<defName>DoorPowered</defName>
+		<label>Metal Door (Powered)</label>
+		<description>A powered metal door that allows people to move through the door without slowing down.
+		Max Health:  150</description>
+		<workToBuild>1100</workToBuild>
+		<texturePath>Things/Building/SCDoors/DoorMetalPowered_Mover</texturePath>
+		<uiIconPath>Things/Building/SCDoors/DoorMetalPowered_MenuIcon</uiIconPath>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>22</count>
+			</li>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<basePowerConsumption>25</basePowerConsumption>
+			</li>
+		</comps>
+		<designationHotKey>O</designationHotKey>
+		<researchPrerequisite>ConstructionII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="DoorBase">
+		<defName>DoorBlast</defName>
+		<label>Blast Door</label>
+		<description>A powered blast door that allows people to move through the door without slowing down.
+		Max Health:  150</description>
+		<workToBuild>2000</workToBuild>
+		<maxHealth>500</maxHealth>
+		<texturePath>Things/Building/SCDoors/DoorBlast_Mover</texturePath>
+		<uiIconPath>Things/Building/SCDoors/DoorBlast_MenuIcon</uiIconPath>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>50</count>
+			</li>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<designationHotKey>O</designationHotKey>
+		<researchPrerequisite>ConstructionIII</researchPrerequisite>
+	</ThingDef>	
+
+	<ThingDef ParentName="DoorBase">
+		<defName>FenceGate</defName>
+		<label>Fence gate</label>
+		<description>A fence gate. Must be manually opened and closed, which slows people down.
+		Max Health:  40</description>
+		<workToBuild>300</workToBuild>
+		<altitudeLayer>Waist</altitudeLayer>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<blockLight>false</blockLight>
+		<maxHealth>40</maxHealth>
+		<texturePath>Things/Building/SCDoors/FenceGate</texturePath>
+		<uiIconPath>Things/Building/SCDoors/FenceGateMenu</uiIconPath>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+
+
+	<!--========================= Walls =============================-->
+	
+	
+	<ThingDef ParentName="BuildingBase" Name="WallBase" Abstract="True">
+		<eType>Wall</eType>
+		<thingClass>Building</thingClass>
+		<linkDrawerType>CornerFiller</linkDrawerType>
+		<category>Building</category>
+		<blueprintTexturePath>Things/Building/Linked/Wall_Blueprint_Atlas</blueprintTexturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<coversFloor>true</coversFloor>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<surfaceNeeded>Heavy</surfaceNeeded>
+		<holdsRoof>true</holdsRoof>
+		<designationCategory>Structure</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>3</multiplier>
+			</li>
+		</damageMultipliers>
+	</ThingDef>
+
+
+	<ThingDef ParentName="WallBase">
+		<defName>WallLog</defName>
+		<label>Log Wall</label>
+		<texturePath>Things/Building/Linked/WallLog_Atlas</texturePath>
+		<uiIconPath>Things/Building/Linked/WallLog_MenuIcon</uiIconPath>
+		<maxHealth>300</maxHealth>
+		<flammability>1</flammability>
+		<description>A wall made of logs stacked together. Very strong, but is flammable and does not transmit power.  Consumes alot of resources.
+		Max Health:  300</description>
+		<workToBuild>100</workToBuild>
+		<linkFlags>
+			<li>WallLog</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>WoodLog</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<soundBulletHit>BulletImpactWood</soundBulletHit>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<designationHotKey>B</designationHotKey>
+	</ThingDef>
+
+
+	<ThingDef ParentName="WallBase">
+		<defName>WallWood</defName>
+		<label>Wooden Wall</label>
+		<texturePath>Things/Building/Linked/WallWood_Atlas</texturePath>
+		<uiIconPath>Things/Building/Linked/WallWood_MenuIcon</uiIconPath>
+		<maxHealth>150</maxHealth>
+		<flammability>1</flammability>
+		<description>A wall made of wooden planks with a built-in power conduit. Cheap and fast-building, but weak.
+		Max Health:  150</description>
+		<workToBuild>150</workToBuild>
+		<designationHotKey>V</designationHotKey>
+		<linkFlags>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<soundBulletHit>BulletImpactWood</soundBulletHit>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+  
+  
+	<ThingDef ParentName="WallBase">
+		<defName>WallWoodPowered</defName>
+		<label>Wooden Wall (Powered)</label>
+		<texturePath>Things/Building/Linked/WallWood_Atlas</texturePath>
+		<uiIconPath>Things/Building/Linked/WallWood_MenuIcon</uiIconPath>
+		<maxHealth>180</maxHealth>
+		<flammability>1</flammability>
+		<description>A wall made of wooden planks with a built-in power conduit. Cheap and fast-building, but weak.
+		Max Health:  150</description>
+		<workToBuild>150</workToBuild>
+		<designationHotKey>V</designationHotKey>
+		<comps>
+			<li>
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<linkFlags>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>5</count>
+			</li>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>1</count>
+			</li>
+		</costList>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<soundBulletHit>BulletImpactWood</soundBulletHit>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<researchPrerequisite>ConstructionII</researchPrerequisite>
+	</ThingDef>
+  
+  
+  	<ThingDef ParentName="WallBase">
+		<defName>WallStone</defName>
+		<label>Stone wall</label>
+		<texturePath>Things/Building/Linked/WallStone_Atlas</texturePath>
+		<uiIconPath>Things/Building/Linked/WallStone_MenuIcon</uiIconPath>
+		<maxHealth>800</maxHealth>
+		<flammability>0</flammability>
+		<description>A stone wall. It could stand for ages. It doesn't burn or transmit power.
+		Max Health:  750</description>
+		<workToBuild>750</workToBuild>
+		<mineable>true</mineable>
+		<linkFlags>
+			<li>Rock</li>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<designationHotKey>M</designationHotKey>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+  
+  
+	<ThingDef ParentName="WallBase">
+		<defName>WallStonePowered</defName>
+		<label>Powered Stone Wall</label>
+		<texturePath>Things/Building/SCWalls/WallStoneNew_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCWalls/WallStoneNew_MenuIcon</uiIconPath>
+		<maxHealth>880</maxHealth>
+		<flammability>0</flammability>
+		<description>A stone wall with a built-in power conduit. It could stand for ages. It doesn't burn.
+		Max Health:  750</description>
+		<workToBuild>750</workToBuild>
+		<comps>
+			<li>
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<mineable>true</mineable>
+		<linkFlags>
+			<li>Rock</li>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>10</count>
+			</li>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>1</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<designationHotKey>M</designationHotKey>
+		<researchPrerequisite>ConstructionII</researchPrerequisite>
+	</ThingDef>
+  
+  
+	<ThingDef ParentName="WallBase">
+		<defName>WallMetal</defName>
+		<label>Metal Wall</label>
+		<texturePath>Things/Building/Linked/WallMetal_Atlas</texturePath>
+		<uiIconPath>Things/Building/Linked/WallMetal_MenuIcon</uiIconPath>
+		<maxHealth>300</maxHealth>
+		<flammability>1</flammability>
+		<description>A metal wall with a built-in power conduit. Strong, but expensive and slow to build. It's not affected by fires.
+		Max Health:  300</description>
+		<workToBuild>300</workToBuild>
+		<designationHotKey>F</designationHotKey>
+		<comps>
+			<li>
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<linkFlags>
+			<li>Rock</li>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<researchPrerequisite>ConstructionII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="WallBase">
+		<defName>WallMetalLighted</defName>
+		<label>Lighted Metal Wall</label>
+		<texturePath>Things/Building/SCWalls/WallMetalLights_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCWalls/WallMetalLights_MenuIcon</uiIconPath>
+		<maxHealth>300</maxHealth>
+		<flammability>1</flammability>
+		<description>A lighted metal wall with a built in power conduit.
+		Max Health:  300</description>
+		<workToBuild>300</workToBuild>
+		<designationHotKey>F</designationHotKey>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<overlightRadius>3</overlightRadius>
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+		</comps>
+		<linkFlags>
+			<li>Rock</li>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>10</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<researchPrerequisite>WallLights</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="WallBase">
+		<defName>WallStoneLighted</defName>
+		<label>Lighted Stone Wall</label>
+		<texturePath>Things/Building/SCWalls/WallStoneLights_Atlas</texturePath>
+		<uiIconPath>Things/Building/SCWalls/WallStoneLights_MenuIcon</uiIconPath>
+		<maxHealth>750</maxHealth>
+		<flammability>1</flammability>
+		<description>A lighted stone wall with a built in power conduit.
+		Max Health:  300</description>
+		<workToBuild>300</workToBuild>
+		<designationHotKey>F</designationHotKey>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<overlightRadius>3</overlightRadius>
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+		</comps>
+		<linkFlags>
+			<li>Rock</li>
+			<li>WallWood</li>
+			<li>WallMetal</li>
+			<li>WallStone</li>
+			<li>WallBrick</li>
+			<li>WallMud</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>10</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<filthLeavings>
+			<li>
+				<thingDef>RockRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<researchPrerequisite>WallLights</researchPrerequisite>
+	</ThingDef>
+	
+	
+	<!--========================= Fence =============================-->
+	
+	
+	<ThingDef ParentName="WallBase">
+		<defName>WoodFence</defName>
+		<eType>BuildingInert</eType>
+		<label>Wood Fence</label>
+		<texturePath>Things/Building/SCWalls/FenceAtlas</texturePath>
+		<uiIconPath>Things/Building/SCWalls/Fence_Menu_Icon</uiIconPath>
+		<maxHealth>80</maxHealth>
+		<castEdgeShadows>false</castEdgeShadows>
+		<flammability>1</flammability>
+		<description>A fence made of planks. Very fast to build, but flammable and weak.
+		Max Health:  80</description>
+		<workToBuild>150</workToBuild>
+		<fillPercent>0.5</fillPercent>
+		<passability>Impassable</passability>
+		<altitudeLayer>Waist</altitudeLayer>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<blockLight>false</blockLight>
+		<staticSunShadowHeight>0.50</staticSunShadowHeight>
+		<linkFlags>
+			<li>WallLog</li>
+			<li>WallWood</li>
+		</linkFlags>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<soundBulletHit>BulletImpactWood</soundBulletHit>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+
+	
+</Buildings>

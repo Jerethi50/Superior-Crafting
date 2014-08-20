@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkTypeDefs>
+
+
+<WorkTypeDef>
+
+<defName>paperwork</defName>
+<pawnLabel>Paperworker</pawnLabel>
+<gerundLabel>Paperworker</gerundLabel>
+<tooltipDesc>Paperworkers do paperwork.</tooltipDesc>
+<verb>Do</verb>
+<naturalPriority>401</naturalPriority>
+<relevantSkills>
+<li>Crafting</li>
+</relevantSkills>
+<workTags> <li>Crafting</li> </workTags>
+
+</WorkTypeDef>
+
+
+
+</WorkTypeDefs>

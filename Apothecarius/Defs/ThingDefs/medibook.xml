@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Resources>
+
+
+<ThingDef Name="ResourceBase" Abstract="True">
+
+<thingClass>ThingWithComponents</thingClass>
+
+
+
+<category>Item</category>
+
+<eType>Item</eType>
+
+<resourceReadoutPriority>Middle</resourceReadoutPriority>
+
+<useStandardHealth>true</useStandardHealth>
+
+<selectable>true</selectable>
+
+<maxHealth>100</maxHealth>
+
+<altitudeLayer>Item</altitudeLayer>
+
+<stackLimit>25</stackLimit>
+
+
+
+
+<comps>
+
+
+<li>
+
+<compClass>CompForbiddable</compClass>
+
+</li>
+
+</comps>
+
+<beauty>Nice</beauty>
+
+<alwaysHaulable>true</alwaysHaulable>
+
+<drawGUIOverlay>true</drawGUIOverlay>
+
+<rotatable>false</rotatable>
+
+<pathCost>15</pathCost>
+
+
+
+
+<texturePath>book</texturePath>
+
+<soundInteract>Interact_Research</soundInteract>
+
+<soundDrop>Standard_Drop</soundDrop>
+
+<useStandardHealth>false</useStandardHealth>
+
+<basePrice>25</basePrice>
+
+<tradersCarry>true</tradersCarry>
+
+
+<storeCategories>
+
+<li>books</li>
+
+</storeCategories>
+
+
+
+
+
+
+</ThingDef>
+
+<!--BOOKS-->
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>medibook</defName>
+<label>Dir En Grey's Anatomy</label>
+<description>The japanese art of "doctoring" - a book to teach the Medicine skill.</description>
+</ThingDef>
+
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>minebook</defName>
+<label>Urist McDigger</label>
+<description>If the stone is warm stop digging - a book to teach the Mining skill.</description>
+</ThingDef>
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>craftbook</defName>
+<label>Factory? Oh!</label>
+<description>A tale of conveyor belts and inserters - a book to teach the Crafting skill.</description>
+</ThingDef>
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>constructbook</defName>
+<label>Craft of Building</label>
+<description>The long way to a Quarry (Quarry sold seperately) - a book to teach the Construction skill.</description>
+</ThingDef>
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>growbook</defName>
+<label>Moon of Harvests</label>
+<description>I have 99 problems but a HOE aint one - a book to teach the Growing skill.</description>
+</ThingDef>
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>cookbook</defName>
+<label>Walts Cookbook</label>
+<description>Jesse we have to cook - a book to teach the Cooking skill.</description>
+</ThingDef>
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>facebook</defName>
+<label>Forever Alone?</label>
+<description>The story of Brian in over 9000 pages - a book to teach the Social skill.</description>
+</ThingDef>
+
+
+
+<ThingDef ParentName="ResourceBase">
+<defName>researchbook</defName>
+<label>Wiki's Handbook</label>
+<description>I need those stuff for "reasearch" purposes! - a  book to teach the Research skill.</description>
+</ThingDef>
+
+<!-- HELP Im beeing held captive in a book factory - forced to invent "funny" book names and descriptions!!  -->
+
+
+</Resources>

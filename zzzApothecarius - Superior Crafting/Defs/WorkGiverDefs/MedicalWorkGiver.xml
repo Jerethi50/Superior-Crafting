@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkGivers>
+
+
+<WorkGiverDef>
+
+<defName>DoBillsMediTable</defName>
+
+<giverClass>WorkGiver_DoBill</giverClass>
+
+<workType>apothecarius</workType>
+
+<priorityInType>10</priorityInType>
+
+<workTableDef>meditable</workTableDef>
+
+<verb>craft</verb>
+
+<gerund>crafting</gerund>
+
+</WorkGiverDef>
+
+</WorkGivers>

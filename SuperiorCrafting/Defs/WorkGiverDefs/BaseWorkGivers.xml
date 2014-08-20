@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+
+  <WorkGiverDef>
+    <defName>DoctorFeed</defName>
+    <giverClass>WorkGiver_FeedIncapped</giverClass>
+    <workType>Doctor</workType>
+    <verb>treat</verb>
+    <gerund>treating</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>GrowerSow</defName>
+    <giverClass>WorkGiver_GrowerSow</giverClass>
+    <workType>Growing</workType>
+    <verb>sow</verb>
+    <gerund>sowing</gerund>
+    <scanThings>false</scanThings>
+    <scanCells>true</scanCells>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>GrowerHarvest</defName>
+    <giverClass>WorkGiver_GrowerHarvest</giverClass>
+    <workType>Growing</workType>
+    <verb>harvest</verb>
+    <gerund>harvesting</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>Mine</defName>
+    <giverClass>WorkGiver_Miner</giverClass>
+    <workType>Mining</workType>
+    <verb>mine</verb>
+    <gerund>mining</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>Research</defName>
+    <giverClass>WorkGiver_Researcher</giverClass>
+    <workType>Research</workType>
+    <verb>research</verb>
+    <gerund>researching on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>HaulGeneral</defName>
+    <giverClass>WorkGiver_HaulGeneral</giverClass>
+    <workType>Hauling</workType>
+    <verb>haul</verb>
+    <gerund>hauling</gerund>
+    <priorityInType>5</priorityInType>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>HaulCorpses</defName>
+    <giverClass>WorkGiver_HaulCorpses</giverClass>
+    <workType>Hauling</workType>
+    <verb>haul</verb>
+    <gerund>hauling</gerund>
+    <priorityInType>10</priorityInType>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>PlantsCut</defName>
+    <giverClass>WorkGiver_PlantsCut</giverClass>
+    <workType>PlantCutting</workType>
+    <verb>cut</verb>
+    <gerund>cutting</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>CleanFilth</defName>
+    <giverClass>WorkGiver_CleanerFilth</giverClass>
+    <workType>Cleaning</workType>
+    <verb>clean</verb>
+    <gerund>cleaning</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>Repair</defName>
+    <giverClass>WorkGiver_Repairer</giverClass>
+    <workType>Repair</workType>
+    <verb>repair</verb>
+    <gerund>repairing</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>FightFires</defName>
+    <giverClass>WorkGiver_FightFires</giverClass>
+    <workType>Firefighter</workType>
+    <verb>extinguish</verb>
+    <gerund>extinguishing</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>Warden</defName>
+    <giverClass>WorkGiver_Warden</giverClass>
+    <workType>Warden</workType>
+    <verb>warden</verb>
+    <gerund>wardening</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>Deconstruct</defName>
+    <giverClass>WorkGiver_Deconstruct</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>200</priorityInType>
+    <verb>deconstruct</verb>
+    <gerund>deconstructing</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ConstructFinishFrames</defName>
+    <giverClass>WorkGiver_ConstructFinishFrames</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>100</priorityInType>
+    <verb>construct</verb>
+    <gerund>constructing</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ConstructDeliverResourcesToFrames</defName>
+    <giverClass>WorkGiver_ConstructDeliverResourcesToFrames</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>10</priorityInType>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ConstructDeliverResourcesToBlueprints</defName>
+    <giverClass>WorkGiver_ConstructDeliverResourcesToBlueprints</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>9</priorityInType>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>HunterHunt</defName>
+    <giverClass>WorkGiver_HunterHunt</giverClass>
+    <workType>Hunting</workType>
+    <verb>hunt</verb>
+    <gerund>hunting</gerund>
+  </WorkGiverDef>
+
+
+<!-- ============= Cooking ============= -->
+  <WorkGiverDef>
+    <defName>DoBillsCook</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>100</priorityInType>
+    <workTableDef>CookStove</workTableDef>
+    <verb>cook</verb>
+    <gerund>cooking on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsButcherFlesh</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>90</priorityInType>
+    <workTableDef>TableButcher</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>CookFillHopper</defName>
+    <giverClass>WorkGiver_CookFillHopper</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>10</priorityInType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+  </WorkGiverDef>
+
+
+  <!-- ============= Crafting ============= -->
+  <WorkGiverDef>
+    <defName>DoBillsMakeWood</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <workTableDef>TableSawmillHand</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsMakeWood2</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <workTableDef>TableSawmillElectric</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+   <WorkGiverDef>
+    <defName>DoBillsStonecut</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <workTableDef>TableStonecutter</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsFurnace</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <workTableDef>Furnace</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsCremate</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>120</priorityInType>
+    <workTableDef>Crematorium</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsTailor</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <workTableDef>TableTailor</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsChemlab</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <workTableDef>TableChemlab</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsSlagRefining</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>90</priorityInType>
+    <workTableDef>ElectricSmelter</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsButcherMechanoid</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <workTableDef>TableMachining</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsMakeMulch</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <workTableDef>Composter</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsMakeGlass</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <workTableDef>TableGlassworks</workTableDef>
+    <verb>work on</verb>
+    <gerund>working on</gerund>
+  </WorkGiverDef>
+  
+  
+</WorkGivers>

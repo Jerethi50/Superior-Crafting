@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkTypeDefs>
+
+
+<WorkTypeDef>
+
+<defName>readwrite</defName>
+<pawnLabel>Read/Write</pawnLabel>
+<gerundLabel>Read/Write</gerundLabel>
+<tooltipDesc>This work enables your people to write books or learn Skills from them</tooltipDesc>
+<verb>Do</verb>
+<naturalPriority>501</naturalPriority>
+
+
+</WorkTypeDef>
+
+
+
+
+</WorkTypeDefs>

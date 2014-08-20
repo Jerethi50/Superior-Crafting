@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-TraderKindDef>
+
+	<TraderKindDef>
+		<defName>FarmingVessel</defName>
+		<label>Agricultural Trader</label>
+		<commodityDefs>
+			<li>
+				<itemDef>Silver</itemDef>
+				<amountMin>1500</amountMin>
+				<amountMax>2000</amountMax>
+			</li>
+	  <li>
+		<itemDef>AnimalHide</itemDef>
+		<amountMin>0</amountMin>
+		<amountMax>0</amountMax>
+	  </li>
+	  <li>
+		<itemDef>CottonRaw</itemDef>
+		<amountMin>0</amountMin>
+		<amountMax>0</amountMax>
+	  </li>
+	  <li>
+		<itemDef>RawPotatoes</itemDef>
+		<dropPriceModifier>Cheap</dropPriceModifier>
+		<amountMin>300</amountMin>
+		<amountMax>500</amountMax>
+	  </li>
+      <li>
+        <itemDef>RawBerries</itemDef>
+        <dropPriceModifier>Cheap</dropPriceModifier>
+        <amountMin>300</amountMin>
+        <amountMax>500</amountMax>
+      </li>
+      <li>
+        <itemDef>RawAgave</itemDef>
+        <dropPriceModifier>Cheap</dropPriceModifier>
+        <amountMin>150</amountMin>
+        <amountMax>300</amountMax>
+      </li>
+      <li>
+        <itemDef>MealSurvivalPack</itemDef>
+        <amountMin>100</amountMin>
+        <amountMax>200</amountMax>
+      </li>
+		</commodityDefs>
+	</TraderKindDef>
+	
+	
+	<TraderKindDef>
+		<defName>MaterialsTrader</defName>
+		<label>Raw Materials Trader</label>
+			<commodityDefs>
+				<li>
+					<itemDef>Silver</itemDef>
+					<amountMin>1500</amountMin>
+					<amountMax>2000</amountMax>
+				</li>
+		<li>
+		  <itemDef>Metal</itemDef>
+		  <amountMin>250</amountMin>
+		  <amountMax>500</amountMax>
+		</li>
+		<li>
+          <itemDef>Sand</itemDef>
+          <amountMin>300</amountMin>
+          <amountMax>600</amountMax>
+        </li>
+		<li>
+		  <itemDef>StoneBlocks</itemDef>
+		  <amountMin>250</amountMin>
+		  <amountMax>500</amountMax>
+		</li>
+		<li>
+		  <itemDef>WoodLog</itemDef>
+		  <amountMin>250</amountMin>
+		  <amountMax>500</amountMax>
+		</li>
+			</commodityDefs>
+	</TraderKindDef>
+
+
+	<TraderKindDef>
+		<defName>IndustrialTrader</defName>
+		<label>industrial trader</label>
+			<commodityDefs>
+				<li>
+					<itemDef>Silver</itemDef>
+					<amountMin>1500</amountMin>
+					<amountMax>2000</amountMax>
+				</li>
+		<li>
+		  <itemDef>Leather</itemDef>
+		  <amountMin>0</amountMin>
+		  <amountMax>0</amountMax>
+		</li>
+		<li>
+          <itemDef>Cloth</itemDef>
+          <amountMin>250</amountMin>
+          <amountMax>500</amountMax>
+        </li>
+		<li>
+          <itemDef>Glass</itemDef>
+          <amountMin>250</amountMin>
+          <amountMax>500</amountMax>
+        </li>
+		<li>
+		  <itemDef>WoodPlank</itemDef>
+		  <amountMin>500</amountMin>
+		  <amountMax>700</amountMax>
+		</li>
+		<li>
+          <itemDef>Sand</itemDef>
+          <amountMin>250</amountMin>
+          <amountMax>500</amountMax>
+        </li>
+		<li>
+          <itemDef>StoneBlocks</itemDef>
+          <amountMin>250</amountMin>
+          <amountMax>500</amountMax>
+        </li>
+		<li>
+		  <itemDef>SteelBars</itemDef>
+		  <amountMin>250</amountMin>
+		  <amountMax>500</amountMax>
+		</li>
+        <li>
+          <itemDef>Uranium</itemDef>
+          <amountMin>400</amountMin>
+          <amountMax>600</amountMax>
+        </li>
+			</commodityDefs>
+	</TraderKindDef>
+
+
+	<TraderKindDef>
+		<defName>CombatSupplier</defName>
+		<label>combat supplier</label>
+		<tradesWeapons>True</tradesWeapons>
+		<sellsWeapons>True</sellsWeapons>
+		<commodityDefs>
+			<li>
+				<itemDef>Silver</itemDef>
+				<amountMin>1500</amountMin>
+				<amountMax>2000</amountMax>
+			</li>
+      <li>
+        <itemDef>AIChips</itemDef>
+        <amountMin>10</amountMin>
+        <amountMax>30</amountMax>
+      </li>
+      <li>
+        <itemDef>Medicine</itemDef>
+        <amountMin>10</amountMin>
+        <amountMax>30</amountMax>
+      </li>
+      <li>
+        <itemDef>Shells</itemDef>
+        <dropPriceModifier>Cheap</dropPriceModifier>
+        <amountMin>400</amountMin>
+        <amountMax>600</amountMax>
+      </li>
+      <li>
+        <itemDef>Missiles</itemDef>
+        <dropPriceModifier>Cheap</dropPriceModifier>
+        <amountMin>40</amountMin>
+        <amountMax>60</amountMax>
+      </li>
+		</commodityDefs>
+	</TraderKindDef>
+
+
+	<TraderKindDef>
+		<defName>SlaveTrader</defName>
+		<label>slave trader</label>
+		<tradesSlaves>True</tradesSlaves>
+		<tradesWeapons>True</tradesWeapons>
+		<sellsSlaves>True</sellsSlaves>
+		<commodityDefs>
+			<li>
+				<itemDef>Silver</itemDef>
+				<amountMin>1500</amountMin>
+				<amountMax>2000</amountMax>
+			</li>
+		</commodityDefs>
+	</TraderKindDef>
+
+
+</DefPackage-TraderKindDef>

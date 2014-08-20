@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Superior Crafting</name>
+	<author>Abrexus</author>
+	<url></url>
+	<targetVersion>Alpha 6</targetVersion>
+	<description>It is with great pleasure I bring to you this mod I've been working on for the past several weeks.  Rimwold is an amazing game, and I have been inspired by many of the great modders in the community to contribute.
+
+Superior Crafting is my take on a more balanced game experience.  I will say up front the mod may not be for everyone.  You start off with only the knowledge to build the most basic of buildings and structures.  I first came up with the idea while I was playing my one hundredth game or so, and I realized I never bothered to build log walls.  I mean, why bother when you can start right off with metal or wood.  So that was the birth of the idea.  It has really grown leaps and bounds through the help of friends from Twitch who have given me many good suggestions.
+
+As I stated before, you start off with just the basics.  Even the resources have to be crafted into usable material.  While there is a bit of a learning curve, it gives you the incentive to research new things, so you can get that new item you want to build.
+
+Most of the buildings and resources have had their textures redone, so you may find a nice surprise when you open the game for the first time.  Because of the way the resource tree has been reworked, the game should work well with other mods, but items added from other mods wont be restricted by research, and may not make use of the crafting tree developed for this mod.  Character Creator, event generation, and map generation mods will not affect the core experience of the mod.
+
+Known Issues
+When first installing the mod, the textures in the furniture category may not all load properly.  If you completely exit the game and restart, that should fix the issue.</description>
+</ModMetaData>

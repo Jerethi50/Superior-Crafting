@@ -1,0 +1,1612 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+
+<!--============================== Hand Crafting ==============================-->
+
+
+	<RecipeDef>
+		<defName>MakeStoneBlocks_Hand</defName>
+		<label>Make stone blocks</label>
+		<description>Cuts a rock chunk into 30 stone blocks by hand.  Quite slow.</description>
+		<jobString>Stonecutting.</jobString>
+		<workAmount>1200</workAmount>
+		<workTimeSkillNeed>StonecuttingTime</workTimeSkillNeed>
+		<efficiencySkillNeed>StonecuttingEfficiency</efficiencySkillNeed>
+		<workEffect>CutStone</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkRock</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>30</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkRock</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeSand_Hand</defName>
+		<label>Make Sand</label>
+		<description>Make sand from rock chunks.</description>
+		<jobString>Making sand.</jobString>
+		<workAmount>1200</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkRock</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Sand</thingDef>
+				<count>30</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkRock</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>150</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeWoodPlanks_Hand</defName>
+		<label>Make wood planks</label>
+		<description>Cuts 10 wood logs into 20 wood planks by hand. Quite slow.</description>
+		<jobString>Making wood planks.</jobString>
+		<workAmount>1200</workAmount>
+		<workEffect>MakeWoodPlanks_Hand</workEffect>
+    <sustainerSoundDef>Recipe_MakeWoodPlanks_Hand</sustainerSoundDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <li>
+        <thingDef>WoodPlank</thingDef>
+        <count>20</count>
+      </li>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+			<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>ExtractMetalFromOre_Hand</defName>
+		<label>Melt metal ore into bars</label>
+		<description>Melts 10 metal ore into 20 steel bars by hand. Quite slow.</description>
+		<jobString>Making metal bars from metal ore.</jobString>
+		<workAmount>1200</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+    <sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Metal</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <li>
+        <thingDef>SteelBars</thingDef>
+        <count>20</count>
+      </li>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Metal</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <skillGains>
+      <li>
+        <skill>Crafting</skill>
+        <xp>100</xp>
+      </li>
+    </skillGains>
+  </RecipeDef>
+  
+  
+<!--============================== Machine Crafting ==============================-->
+
+  
+	<RecipeDef>
+		<defName>MakeStoneBlocks_Machine</defName>
+		<label>Make stone blocks</label>
+		<description>Cuts a rock chunk into 35 stone blocks by hand.  Quite fast.</description>
+		<jobString>Stonecutting.</jobString>
+		<workAmount>600</workAmount>
+		<workTimeSkillNeed>StonecuttingTime</workTimeSkillNeed>
+		<efficiencySkillNeed>StonecuttingEfficiency</efficiencySkillNeed>
+		<workEffect>CutStone</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkRock</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>35</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkRock</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeSand_Machine</defName>
+		<label>Make Sand</label>
+		<description>Make sand from rock chunks.</description>
+		<jobString>Making sand.</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkRock</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Sand</thingDef>
+				<count>35</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkRock</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>150</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeWoodPlanks_Machine</defName>
+		<label>Make wood planks</label>
+		<description>Cuts 10 wood logs into 25 wood planks by hand. Quite fast.</description>
+		<jobString>Making wood planks</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>MakeWoodPlanks_Hand</workEffect>
+    <sustainerSoundDef>Recipe_MakeWoodPlanks_Hand</sustainerSoundDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <li>
+        <thingDef>WoodPlank</thingDef>
+        <count>25</count>
+      </li>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+			<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>ExtractMetalFromOre_Machine</defName>
+		<label>Melt metal ore into bars</label>
+		<description>Melts 10 metal ore into 25 steel bars by hand. Quite fast.</description>
+		<jobString>Making metal bars from metal ore.</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+    <sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Metal</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <li>
+        <thingDef>SteelBars</thingDef>
+        <count>25</count>
+      </li>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Metal</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <skillGains>
+      <li>
+        <skill>Crafting</skill>
+        <xp>100</xp>
+      </li>
+    </skillGains>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>ExtractMetalFromSlag</defName>
+    <label>Turn scrap metal into bars</label>
+    <description>Use heat and strong electromagnets to shape scrap metal into useful metal bars.</description>
+    <jobString>Making metal bars from scrap metal</jobString>
+    <workAmount>600</workAmount>
+    <workTimeSkillNeed>SlagExtractTime</workTimeSkillNeed>
+    <efficiencySkillNeed>SlagExtractEfficiency</efficiencySkillNeed>
+    <workEffect>UseMetalRefinery</workEffect>
+    <sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkSlag</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <li>
+        <thingDef>SteelBars</thingDef>
+        <count>10</count>
+      </li>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSlag</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <skillGains>
+      <li>
+        <skill>Crafting</skill>
+        <xp>120</xp>
+      </li>
+    </skillGains>
+  </RecipeDef>
+  
+	<RecipeDef>
+		<defName>MakeGlass</defName>
+		<label>Make Glass</label>
+		<description>Make glass from sand</description>
+		<jobString>Making glass</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Sand</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Sand</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>150</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>MakeMulch</defName>
+		<label>Make Mulch</label>
+		<description>Make mulch from wood logs</description>
+		<jobString>Making mulch.</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>WoodMulch</thingDef>
+				<count>10</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>150</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeAgaveGel</defName>
+		<label>Make Agave Gel</label>
+		<description>Make Agave Gel from Raw Agave</description>
+		<jobString>Making Agave Gel.</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawAgave</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Medicine</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawAgave</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Medicine</skill>
+			<xp>150</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+  
+<!--============================== Weapon and Armor Smithing ==============================-->
+  
+  
+  	<RecipeDef>
+		<defName>MakePistol</defName>
+		<label>Craft Pistol</label>
+		<description>Craft a pistol from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>500</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_Pistol</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>50</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>2</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakePumpShotgun</defName>
+		<label>Craft Pump Shotgun</label>
+		<description>Craft a pump shotgun from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>1000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_PumpShotgun</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>100</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>4</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeLeeEnfield</defName>
+		<label>Craft Lee Enfield</label>
+		<description>Craft a lee enfield from metal bars and wood.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>1500</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>WoodPlank</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_LeeEnfield</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+			<li>WoodPlank</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>150</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeM16Rifle</defName>
+		<label>Craft M16 Rifle</label>
+		<description>Craft an M16 Rifle from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>2000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_M16Rifle</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>200</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeM24Rifle</defName>
+		<label>Craft M24 Rifle</label>
+		<description>Craft an M24 Rifle from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>2500</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_M24Rifle</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>250</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>10</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeUzi</defName>
+		<label>Craft Uzi</label>
+		<description>Craft an Uzi from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>3000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_Uzi</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>300</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeT9</defName>
+		<label>Craft T-9 Incendiary Launcher</label>
+		<description>Craft a T-9 Incendiary Launcher from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>3500</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_T9IncendiaryLauncher</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>350</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>14</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeL15LMG</defName>
+		<label>Craft L-15 LMG</label>
+		<description>Craft an L-15 LMG from metal bars.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>4000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_L15LMG</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>400</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>16</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeR4Charged</defName>
+		<label>Craft R-4 Charge Rifle</label>
+		<description>Craft an R-4 Charge Rifle from metal bars and uranium.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>4500</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Uranium</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Gun_R4ChargeRifle</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+			<li>Uranium</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>450</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>18</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeVestPlate</defName>
+		<label>Craft Vest Plate</label>
+		<description>Craft a Vest Plate from metal bars and leather.</description>
+		<jobString>Making armor.</jobString>
+		<workAmount>4000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Leather</li>
+				</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_VestPlate</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+			<li>Leather</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>400</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakePoweredArmor</defName>
+		<label>Craft Powered Armor</label>
+		<description>Craft Powered Armor from metal bars, leather, and uranium.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>10000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>SteelBars</li>
+				</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Leather</li>
+				</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Uranium</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_PowerArmor</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelBars</li>
+			<li>Leather</li>
+			<li>Uranium</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>1000</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>18</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>BreakVestPlate</defName>
+		<label>Deconstruct Vest Plate</label>
+		<description>Deconstruct a Vest Plate to regain some of the metal bars and leather.</description>
+		<jobString>Deconstructing armor.</jobString>
+		<workAmount>2000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Apparel_VestPlate</li>
+				</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Apparel_VestPlate</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>200</xp>
+		</li>
+		</skillGains>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>BreakPoweredArmor</defName>
+		<label>Deconstruct Powered Armor</label>
+		<description>Deconstruct a Powered Armor to regain some of the metal bars and leather.</description>
+		<jobString>Deconstructing armor.</jobString>
+		<workAmount>5000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Apparel_PowerArmor</li>
+				</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>10</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Apparel_PowerArmor</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>500</xp>
+		</li>
+		</skillGains>
+	</RecipeDef>
+  
+  
+<!--============================== Tailor Crafting ==============================-->
+  
+  
+	<RecipeDef>
+		<defName>MakeCloth</defName>
+		<label>Turn raw cotton into cloth</label>
+		<description>Spin raw cotton into cloth bolts.</description>
+		<jobString>Making Cloth.</jobString>
+		<workAmount>700</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>CottonRaw</li>
+				</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>CottonRaw</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>100</xp>
+		</li>
+		</skillGains>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>MakeLeather</defName>
+		<label>Turn hides into leather</label>
+		<description>Process hides into leather patches.</description>
+		<jobString>Making leather.</jobString>
+		<workAmount>1000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>AnimalHide</li>
+				</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>6</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>AnimalHide</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>MakeCowBoyHat</defName>
+		<label>Make a Cowboy Hat</label>
+		<description>Makes a Cowboy Hat from cloth bolts.</description>
+		<jobString>Making clothes.</jobString>
+		<workAmount>1500</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Leather</li>
+				</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_CowboyHat</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Leather</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>150</xp>
+			</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>3</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeBasicShirt</defName>
+		<label>Make a T-Shirt</label>
+		<description>Makes a T-Shirt from cloth bolts.</description>
+		<jobString>Making clothes.</jobString>
+		<workAmount>1250</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Cloth</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_BasicShirt</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Cloth</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>125</xp>
+			</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>3</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeCollarShirt</defName>
+		<label>Make a Button-down shirt</label>
+		<description>Makes a Button-down shirt from cloth bolts.</description>
+		<jobString>Making clothes.</jobString>
+		<workAmount>1250</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Cloth</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_CollarShirt</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Cloth</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>125</xp>
+			</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>3</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeDuster</defName>
+		<label>Make a Duster</label>
+		<description>Makes a Duster from cloth bolts.</description>
+		<jobString>Making clothes.</jobString>
+		<workAmount>2000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Cloth</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Leather</li>
+				</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Duster</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Cloth</li>
+			<li>Leather</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>200</xp>
+			</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>5</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeJacket</defName>
+		<label>Make a Jacket</label>
+		<description>Makes a Jacket from cloth bolts.</description>
+		<jobString>Making clothes.</jobString>
+		<workAmount>2000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Cloth</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Leather</li>
+				</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Jacket</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Cloth</li>
+			<li>Leather</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>200</xp>
+			</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>5</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+  
+  
+<!--============================== Tailor Desonstruction ==============================-->
+
+
+	<RecipeDef>
+		<defName>BreakTribalA</defName>
+		<label>Deconstruct Tribal Gear</label>
+		<description>Deconstruct tribal gear to regain some of the hides.</description>
+		<jobString>Deconstructing gear.</jobString>
+		<workAmount>625</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_TribalA</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>AnimalHide</thingDef>
+				<count>2</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_TribalA</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>63</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>BreakCowBoyHat</defName>
+		<label>Deconstruct Cowboy Hat</label>
+		<description>Deconstruct clothing to regain some of the cloth.</description>
+		<jobString>Deconstructing hat.</jobString>
+		<workAmount>750</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_CowboyHat</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_CowboyHat</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>75</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>BreakBasicShirt</defName>
+		<label>Deconstruct T-Shirt</label>
+		<description>Deconstruct clothing to regain some of the cloth.</description>
+		<jobString>Deconstructing shirt.</jobString>
+		<workAmount>625</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_BasicShirt</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>2</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_BasicShirt</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>63</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>BreakCollarShirt</defName>
+		<label>Deconstruct Button-down Shirt</label>
+		<description>Deconstruct a button-down shirt to regain some of the cloth.</description>
+		<jobString>Deconstructing shirt.</jobString>
+		<workAmount>625</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_CollarShirt</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>2</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_CollarShirt</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>63</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>BreakDuster</defName>
+		<label>Deconstruct Duster</label>
+		<description>Deconstruct a duster to regain some of the cloth and leather.</description>
+		<jobString>Deconstructing duster.</jobString>
+		<workAmount>1000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Duster</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>2</count>
+			</li>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_Duster</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>BreakJacket</defName>
+		<label>Deconstruct Jacket</label>
+		<description>Deconstruct a jacket to regain some of the cloth and leather.</description>
+		<jobString>Deconstructing jacket.</jobString>
+		<workAmount>1000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Jacket</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>2</count>
+			</li>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_Jacket</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+			<skill>Crafting</skill>
+			<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+</RecipeDefs>

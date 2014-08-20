@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RecipeDefs>
+
+<!-- SOYLENT GREEN -->
+
+
+
+<RecipeDef>
+
+<defName>makesoylentgreen</defName>
+
+<label>Make Soylent Green</label>
+
+<description>Make Soylent Green from People.</description>
+
+<jobString>Making Soylent Green.</jobString>
+
+<workAmount>400</workAmount>
+
+<workEffect>ButcherFlesh</workEffect>
+
+<sustainerSoundDef>Recipe_ButcherCorpseFlesh</sustainerSoundDef>
+
+
+<ingredients>
+
+
+<li>
+
+
+<filter>
+
+
+<categories> <li>CorpsesHumanoid</li></categories>
+</filter>
+
+<count>1</count>
+
+</li>
+
+</ingredients>
+
+
+<products>
+
+
+<li>
+
+<thingDef>soylentgreen</thingDef>
+
+<count>25</count>
+
+</li>
+
+</products>
+
+
+<fixedIngredientFilter>
+
+<categories> <li>CorpsesHumanoid</li></categories>
+
+
+</fixedIngredientFilter>
+
+
+<skillGains>
+
+
+<li>
+
+<skill>Cooking</skill>
+
+<xp>50</xp>
+
+</li>
+
+</skillGains>
+
+</RecipeDef>
+</RecipeDefs>

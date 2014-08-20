@@ -1,0 +1,1697 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+  <!--============================== Beds ==============================-->
+  
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>SleepingSpot</defName>
+		<EType>Bed</EType>
+		<Label>Sleeping Spot</Label>
+		<Description>Designates a spot on the ground where people should sleep. Not comfortable.
+Rest effectiveness: 60%</Description>
+		<ThingClass>Building_Bed</ThingClass>
+		<graphicPath>Things/Building/SCFurniture/Beds/SleepingSpot</graphicPath>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<WorkToBuild>0</WorkToBuild>
+		<UseStandardHealth>False</UseStandardHealth>
+		<Size>(1,2)</Size>
+		<Overdraw>true</Overdraw>
+		<DesignationCategory>Furniture</DesignationCategory>
+		<Passability>Standable</Passability>
+		<DrawGUIOverlay>True</DrawGUIOverlay>
+		<building>
+			<!--<bed_graphicPath_forPrisoner>Things/Building/Bed/SleepSpot_ForPrisoner</bed_graphicPath_forPrisoner>-->
+			<Bed_ShowSleeperBody>True</Bed_ShowSleeperBody>
+			<Bed_HealTickInterval>3200</Bed_HealTickInterval>
+			<bed_RestEffectiveness>0.6</bed_RestEffectiveness>
+			<supportsPlants>true</supportsPlants>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+		</building>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>BedHides</defName>
+		<EType>Bed</EType>
+		<Label>Hide Bed</Label>
+		<Description>A simple bed made of wood planks and animal hides.
+Rest effectiveness: 80%
+Beauty:  Neutral</Description>
+		<Beauty>Neutral</Beauty>
+		<ThingClass>Building_Bed</ThingClass>
+		<graphicPath>Things/Building/SCFurniture/Beds/BedHides</graphicPath>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<MaxHealth>50</MaxHealth>
+		<Size>(1,2)</Size>
+		<WorkToBuild>625</WorkToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>AnimalHide</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<Overdraw>True</Overdraw>
+		<building>
+			<bed_graphicPath_forPrisoner>Things/Building/SCFurniture/Beds/BedHides</bed_graphicPath_forPrisoner>
+			<Bed_ShowSleeperBody>True</Bed_ShowSleeperBody>
+			<Bed_HealTickInterval>2400</Bed_HealTickInterval>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<PathCost>50</PathCost>
+		<LeaveResourcesWhenKilled>False</LeaveResourcesWhenKilled>
+		<DesignationCategory>Furniture</DesignationCategory>
+		<Passability>Standable</Passability>
+		<DrawGUIOverlay>True</DrawGUIOverlay>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Bed</defName>
+		<EType>Bed</EType>
+		<Label>Cloth Bed</Label>
+		<Description>A cloth mattress and sheets on a wood frame for resting.
+Rest effectiveness: 100%
+Beauty:  Nuetral"</Description>
+		<Beauty>Neutral</Beauty>
+		<ThingClass>Building_Bed</ThingClass>
+		<graphicPath>Things/Building/SCFurniture/Beds/ClothBed</graphicPath>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<MaxHealth>70</MaxHealth>
+		<Size>(1,2)</Size>
+		<WorkToBuild>875</WorkToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<Overdraw>True</Overdraw>
+		<building>
+			<bed_graphicPath_forPrisoner>Things/Building/SCFurniture/Beds/ClothBedP</bed_graphicPath_forPrisoner>
+			<Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+			<Bed_HealTickInterval>2000</Bed_HealTickInterval>
+			<bed_RestEffectiveness>1</bed_RestEffectiveness>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<PathCost>60</PathCost>
+		<LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>1</count>
+			</li>
+		</filthLeavings>
+		<StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+		<CastEdgeShadows>True</CastEdgeShadows>
+		<DesignationCategory>Furniture</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<DrawGUIOverlay>True</DrawGUIOverlay>
+		<designationHotKey>B</designationHotKey>
+		<researchPrerequisite>CraftingI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyBed</defName>
+		<EType>Bed</EType>
+		<Label>Comfy Bed</Label>
+		<Description>A cozy mattress and sheets on a metal frame for resting.
+Rest effectiveness: 125%
+Beauty:  Nice "Tiny"</Description>
+		<Beauty>NiceTiny</Beauty>
+		<ThingClass>Building_Bed</ThingClass>
+		<graphicPath>Things/Building/SCFurniture/Beds/ComfyBed</graphicPath>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<MaxHealth>70</MaxHealth>
+		<Size>(1,2)</Size>
+		<WorkToBuild>875</WorkToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<Overdraw>True</Overdraw>
+		<building>
+			<bed_graphicPath_forPrisoner>Things/Building/SCFurniture/Beds/ComfyBedP</bed_graphicPath_forPrisoner>
+			<Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+			<Bed_HealTickInterval>2000</Bed_HealTickInterval>
+			<bed_RestEffectiveness>1.25</bed_RestEffectiveness>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<PathCost>60</PathCost>
+		<LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+		<filthLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</filthLeavings>
+		<StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+		<CastEdgeShadows>True</CastEdgeShadows>
+		<DesignationCategory>Furniture</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<DrawGUIOverlay>True</DrawGUIOverlay>
+		<designationHotKey>B</designationHotKey>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RoyalBed</defName>
+		<EType>Bed</EType>
+		<label>Sleeping Pod</label>
+		<Description>A futuristic bed with a high beauty rating.
+Rest effectiveness: 125%
+Beauty:  Nice</Description>
+		<Beauty>Nice</Beauty>
+		<ThingClass>Building_Bed</ThingClass>
+		<graphicPath>Things/Building/SCFurniture/Beds/PodBed</graphicPath>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<MaxHealth>150</MaxHealth>
+		<Size>(1,2)</Size>
+		<WorkToBuild>1875</WorkToBuild>
+		<CostList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>30</count>
+			</li>
+		</CostList>
+		<Overdraw>True</Overdraw>
+		<building>
+			<bed_graphicPath_forPrisoner>Things/Building/SCFurniture/Beds/PodBedP</bed_graphicPath_forPrisoner>
+			<Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+			<Bed_HealTickInterval>2000</Bed_HealTickInterval>
+			<bed_RestEffectiveness>1.25</bed_RestEffectiveness>
+		</building>
+		<SurfaceNeeded>Light</SurfaceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<PathCost>60</PathCost>
+		<LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</killedLeavings>
+		<StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+		<CastEdgeShadows>True</CastEdgeShadows>
+		<DesignationCategory>Furniture</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<DrawGUIOverlay>True</DrawGUIOverlay>
+		<designationHotKey>R</designationHotKey>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>MedicalBed</defName>
+		<EType>Bed</EType>
+		<label>Healing Pod</label>
+		<Description>A healing pod, perfect for healing up wounded colonists and prisoners.  Not as comfortable as a normal bed, but heals twice as fast!
+Rest effectiveness: 75%
+Beauty:  Nuetral</Description>
+		<Beauty>Neutral</Beauty>
+		<ThingClass>Building_Bed</ThingClass>
+		<graphicPath>Things/Building/SCFurniture/Beds/MedBed</graphicPath>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<MaxHealth>150</MaxHealth>
+		<Size>(1,2)</Size>
+		<WorkToBuild>1875</WorkToBuild>
+		<CostList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>30</count>
+			</li>
+			<li>
+				<thingDef>Medicine</thingDef>
+				<count>5</count>
+			</li>
+		</CostList>
+		<Overdraw>True</Overdraw>
+		<building>
+			<bed_graphicPath_forPrisoner>Things/Building/SCFurniture/Beds/MedBedP</bed_graphicPath_forPrisoner>
+			<Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+			<Bed_HealTickInterval>1000</Bed_HealTickInterval>
+			<bed_RestEffectiveness>.75</bed_RestEffectiveness>
+		</building>
+		<SurfaceNeeded>Light</SurfaceNeeded>
+		<fillPercent>0.4</fillPercent>
+		<PathCost>60</PathCost>
+		<LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</killedLeavings>
+		<StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+		<CastEdgeShadows>True</CastEdgeShadows>
+		<DesignationCategory>Misc</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<DrawGUIOverlay>True</DrawGUIOverlay>
+		<researchPrerequisite>Medicine</researchPrerequisite>
+	</ThingDef>
+
+
+  <!--======================= Chairs ==============================-->
+  
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>Stool_Wood</defName>
+		<eType>Building_Chair</eType>
+		<label>Wooden Stool</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/StoolWood</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>30</maxHealth>
+		<description>A basic wooden stool people can on.
+Beauty:  Neutral
+Rest Effectiveness:  40%</description>
+		<beauty>Neutral</beauty>
+		<size>(1,1)</size>
+		<workToBuild>375</workToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>1</count>
+			</li>
+		</filthLeavings>
+			<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.4</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>Stool_Metal</defName>
+		<eType>Building_Chair</eType>
+		<label>Metal Stool</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/StoolMetal</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>30</maxHealth>
+		<description>A basic metal stool people can sit on.
+Beauty:  Neutral
+Rest Effectiveness:  60%</description>
+		<beauty>Neutral</beauty>
+		<size>(1,1)</size>
+		<workToBuild>375</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>SlagRubble</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.6</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>BarStool</defName>
+		<eType>Building_Chair</eType>
+		<label>Bar Stool</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/BarStool</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>40</maxHealth>
+		<description>A stylish bar stool people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyChairNeutral</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Chair</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyChairNeutral</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>60</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>750</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyChairBlack</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Chair (Black)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyChairBlack</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>60</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>750</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyChairRose</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Chair (Rose)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyChairRose</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>60</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>750</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyChairTan</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Chair (Tan)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyChairTan</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>60</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>750</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyChairWhite</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Chair (White)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyChairWhite</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>60</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>750</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyCouchNeutral</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Couch</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyCouchNeutral</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>120</maxHealth>
+		<description>A comfy couch people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(2,1)</size>
+		<workToBuild>1500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>2</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyCouchBlack</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Couch (Black)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyCouchBlack</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>120</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(2,1)</size>
+		<workToBuild>1500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>2</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyCouchRose</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Couch (Rose)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyCouchRose</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>120</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(2,1)</size>
+		<workToBuild>1500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>2</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyCouchTan</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Couch (Tan)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyCouchTan</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>120</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(2,1)</size>
+		<workToBuild>1500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>2</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ComfyCouchWhite</defName>
+		<eType>Building_Chair</eType>
+		<label>Comfy Couch (White)</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/ComfyCouchWhite</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>120</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice "Tiny"
+Rest Effectiveness:  80%</description>
+		<beauty>NiceTiny</beauty>
+		<size>(2,1)</size>
+		<workToBuild>1500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Cloth</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>2</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CarpetMaking</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>PodChair</defName>
+		<eType>Building_Chair</eType>
+		<label>Pod Chair</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/PodChair</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>120</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice
+Rest Effectiveness:  80%</description>
+		<beauty>Nice</beauty>
+		<size>(1,1)</size>
+		<workToBuild>1500</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>ChunkSlag</thingDef>
+			<count>1</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>PodCouch</defName>
+		<eType>Building_Chair</eType>
+		<label>Pod Couch</label>
+		<graphicPath>Things/Building/SCFurniture/Chairs/PodCouch</graphicPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>240</maxHealth>
+		<description>A comfy chair people can sit on.
+Beauty:  Nice
+Rest Effectiveness:  80%</description>
+		<beauty>Nice</beauty>
+		<size>(2,1)</size>
+		<workToBuild>3000</workToBuild>
+		<flammability>1.0</flammability>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>80</count>
+			</li>
+			<li>
+				<thingDef>Leather</thingDef>
+				<count>40</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>ChunkSlag</thingDef>
+			<count>2</count>
+			</li>
+		</filthLeavings>
+		<pathCost>30</pathCost>
+		<building>
+			<bed_RestEffectiveness>0.8</bed_RestEffectiveness>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+
+  <!--======================= Tables ==============================-->
+  
+  
+	<ThingDef Abstract="True" ParentName="BuildingBase" Name="TableBase">
+		<eType>Building_Table</eType>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Waist</altitudeLayer>
+		<description>People eat off tables when chairs are placed facing them.</description>
+		<overdraw>false</overdraw>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>1</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<designationCategory>Furniture</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<itemSurface>true</itemSurface>
+		<comps>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMini_Wood</defName>
+		<label>Wooden Table (1x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableWood1x1</graphicPath>
+		<beauty>Neutral</beauty>
+		<overdraw>false</overdraw>
+		<maxHealth>30</maxHealth>
+		<description>A small wood table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>1</flammability>
+		<size>(1,1)</size>
+		<workToBuild>375</workToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableShort_Wood</defName>
+		<label>Wooden Table (2x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableWood2x1</graphicPath>
+		<beauty>Neutral</beauty>
+		<overdraw>false</overdraw>
+		<maxHealth>60</maxHealth>
+		<description>A short wood table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>1</flammability>
+		<size>(1,2)</size>
+		<workToBuild>750</workToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>30</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>1</count>
+		</li>
+		</filthLeavings>
+	</ThingDef>
+  
+	<ThingDef ParentName="TableBase">
+		<defName>TableMed_Wood</defName>
+		<label>Wooden Table (2x2)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableWood2x2</graphicPath>
+		<beauty>Neutral</beauty>
+		<overdraw>false</overdraw>
+		<maxHealth>120</maxHealth>
+		<description>A medium wood table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>1</flammability>
+		<size>(2,2)</size>
+		<workToBuild>1500</workToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>60</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+			<thingDef>WoodRubble</thingDef>
+			<count>2</count>
+		</li>
+		</filthLeavings>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableLong_Wood</defName>
+		<label>Wooden Table (2x4)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableWood2x4</graphicPath>
+		<overdraw>false</overdraw>
+		<maxHealth>240</maxHealth>
+		<description>A large wood table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>1</flammability>
+		<size>(2,4)</size>
+		<workToBuild>3000</workToBuild>
+		<constructionEffect>ConstructWood</constructionEffect>
+		<constructionAnimation>WoodTiles</constructionAnimation>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>120</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>4</count>
+			</li>
+		</filthLeavings>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMini_Metal</defName>
+		<label>Metal Table (1x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableMetal1x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Neutral</beauty>
+		<maxHealth>30</maxHealth>
+		<description>A small metal table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>0</flammability>
+		<size>(1,1)</size>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+   
+	<ThingDef ParentName="TableBase">
+		<defName>TableShort_Metal</defName>
+		<label>Metal Table (2x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableMetal2x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Neutral</beauty>
+		<maxHealth>60</maxHealth>
+		<description>A short metal table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>0</flammability>
+		<size>(2,1)</size>
+		<workToBuild>750</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>30</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMed_Metal</defName>
+		<label>Metal Table (2x2)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableMetal2x2</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Neutral</beauty>
+		<maxHealth>120</maxHealth>
+		<description>A medium metal table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>0</flammability>
+		<size>(2,2)</size>
+		<workToBuild>1500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>60</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableLong_Metal</defName>
+		<label>Metal Table (2x4)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableMetal2x4</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Neutral</beauty>
+		<maxHealth>240</maxHealth>
+		<description>A large metal table that colonists may eat from.
+Beauty:  Neutral</description>
+		<flammability>0</flammability>
+		<size>(2,4)</size>
+		<workToBuild>3000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>120</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>4</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>ConstructionI</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMini_Stone</defName>
+		<label>Stone Table (1x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableStone1x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>NiceTiny</beauty>
+		<maxHealth>30</maxHealth>
+		<description>A small stone table that colonists may eat from.
+Beauty:  Nice "Tiny"</description>
+		<flammability>0</flammability>
+		<size>(1,1)</size>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>15</count>
+			</li>
+		</costList>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+   
+	<ThingDef ParentName="TableBase">
+		<defName>TableShort_Stone</defName>
+		<label>Stone Table (2x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableStone2x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>NiceTiny</beauty>
+		<maxHealth>60</maxHealth>
+		<description>A short stone table that colonists may eat from.
+Beauty:  Nice "Tiny"</description>
+		<flammability>0</flammability>
+		<size>(2,1)</size>
+		<workToBuild>750</workToBuild>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>30</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkRock</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMed_Stone</defName>
+		<label>Stone Table (2x2)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableStone2x2</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>NiceTiny</beauty>
+		<maxHealth>120</maxHealth>
+		<description>A medium stone table that colonists may eat from.
+Beauty:  Nice "Tiny"</description>
+		<flammability>0</flammability>
+		<size>(2,2)</size>
+		<workToBuild>1500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>60</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkRock</thingDef>
+				<count>2</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableLong_Stone</defName>
+		<label>Stone Table (2x4)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableStone2x4</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>NiceTiny</beauty>
+		<maxHealth>240</maxHealth>
+		<description>A large stone table that colonists may eat from.
+Beauty:  Nice "Tiny"</description>
+		<flammability>0</flammability>
+		<size>(2,4)</size>
+		<workToBuild>3000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>120</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkRock</thingDef>
+				<count>4</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMini_Glass</defName>
+		<label>Glass Table (1x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableGlass1x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Nice</beauty>
+		<maxHealth>30</maxHealth>
+		<description>A small glass table that colonists may eat from.
+Beauty:  Nice</description>
+		<flammability>0</flammability>
+		<size>(1,1)</size>
+		<workToBuild>375</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>10</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableShort_Glass</defName>
+		<label>Glass Table (2x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableGlass2x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Nice</beauty>
+		<maxHealth>60</maxHealth>
+		<description>A short glass table that colonists may eat from.
+Beauty:  Nice</description>
+		<flammability>0</flammability>
+		<size>(2,1)</size>
+		<workToBuild>750</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>10</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableMed_Glass</defName>
+		<label>Glass Table (2x2)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableGlass2x2</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Nice</beauty>
+		<maxHealth>120</maxHealth>
+		<description>A medium glass table that colonists may eat from.
+Beauty:  Nice</description>
+		<flammability>0</flammability>
+		<size>(2,2)</size>
+		<workToBuild>1500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>TableLong_Glass</defName>
+		<label>Glass Table (2x4)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/TableGlass2x4</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Nice</beauty>
+		<maxHealth>240</maxHealth>
+		<description>A large glass table that colonists may eat from.
+Beauty:  Nice</description>
+		<flammability>0</flammability>
+		<size>(2,4)</size>
+		<workToBuild>3000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>80</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>40</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>4</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="TableBase">
+		<defName>GlassBarTop</defName>
+		<label>Glass Bartop (4x1)</label>
+		<graphicPath>Things/Building/SCFurniture/Tables/Bartop4x1</graphicPath>
+		<overdraw>false</overdraw>
+		<beauty>Nice</beauty>
+		<maxHealth>120</maxHealth>
+		<description>A glass bar that colonists may eat from.
+Beauty:  Nice</description>
+		<flammability>0</flammability>
+		<size>(4,1)</size>
+		<workToBuild>1500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>20</count>
+			</li>
+		</costList>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</killedLeavings>
+		<researchPrerequisite>CraftingIII</researchPrerequisite>
+	</ThingDef>
+
+  
+  <!-- ======================== Lighting ======================= -->
+  
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>WoodTorch</defName>
+		<eType>BuildingComplex</eType>
+		<label>Wood Torch</label>
+		<thingClass>SuperiorCrafting.Building_WoodTorch</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCFurniture/Lights/WoodTorch</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>10</maxHealth>
+		<flammability>1.0</flammability>
+		<tickerType>Normal</tickerType>
+		<selectable>true</selectable>
+		<description>A wooden torch that lights an area, but only lasts for a limited time.
+Beauty:  Nice "Tiny"</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>125</workToBuild>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Furniture</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+	</ThingDef>  
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>StandingLamp</defName>
+		<eType>BuildingComplex</eType>
+		<label>Standing Lamp</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCFurniture/Lights/LampStanding</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>40</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<description>A standing lamp that lights an area.
+Beauty:  Nice "Tiny"</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Power</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<designationHotKey>L</designationHotKey>
+		<researchPrerequisite>PowerI</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>StandingLamp_Red</defName>
+		<eType>BuildingComplex</eType>
+		<label>Standing Lamp (Red)</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCFurniture/Lights/LampStandingRed</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>40</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<description>A standing lamp that lights an area in red.
+Beauty:  Nice "Tiny"
+		</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,0,0,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Power</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<researchPrerequisite>ColoredLights</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>StandingLamp_Green</defName>
+		<eType>BuildingComplex</eType>
+		<label>Standing Lamp (Green)</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCFurniture/Lights/LampStandingGreen</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>40</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<description>A standing lamp that lights an area in green.
+Beauty:  Nice "Tiny"
+		</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>12</glowRadius>
+				<glowColor>(0,217,0,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Power</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<researchPrerequisite>ColoredLights</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>StandingLamp_Blue</defName>
+		<eType>BuildingComplex</eType>
+		<label>Standing Lamp (Blue)</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCFurniture/Lights/LampStandingBlue</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<maxHealth>40</maxHealth>
+		<flammability>1.0</flammability>
+		<selectable>true</selectable>
+		<description>A standing lamp that lights an area in blue.
+Beauty:  Nice "Tiny"</description>
+		<beauty>NiceTiny</beauty>
+		<size>(1,1)</size>
+		<workToBuild>500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>15</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>12</glowRadius>
+				<glowColor>(0,0,217,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Power</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+			<offset>(0,0,-0.1)</offset>
+		</sunShadowInfo>
+		<rotatable>false</rotatable>
+		<researchPrerequisite>ColoredLights</researchPrerequisite>
+	</ThingDef>
+
+
+</Buildings>

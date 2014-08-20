@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>ButcherCorpseFlesh</defName>
+		<label>Butcher creature</label>
+		<description>Butchers a creature to obtain its meat in usable form.  Does not skin the animal for hides.</description>
+		<jobString>Butchering.</jobString>
+		<workAmount>300</workAmount>
+		<workEffect>ButcherFlesh</workEffect>
+		<workTimeSkillNeed>ButcheryFleshTime</workTimeSkillNeed>
+		<efficiencySkillNeed>ButcheryFleshEfficiency</efficiencySkillNeed>
+    <sustainerSoundDef>Recipe_ButcherCorpseFlesh</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<exceptedCategories>
+				<li>CorpsesMechanoid</li>
+			</exceptedCategories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>CorpsesAnimal</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowBuried</li>
+      </specialFiltersToDisallow>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>ButcherMuffalo</defName>
+		<label>Butcher muffalo</label>
+		<description>Butchers a muffalo to obtain its meat and hide in usable form. It takes a while.</description>
+		<jobString>Butchering.</jobString>
+		<workAmount>900</workAmount>
+		<workEffect>ButcherFlesh</workEffect>
+		<workTimeSkillNeed>ButcheryFleshTime</workTimeSkillNeed>
+		<efficiencySkillNeed>ButcheryFleshEfficiency</efficiencySkillNeed>
+		<sustainerSoundDef>Recipe_ButcherCorpseFlesh</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Muffalo_Corpse</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>AnimalHide</thingDef>
+				<count>8</count>
+			</li>
+		</products>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Muffalo_Corpse</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>Muffalo_Corpse</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>ButcherDeer</defName>
+		<label>Butcher deer</label>
+		<description>Butchers a deer to obtain both its meat and skin in usable form. It takes a while.</description>
+		<jobString>Butchering.</jobString>
+		<workAmount>600</workAmount>
+		<workEffect>ButcherFlesh</workEffect>
+		<workTimeSkillNeed>ButcheryFleshTime</workTimeSkillNeed>
+		<efficiencySkillNeed>ButcheryFleshEfficiency</efficiencySkillNeed>
+		<sustainerSoundDef>Recipe_ButcherCorpseFlesh</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Deer_Corpse</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>AnimalHide</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Deer_Corpse</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>Deer_Corpse</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+	
+  
+  <RecipeDef>
+    <defName>ButcherCorpseMechanoid</defName>
+    <label>Disassemble mechanoid</label>
+    <description>Disassembles a dead mechanoid into its component parts.</description>
+    <jobString>Disassembling mechanoid.</jobString>
+    <workAmount>500</workAmount>
+    <workEffect>ButcherMechanoid</workEffect>
+    <workTimeSkillNeed>ButcheryMechanoidTime</workTimeSkillNeed>
+    <efficiencySkillNeed>ButcheryMechanoidEfficiency</efficiencySkillNeed>
+    <sustainerSoundDef>Recipe_ButcherCorpseMechanoid</sustainerSoundDef>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <li>
+        <thingDef>AIChips</thingDef>
+        <count>5</count>
+      </li>
+	  <li>
+        <thingDef>SteelBars</thingDef>
+        <count>45</count>
+      </li>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>CorpsesMechanoid</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowBuried</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  
+</RecipeDefs>

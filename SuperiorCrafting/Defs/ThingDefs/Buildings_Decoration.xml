@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>ClutterCabinet</defName>
+		<eType>BuildingInert</eType>
+		<label>Cabinet</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCDecor/Cabinet</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<pathCost>60</pathCost>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>150</maxHealth>
+		<description>A decorative cabinet.
+Beauty:  Nice "Tiny"</description>
+		<workToBuild>2500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>50</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<beauty>NiceTiny</beauty>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Decoration</designationCategory>
+		<constructionEffect>ConstructDig</constructionEffect>
+		<repairEffect>ConstructDig</repairEffect>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ClutterDesk</defName>
+		<eType>BuildingInert</eType>
+		<label>Desk</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCDecor/Desk</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<pathCost>60</pathCost>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>75</maxHealth>
+		<description>A decorative desk.
+Beauty:  Nice "Tiny"</description>
+		<Size>(2,1)</Size>
+		<workToBuild>3750</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>75</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<beauty>NiceTiny</beauty>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Decoration</designationCategory>
+		<constructionEffect>ConstructDig</constructionEffect>
+		<repairEffect>ConstructDig</repairEffect>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ClutterLocker</defName>
+		<eType>BuildingInert</eType>
+		<label>Locker</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCDecor/Locker</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<pathCost>60</pathCost>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>50</maxHealth>
+		<description>A decorative locker.
+Beauty:  Nice "Tiny"</description>
+		<workToBuild>2500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>50</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<beauty>NiceTiny</beauty>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Decoration</designationCategory>
+		<constructionEffect>ConstructDig</constructionEffect>
+		<repairEffect>ConstructDig</repairEffect>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>ClutterShelf</defName>
+		<eType>BuildingInert</eType>
+		<label>Shelf</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<texturePath>Things/Building/SCDecor/Shelf</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<pathCost>60</pathCost>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.3</fillPercent>
+		<maxHealth>50</maxHealth>
+		<description>A decorative shelf.
+Beauty:  Nice "Tiny"</description>
+		<workToBuild>2500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>50</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<beauty>NiceTiny</beauty>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Decoration</designationCategory>
+		<constructionEffect>ConstructDig</constructionEffect>
+		<repairEffect>ConstructDig</repairEffect>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>PlantPot</defName>
+		<eType>BuildingComplex</eType>
+		<label>Planter</label>
+		<thingClass>Building_PlantGrower</thingClass>
+		<texturePath>Things/Building/SCDecor/PlantPot1x1</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>Impassable</passability>
+		<maxHealth>25</maxHealth>
+		<flammability>1.0</flammability>
+		<description>Growers plant decorative flowers here.</description>
+		<size>(1,1)</size>
+		<workToBuild>1250</workToBuild>
+		<costList>
+			<li>
+				<thingDef>WoodPlank</thingDef>
+				<count>20</count>
+			</li>
+			<li>
+				<thingDef>WoodMulch</thingDef>
+				<count>5</count>
+			</li>
+		</costList>
+		<filthLeavings>
+			<li>
+				<thingDef>WoodRubble</thingDef>
+				<count>1</count>
+			</li>
+		</filthLeavings>
+		<overdraw>false</overdraw>
+		<fertility>1.0</fertility>
+		<designationCategory>Decoration</designationCategory>
+		<sunShadowInfo>
+			<basewidth>0.3</basewidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.6</tallness>
+			</sunShadowInfo>
+		<building>
+			<defaultPlantToGrow>PlantDaylily</defaultPlantToGrow>
+			<plantsDestroyWithMe>true</plantsDestroyWithMe>
+			<supportsPlants>true</supportsPlants>
+		</building>
+		<rotatable>false</rotatable>
+		<itemSurface>true</itemSurface>
+		<designationHotKey>P</designationHotKey>
+		<researchPrerequisite>CraftingII</researchPrerequisite>
+	</ThingDef>
+
+
+</ThingDefs>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Meteorite Mod</name>
+  <author>Jerethi50</author>
+  <url></url>
+  <targetVersion>Alpha 5</targetVersion>
+  <description> Version 1.1
+============
+This mod is based off of the mod Quarry By ominus, I took his mod and changed the functionality,
+Now at the begining of a new game silver, mineral, stone and uranium Meteorites will spawn on the planets surface, 
+In varying abundances, based on mineral type and rarity, 
+I also adjusted the health of each type of Meteorite based on realistic mineral hardness values.
+I removed the original functionality of the quarry mod, and changed the id's used, 
+So this should be compatible with the original mod if it is ever updated.
+
+Original Readme:
+
+This mod allows you to dig up stone and minerals on rock terrain, 
+it takes longer to dig/mine the minerals that are more valuable.
+ 
+ Initially this mod was meant to provide a slow but infinite way of getting stone 
+ but then i decided to add a few more choices for mining.
+
+============
+</description>
+</ModMetaData>

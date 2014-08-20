@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainDefs>
+
+
+  <TerrainDef Name="FloorBase" Abstract="True">
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <WorkToBuild>135</WorkToBuild>
+    <Beauty>NiceTiny</Beauty>
+    <designationCategory>Floors</designationCategory>
+    <Fertility>0</Fertility>
+    <ConstructionEffect>ConstructDig</ConstructionEffect>
+	<constructionAnimation>DirtTiles</constructionAnimation>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+  </TerrainDef>
+
+  
+  <!-- ================= Carpets ================= -->
+  
+  
+   <TerrainDef ParentName="FloorBase">
+    <DefName>CarpetWhite</DefName>
+    <Label>White Carpet</Label>
+    <RenderPrecedence>200</RenderPrecedence>
+    <Description>Soft white carpet with a fresh and clean look.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/CarpetWhite</TexturePath>
+	<Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CarpetMaking</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>Cloth</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="FloorBase">
+    <DefName>CarpetBeige</DefName>
+    <Label>Beige Carpet</Label>
+    <RenderPrecedence>200</RenderPrecedence>
+    <Description>Stunning beige carpet that is soft, and relaxing.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/CarpetBeige</TexturePath>
+	<Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CarpetMaking</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>Cloth</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="FloorBase">
+    <DefName>CarpetRed</DefName>
+    <Label>Red Carpet</Label>
+    <RenderPrecedence>200</RenderPrecedence>
+    <Description>Plush carpet in a lovely rose hue.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/CarpetRed</TexturePath>
+	<Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CarpetMaking</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>Cloth</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <DefName>CarpetGreen</DefName>
+    <Label>Green Carpet</Label>
+    <RenderPrecedence>199</RenderPrecedence>
+    <Description>Naturalistic-feeling green carpet.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/CarpetGreen</TexturePath>
+	<Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CarpetMaking</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>Cloth</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <DefName>CarpetBlue</DefName>
+    <Label>Blue Carpet</Label>
+    <RenderPrecedence>198</RenderPrecedence>
+    <Description>Toe-hugging plush carpet in a cool blue color.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/CarpetBlue</TexturePath>
+	<Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CarpetMaking</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>Cloth</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  
+  <!-- ================= Wood floor ================= -->
+  
+  
+  <TerrainDef  ParentName="FloorBase">
+    <DefName>WoodPlankFloor</DefName>
+    <Label>Unfinished Oak</Label>
+    <RenderPrecedence>250</RenderPrecedence>
+    <Description>Unfinished oak. At least you're not walking on dirt.
+Beauty:  Neutral</Description>
+    <TexturePath>Terrain/Surfaces/WoodFloor2</TexturePath>
+    <Beauty>Neutral</Beauty>
+    <WorkToBuild>30</WorkToBuild>
+    <CostList>
+      <li>
+        <thingDef>WoodPlank</thingDef>
+        <count>1</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  <TerrainDef  ParentName="FloorBase">
+    <DefName>WoodPlankFloor1</DefName>
+    <Label>Oak Plank</Label>
+    <RenderPrecedence>250</RenderPrecedence>
+    <Description>Wood plank flooring. For that warm, homey feeling.
+Beauty:  Nice "Tiny"</Description>
+    <TexturePath>Terrain/Surfaces/WoodFloor</TexturePath>
+    <Beauty>NiceTiny</Beauty>
+    <WorkToBuild>90</WorkToBuild>
+    <ResearchPrerequisite>ConstructionI</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>WoodPlank</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  <TerrainDef  ParentName="FloorBase">
+    <DefName>WoodPlankFloor2</DefName>
+    <Label>Carved Oak</Label>
+    <RenderPrecedence>250</RenderPrecedence>
+    <Description>Carved oak flooring for the stylish colonist.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/WoodFloor3</TexturePath>
+    <Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CraftingII</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>WoodPlank</thingDef>
+        <count>6</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+
+  
+  <!-- ================= Metal Floor ================= -->
+  
+  
+  <TerrainDef  ParentName="FloorBase">
+    <DefName>MetalTile</DefName>
+    <Label>Metal tile</Label>
+    <RenderPrecedence>240</RenderPrecedence>
+    <Description>Metal tiles, for that spaceship look.
+Beauty:  Neutral</Description>
+    <TexturePath>Terrain/Surfaces/MetalTile</TexturePath>
+    <Beauty>Neutral</Beauty>
+    <WorkToBuild>90</WorkToBuild>
+    <ResearchPrerequisite>ConstructionI</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>SteelBars</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  
+  <!-- ================= Stone Floor ================= -->
+  
+
+   <TerrainDef ParentName="FloorBase">
+    <defName>Concrete</defName>
+    <Label>Concrete</Label>
+    <Description>Quick-poured concrete. Fast to walk on.  You'll need to be able to dig out the ground to pour this.
+Beauty:  Neutral</Description>
+    <TexturePath>Terrain/Surfaces/Concrete</TexturePath>
+    <EdgeType>Hard</EdgeType>
+    <RenderPrecedence>150</RenderPrecedence>
+    <PathCost>0</PathCost>
+    <Beauty>Neutral</Beauty>
+    <WorkToBuild>30</WorkToBuild>
+    <CostList>
+      <li>
+        <thingDef>StoneBlocks</thingDef>
+        <count>1</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="FloorBase">
+    <DefName>PavedTile</DefName>
+    <Label>Paved tile</Label>
+    <RenderPrecedence>230</RenderPrecedence>
+    <Description>Simple concrete tiles. Quick to move around on.
+Beauty:  Nice "Tiny"</Description>
+    <TexturePath>Terrain/Surfaces/PavedTile</TexturePath>
+    <Beauty>NiceTiny</Beauty>
+    <WorkToBuild>90</WorkToBuild>
+    <ResearchPrerequisite>ConstructionI</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>StoneBlocks</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="FloorBase">
+    <DefName>WhiteTile</DefName>
+    <Label>White tile</Label>
+    <RenderPrecedence>230</RenderPrecedence>
+    <Description>White stone tiles. Quick to move around on.
+Beauty:  Nice "Tiny"</Description>
+    <TexturePath>Terrain/Surfaces/WhiteTile</TexturePath>
+    <Beauty>NiceTiny</Beauty>
+    <WorkToBuild>90</WorkToBuild>
+    <ResearchPrerequisite>ConstructionI</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>StoneBlocks</thingDef>
+        <count>3</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <DefName>StoneTile</DefName>
+    <Label>Stone Tile</Label>
+    <RenderPrecedence>220</RenderPrecedence>
+    <Description>Solid stone tiles for a nice, castle feeling.
+Beauty:  Nice</Description>
+    <TexturePath>Terrain/Surfaces/StoneTile</TexturePath>
+    <Beauty>Nice</Beauty>
+    <WorkToBuild>180</WorkToBuild>
+    <ResearchPrerequisite>CraftingII</ResearchPrerequisite>
+    <CostList>
+      <li>
+        <thingDef>StoneBlocks</thingDef>
+        <count>6</count>
+      </li>
+    </CostList>
+  </TerrainDef>
+
+  
+  <!-- ================= Foundation solids ================= -->
+  
+  
+  <TerrainDef>
+    <defName>SmoothStone</defName>
+    <Label>Smooth stone</Label>
+    <Description>Smoothed natural stone. Fast to walk on and requires no resources to make.
+Beauty:  Neutral</Description>
+    <TexturePath>Terrain/Surfaces/SmoothStone</TexturePath>
+    <EdgeType>Fade</EdgeType>
+    <RenderPrecedence>140</RenderPrecedence>
+    <PathCost>0</PathCost>
+    <Beauty>Neutral</Beauty>
+    <WorkToBuild>500</WorkToBuild>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <SurfaceNeeded>SmoothableStone</SurfaceNeeded>
+    <designationCategory>Floors</designationCategory>
+    <Fertility>0</Fertility>
+    <ConstructionEffect>ConstructDig</ConstructionEffect>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>RoughHewnRock</defName>
+    <Label>Rough-hewn rock</Label>
+    <TexturePath>Terrain/Surfaces/RoughHewnRock</TexturePath>
+    <EdgeType>Fade</EdgeType>
+    <RenderPrecedence>50</RenderPrecedence>
+    <PathCost>1</PathCost>
+    <Beauty>UglyTiny</Beauty>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothableStone</li>
+    </affordances>
+    <ConstructionEffect>ConstructDig</ConstructionEffect>
+    <Fertility>0</Fertility>
+  </TerrainDef>
+
+  
+</TerrainDefs>

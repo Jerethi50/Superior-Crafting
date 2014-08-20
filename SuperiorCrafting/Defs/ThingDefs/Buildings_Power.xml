@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+  
+  
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>PowerConduit</defName>
+		<eType>Building_PowerConduit</eType>
+		<label>Power Conduit</label>
+		<thingClass>Building</thingClass>
+		<linkDrawerType>Transmitter</linkDrawerType>
+		<linkFlags>
+			<li>PowerConduit</li>
+		</linkFlags>
+		<category>Building</category>
+		<texturePath>Things/Building/Linked/PowerConduit_Atlas</texturePath>
+		<blueprintTexturePath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</blueprintTexturePath>
+		<uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
+		<flammability>1.0</flammability>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<maxHealth>40</maxHealth>
+		<description>A set of electrical cables needed to provide generated power around.</description>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<workToBuild>75</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>1</count>
+			</li>
+		</costList>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundBulletHit>BulletImpactMetal</soundBulletHit>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Power</designationCategory>
+		<constructionEffect>ConstructDig</constructionEffect>
+		<designationHotKey>U</designationHotKey>
+		<researchPrerequisite>PowerI</researchPrerequisite>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>SteamGenerator</defName>
+		<eType>BuildingComplex</eType>
+		<label>Steam Generator</label>
+		<thingClass>SuperiorCrafting.Building_SteamGenerator</thingClass>
+		<texturePath>Things/Building/SCPower/SteamGenerator3x2</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>0.5</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<maxHealth>240</maxHealth>
+		<flammability>1.0</flammability>
+		<tickerType>Normal</tickerType>
+		<description>A steam turbine generator that produces electricity.  Requires a hopper filled with wood logs for fuel.</description>
+		<size>(3,2)</size>
+		<workToBuild>9000</workToBuild>
+		<costList>
+		<li>
+			<thingDef>SteelBars</thingDef>
+			<count>120</count>
+		</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>-1</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,112,33,0)</glowColor>
+			</li>
+		</comps>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>3</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Heavy</surfaceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<building>
+			<wantsHopperAdjacent>true</wantsHopperAdjacent>
+		</building>
+		<researchPrerequisite>PowerI</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>SolarGenerator</defName>
+		<eType>BuildingComplex</eType>
+		<label>Solar Generator</label>
+		<thingClass>Building_PowerPlantSolar</thingClass>
+		<texturePath>Things/Building/SolarCollector</texturePath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>0.5</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<maxHealth>320</maxHealth>
+		<flammability>1.0</flammability>
+		<tickerType>Normal</tickerType>
+		<description>Produces electricity from sunlight. Must be placed outdoors.</description>
+		<size>(4,4)</size>
+		<workToBuild>12000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>80</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>80</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>-1</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>8</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<researchPrerequisite>PowerII</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>GeothermalGenerator</defName>
+		<eType>Building_PowerPlantGeothermal</eType>
+		<label>Geothermal Generator</label>
+		<thingClass>Building_PowerPlantSteam</thingClass>
+		<texturePath>Things/Building/GeothermalPlant</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<maxHealth>600</maxHealth>
+		<flammability>1.0</flammability>
+		<tickerType>Normal</tickerType>
+		<description>Produces electricity from geothermal steam geysers. Must be placed on a geyser.</description>
+		<size>(6,6)</size>
+		<workToBuild>22500</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>300</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>-3600</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>16</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>3</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Heavy</surfaceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<placementRestricters>
+			<li>PlacementRestricter_OnSteamGeyser</li>
+		</placementRestricters>
+		<researchPrerequisite>PowerIII</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>NuclearGenerator</defName>
+		<eType>Building_PowerPlantGeothermal</eType>
+		<label>Nuclear Generator</label>
+		<thingClass>Building_PowerPlantSteam</thingClass>
+		<texturePath>Things/Building/SCPower/NuclearGenerator6x6</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<maxHealth>750</maxHealth>
+		<flammability>1.0</flammability>
+		<tickerType>Normal</tickerType>
+		<description>Produces electricity from a nuclear reaction. Requires a large amount of uranium to build, but is not restricted in it's placement.</description>
+		<size>(6,6)</size>
+		<workToBuild>30000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>400</count>
+			</li>
+			<li>
+				<thingDef>Uranium</thingDef>
+				<count>50</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>-9000</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>16</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>3</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Heavy</surfaceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<researchPrerequisite>PowerIV</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Battery</defName>
+		<eType>Building_Battery</eType>
+		<label>Battery</label>
+		<thingClass>Building_Battery</thingClass>
+		<texturePath>Things/Building/Battery</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<tickerType>Normal</tickerType>
+		<maxHealth>80</maxHealth>
+		<flammability>2.0</flammability>
+		<description>Stores electricity when there is excess power and yields it when there is not. Charged batteries tend to explode when heated or wet.</description>
+		<size>(1,2)</size>
+		<workToBuild>3000</workToBuild>
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>40</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompPowerBattery</compClass>
+				<storedEnergyMax>1000</storedEnergyMax>
+				<efficiency>0.5</efficiency>
+				<startElectricalFires>true</startElectricalFires>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<researchPrerequisite>PowerI</researchPrerequisite>
+	</ThingDef>
+
+
+</Buildings>

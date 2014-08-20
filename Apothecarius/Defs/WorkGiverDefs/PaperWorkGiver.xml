@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkGivers>
+
+
+<WorkGiverDef>
+
+<defName>DoBillsPaperwork</defName>
+
+<giverClass>WorkGiver_DoBill</giverClass>
+
+<workType>paperwork</workType>
+
+<priorityInType>10</priorityInType>
+
+<workTableDef>papermill</workTableDef>
+
+<verb>paperwork</verb>
+
+<gerund>paperworking</gerund>
+
+</WorkGiverDef>
+
+</WorkGivers>

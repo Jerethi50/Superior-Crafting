@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+
+	<ThingDef Name="ResourceBase" Abstract="True">
+		<thingClass>ThingWithComponents</thingClass>
+		<label>Unspecified resource</label>
+		<category>Item</category>
+		<eType>Item</eType>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useStandardHealth>true</useStandardHealth>
+		<selectable>true</selectable>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+		<tradersCarry>true</tradersCarry>
+		<comps>
+			<li><compClass>CompForbiddable</compClass></li>
+		</comps>
+		<beauty>Ugly</beauty>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	
+	  <!--=============== Currency ====================-->
+  
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>Silver</defName>
+		<label>Silver</label>
+		<description>Little use on its own, this metal is mostly used as a commodity currency.</description>
+		<texturePath>Things/Item/Resource/Silver</texturePath>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<soundInteract>Silver_Drop</soundInteract>
+		<soundDrop>Silver_Drop</soundDrop>
+		<useStandardHealth>false</useStandardHealth>
+		<resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
+		<basePrice>1</basePrice>
+		<storeCategories>
+			<li>Items</li>
+		</storeCategories>
+		<stackLimit>500</stackLimit>
+	</ThingDef>
+	
+	
+  <!--=============== Agricultural Resources ====================-->
+	
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawAgave</defName>
+		<label>Agave Fruit</label>
+		<description>Raw agave fruit. It's best when used as cooking ingredient.</description>
+		<texturePath>Things/Item/Resource/AgaveRaw</texturePath>
+		<soundInteract>Food_Drop</soundInteract>
+		<soundDrop>Food_Drop</soundDrop>
+		<basePrice>4</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		<soundEat>RawVegetable_Eat</soundEat>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawBerries</defName>
+		<label>Berries</label>
+		<description>Assorted berries. Nice to eat, even when raw.</description>
+		<texturePath>Things/Item/Resource/BerriesRaw</texturePath>
+		<soundInteract>Food_Drop</soundInteract>
+		<soundDrop>Food_Drop</soundDrop>
+		<basePrice>3.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatEffect>EatVegetarian</eatEffect>
+			<soundEat>RawVegetable_Eat</soundEat>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>CottonRaw</defName>
+		<label>Cotton</label>
+		<description>Raw Cotton. It can be spun into cloth or sold to a trader.</description>
+		<texturePath>Things/Item/Resource/Cotton</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>2</basePrice>
+		<storeCategories>
+			<li>ResourcesRaw</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawPotatoes</defName>
+		<label>Potatoes</label>
+		<description>Raw potatoes. The most common cooking ingredient.</description>
+		<texturePath>Things/Item/Resource/PotatoesRaw</texturePath>
+		<soundInteract>Food_Drop</soundInteract>
+		<soundDrop>Food_Drop</soundDrop>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+			<soundEat>RawVegetable_Eat</soundEat>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+	
+
+  <!--=============== Raw Materials ====================-->
+  
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>Metal</defName>
+		<label>Metal Ore</label>
+		<description>Metal ore, waiting to be processed into bars.</description>
+		<textureFolderPath>Things/Item/Resource/MetalOre</textureFolderPath>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<basePrice>2.5</basePrice>
+		<useStandardHealth>false</useStandardHealth>
+		<storeCategories>
+			<li>ResourcesRaw</li>
+		</storeCategories>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>WoodLog</defName>
+		<label>Wood Log</label>
+		<description>For building improvised structures. Can be cut into wood planks, which are much more useful.</description>
+		<texturePath>Things/Item/Resource/WoodLog</texturePath>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<basePrice>1.5</basePrice>
+		<tradersCarry>false</tradersCarry>
+		<flammability>1</flammability>
+		<maxHealth>150</maxHealth>
+		<storeCategories>
+			<li>ResourcesRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	
+  <!--=============== Manufactured Resources ====================-->
+  
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>Medicine</defName>
+		<label>Agave Gel</label>
+		<description>Healing gel made from the agave plant.</description>
+		<texturePath>Things/Item/Resource/AgaveGel</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>10</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>AnimalHide</defName>
+		<label>Animal Hide</label>
+		<description>A hide from butchered animals. They can be used to craft leather or be sold.</description>
+		<texturePath>Things/Item/Resource/AnimalHide</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>6</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Cloth</defName>
+		<label>Cloth Bolt</label>
+		<description>A bolt of cloth. It can be sold, or used to make clothing.</description>
+		<texturePath>Things/Item/Resource/Cloth</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>5</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Glass</defName>
+		<label>Glass</label>
+		<description>Glass made from sand.  Used for building structures and items.</description>
+		<texturePath>Things/Item/Resource/Glass</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>8</basePrice>
+		<useStandardHealth>false</useStandardHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Leather</defName>
+		<label>Leather</label>
+		<description>Leather cured from animal hides. It can be sold or used to craft items.</description>
+		<texturePath>Things/Item/Resource/Leather</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>4</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+ 
+ 	<ThingDef ParentName="ResourceBase">
+		<defName>SteelBars</defName>
+		<label>Metal Bars</label>
+		<description>For building structures and weapons.</description>
+		<textureFolderPath>Things/Item/Resource/SteelBars</textureFolderPath>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<basePrice>3</basePrice>
+		<useStandardHealth>false</useStandardHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>WoodMulch</defName>
+		<label>Mulch</label>
+		<description>For enriching the soil.</description>
+		<texturePath>Things/Item/Resource/Mulch</texturePath>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<basePrice>2</basePrice>
+		<useStandardHealth>false</useStandardHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Sand</defName>
+		<label>Sand</label>
+		<description>For making glass and other items.</description>
+		<texturePath>Things/Item/Resource/Sand</texturePath>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Stone_Drop</soundDrop>
+		<basePrice>2</basePrice>
+		<useStandardHealth>false</useStandardHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>StoneBlocks</defName>
+		<label>Stone Blocks</label>
+		<description>For building strong structures.</description>
+		<texturePath>Things/Item/Resource/StoneBlocks</texturePath>
+		<soundInteract>Stone_Drop</soundInteract>
+		<soundDrop>Stone_Drop</soundDrop>
+		<basePrice>3</basePrice>
+		<useStandardHealth>false</useStandardHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>WoodPlank</defName>
+		<label>Wood Planks</label>
+		<description>For building wooden structures and working stations.</description>
+		<texturePath>Things/Item/Resource/WoodPlank</texturePath>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<basePrice>3</basePrice>
+		<tradersCarry>false</tradersCarry>
+		<flammability>1</flammability>
+		<maxHealth>150</maxHealth>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+
+  <!--=============== Unused resources ====================-->
+  
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Uranium</defName>
+		<label>Uranium</label>
+		<description>Powers reactors.</description>
+		<texturePath>Things/Item/Resource/Uranium</texturePath>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<basePrice>15</basePrice>
+		<storeCategories>
+			<li>ResourcesRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Shells</defName>
+		<label>Shells</label>
+		<description>Fired from cannons.</description>
+		<texturePath>Things/Item/Resource/Shell</texturePath>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>10</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Missiles</defName>
+		<label>Missiles</label>
+		<description>Launched from missile launchers.</description>
+		<texturePath>Things/Item/Resource/Missile</texturePath>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>15</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+
+
+</Resources>

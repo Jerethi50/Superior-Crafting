@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ResearchProjectDefs>
+
+
+<ResearchProjectDef>
+
+<defName>paperwork</defName>
+
+<label>Paperwork</label>
+
+<description>Allows you to build a Papermill and produce Paper from Wood for Books.</description>
+
+<totalCost>30000</totalCost>
+
+<prerequisites> <li>CraftingI</li></prerequisites>
+
+</ResearchProjectDef>
+
+</ResearchProjectDefs>

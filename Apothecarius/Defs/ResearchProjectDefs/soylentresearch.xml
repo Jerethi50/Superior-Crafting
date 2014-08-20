@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ResearchProjectDefs>
+
+
+<ResearchProjectDef>
+
+<defName>soylentmakeing</defName>
+
+<label>Soylent Green Production</label>
+
+<description>Allows you to build the Soylent Green Machine to make Soylent Green from "Plankton".</description>
+
+<totalCost>30000</totalCost>
+
+
+
+</ResearchProjectDef>
+
+</ResearchProjectDefs>

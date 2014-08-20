@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainDefs>
+
+	<TerrainDef>
+		<defName>SoilRich</defName>
+		<Label>Rich soil</Label>
+		<TexturePath>Terrain/Surfaces/SoilRich</TexturePath>
+		<EdgeType>Fade</EdgeType>
+		<RenderPrecedence>335</RenderPrecedence>
+		<PathCost>2</PathCost>
+		<Beauty>Neutral</Beauty>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<ConstructionEffect>ConstructDig</ConstructionEffect>
+		<TerrainFilthDef>FilthDirt</TerrainFilthDef>
+		<Fertility>1.4</Fertility>
+		<TakeFootprints>True</TakeFootprints>
+		<SurfaceNeeded>GrowSoil</SurfaceNeeded>
+		<WorkToBuild>50</WorkToBuild>
+		<designationCategory>Production</designationCategory>
+		<CostList>
+			<li>
+				<thingDef>WoodMulch</thingDef>
+				<count>5</count>
+			</li>
+		</CostList>
+		<researchPrerequisite>AgricultureII</researchPrerequisite>
+	</TerrainDef>
+
+
+</TerrainDefs>

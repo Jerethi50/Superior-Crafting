@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ResearchProjectDefs>
+
+
+<ResearchProjectDef>
+
+<defName>mediccrafting</defName>
+
+<label>Medical Crafting</label>
+
+<description>Allows you to build a Meditable to produce Medicine from Red 'Medical' Flowers.</description>
+
+<totalCost>50000</totalCost>
+
+<prerequisites> <li>Hydroponics</li></prerequisites>
+</ResearchProjectDef>
+
+
+
+</ResearchProjectDefs>

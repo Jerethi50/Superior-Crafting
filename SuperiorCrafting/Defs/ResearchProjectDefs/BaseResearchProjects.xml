@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+
+<!--========== Major Discoveries ==========-->
+
+	<ResearchProjectDef>
+		<defName>AgricultureI</defName>
+		<label>Agriculture I</label>
+		<description>Learn the basics of agriculture on this new world.  Allows the growing of Agave and Berries, which are native to this planet.</description>
+		<totalCost>15000</totalCost>
+		<researchMods>
+			<li>
+			<specialAction>SuperiorCrafting.SCUpgrades.AgricultureI</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AgricultureII</defName>
+		<label>Agriculture II</label>
+		<description>Further advancements in agriculture gives your colonists the ability to fertilize the soil.  Unlocks the composter, which allows you to create mulch from wood logs.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>AgricultureI</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>FertilizerPump</defName>
+		<label>Agriculture III</label>
+		<description>Increased familiarity with the planets environment give your colonists the ability to terraform.  Unlocks the fertilizer pump, which allows you to create farmable soil anywhere.</description>
+		<totalCost>45000</totalCost>
+		<prerequisites>
+			<li>AgricultureII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Hydroponics</defName>
+		<label>Agriculture IV</label>
+		<description>Advanced knowledge of this planets environment, unlocks the secrets of hydroponic gardening.  This allows your colonists to build the hydroponic table and sunlamp, to allow for indoor gardening.</description>
+		<totalCost>60000</totalCost>
+		<prerequisites>
+			<li>FertilizerPump</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ConstructionI</defName>
+		<label>Construction I</label>
+		<description>Learn the basics of putting the raw materials of this planet to good use.  Unlocks the ability to create wood and stone walls, as well as a wood fence and basic metal furniture.</description>
+		<totalCost>15000</totalCost>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ConstructionII</defName>
+		<label>Construction II</label>
+		<description>Further advancements in construction, give your colonists the ability to create powered structures.  Unlocks powered stone and wood walls, as well as the powered metal walls.  Powered doors are also available.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>ConstructionI</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ConstructionIII</defName>
+		<label>Construction III</label>
+		<description>Nothing says keep out like a steel reinforced door blocking your way.  Continued advancement in contruction unlocks the abilty to secure your base with blast doors.</description>
+		<totalCost>45000</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>StrongDoors</defName>
+		<label>Construction IV</label>
+		<description>Reinforced doors are good, but reinforced walls are even better!  Advanced knowledge of construction techniques triples the durability of your metal walls.</description>
+		<totalCost>60000</totalCost>
+		<researchMods>
+		<li>
+			<targetDefTypeName>ThingDef</targetDefTypeName>
+			<targetDefName>WallMetal</targetDefName>
+			<targetFieldName>maxHealth</targetFieldName>
+			<targetValInt>900</targetValInt>
+		</li>
+		<li>
+			<targetDefTypeName>ThingDef</targetDefTypeName>
+			<targetDefName>WallMetalLighted</targetDefName>
+			<targetFieldName>maxHealth</targetFieldName>
+			<targetValInt>900</targetValInt>
+		</li>
+			<li>
+			<specialAction>SuperiorCrafting.SCUpgrades.ConstructionIV</specialAction>
+			</li>
+    </researchMods>
+		<prerequisites>
+			<li>ConstructionIII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CraftingI</defName>
+		<label>Crafting I</label>
+		<description>Learn the basics of crafting useful materials from this harsh environment.  Unlocks the ability to grow cotton, and craft it into useful cloth.</description>
+		<totalCost>15000</totalCost>
+		<researchMods>
+			<li>
+			<specialAction>SuperiorCrafting.SCUpgrades.CraftingI</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CraftingII</defName>
+		<label>Crafting II</label>
+		<description>Further advancements in crafting, give your colonists the ability to craft beauty enhancing furniture and items.  Unlocks an array of chair, table, and bed styles.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>CraftingI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CraftingIII</defName>
+		<label>Crafting III</label>
+		<description>There's no reason beauty and high tech can't go hand in hand.  Continued advancement in crafting unlocks the ability to create high tech furniture with a greater beauty rating.</description>
+		<totalCost>45000</totalCost>
+		<prerequisites>
+			<li>CraftingII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CraftingIV</defName>
+		<label>Crafting IV</label>
+		<description>Advancement in crafting isn't only about making your life on this planet more pleasant.  This advancement unlocks the smithing table which allows you to craft weapons and armor, as well as deconstruct those pesky mechanoids, so you can harvest their AI chips.</description>
+		<totalCost>45000</totalCost>
+		<prerequisites>
+			<li>CraftingIII</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>PowerI</defName>
+		<label>Power I</label>
+		<description>Learn the basics of power generation to help your colonists survive in this harsh climate.  Unlocks conduits, lights, and the steam generator which is powered by burning wood logs, as well as the glassworks.</description>
+		<totalCost>15000</totalCost>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>PowerII</defName>
+		<label>Power II</label>
+		<description>Burning wood for power is messy, and it takes time to gather all that wood!  Further advancements in power, give your colonists the ability to harness the power of the sun.  Unlocks the solar powered generator.  Also increases conduit durability.</description>
+		<totalCost>30000</totalCost>
+		<researchMods>
+		<li>
+			<targetDefTypeName>ThingDef</targetDefTypeName>
+			<targetDefName>PowerConduit</targetDefName>
+			<targetFieldName>maxHealth</targetFieldName>
+			<targetValInt>60</targetValInt>
+		</li>
+    </researchMods>
+		<prerequisites>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>PowerIII</defName>
+		<label>Power III</label>
+		<description>What do you do when the sun doesn't shine?  Solar power is great, except when it's dark!  This advancement in power generation unlocks the geothermal generator that can harness the power of the planet!  Also increases conduit durability.</description>
+		<totalCost>45000</totalCost>
+		<researchMods>
+		<li>
+			<targetDefTypeName>ThingDef</targetDefTypeName>
+			<targetDefName>PowerConduit</targetDefName>
+			<targetFieldName>maxHealth</targetFieldName>
+			<targetValInt>80</targetValInt>
+		</li>
+    </researchMods>
+		<prerequisites>
+			<li>PowerII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>PowerIV</defName>
+		<label>Power IV</label>
+		<description>Geothermal power is great, except when you can't find a steam vent!  Advanced knowledge of power generation allows you to build a nuclear reactor, as well as an increase in conduit durability.</description>
+		<totalCost>60000</totalCost>
+		<researchMods>
+		<li>
+			<targetDefTypeName>ThingDef</targetDefTypeName>
+			<targetDefName>PowerConduit</targetDefName>
+			<targetFieldName>maxHealth</targetFieldName>
+			<targetValInt>100</targetValInt>
+		</li>
+    </researchMods>
+		<prerequisites>
+			<li>PowerIII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>SecurityI</defName>
+		<label>Security I</label>
+		<description>Not only does it appear that the planets environment is trying to kill you, but hostile creatures and raiders are as well.  Learning the basics of security will allow your colonists to create a manned turret to help fend off these nasty attacks.</description>
+		<totalCost>15000</totalCost>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Mortars</defName>
+		<label>Security II</label>
+		<description>Sometimes, the best defense is a strong offense.  Further advancements in security research unlock the ability to build mortars, so you can attack those pesky enemies from afar, as well as increasing the rate of turret fire.</description>
+		<totalCost>30000</totalCost>
+		<researchMods>
+			<li>
+				<specialAction>ResearchModsSpecial.GunTurretCooling</specialAction>
+			</li>
+		</researchMods>
+		<prerequisites>
+			<li>SecurityI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>SecurityIII</defName>
+		<label>Security III</label>
+		<description>Don't let your colonists fight out in the open.  Continued advancement in security unlock the ability to create bunkers with manned turrets for additional protection.</description>
+		<totalCost>45000</totalCost>
+		<prerequisites>
+			<li>Mortars</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>GunTurretCooling</defName>
+		<label>Security IV</label>
+		<description>The best way to keep your colonists safe during an attack is to let someone else do the fighting!  This advancement unlocks the abilty to build auto turrets that will fight for you, and do not have to be manned.</description>
+		<totalCost>60000</totalCost>
+		<prerequisites>
+			<li>SecurityIII</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+<!--========== Minor Discoveries ==========-->
+	
+	<ResearchProjectDef>
+		<defName>ColoredLights</defName>
+		<label>Colored Lights</label>
+		<description>Minor Discovery:  This allows colonists to construct colored lights for decorative purposes.</description>
+		<totalCost>15000</totalCost>
+		<prerequisites>
+			<li>CraftingI</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Communication</defName>
+		<label>Communication</label>
+		<description>Minor Discovery:  This allows colonists to construct a communications station and trade beacon, so they may interact with other colonies and trade ships.</description>
+		<totalCost>15000</totalCost>
+		<prerequisites>
+			<li>PowerI</li>
+			<li>SecurityI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Cremation</defName>
+		<label>Cremation</label>
+		<description>Minor Discovery:  This allows colonists to build crematoriums, which can vaporize unwanted corpses.</description>
+		<totalCost>15000</totalCost>
+		<prerequisites>
+			<li>ConstructionI</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CarpetMaking</defName>
+		<label>Fabric Dye</label>
+		<description>Minor Discovery:  This allows colonists to build carpets to increase the quality of their environments.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>CraftingII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Stonecutting</defName>
+		<label>Food Synthesizer</label>
+		<description>Minor Discovery:  This allows colonists to build the food synthesizer.  While not the most tasty of ways to get a meal, the past is nutricous, and it does free up colonists to do other things.</description>
+		<totalCost>15000</totalCost>
+		<prerequisites>
+			<li>CraftingI</li>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>WallLights</defName>
+		<label>Lighted Walls</label>
+		<description>Minor Discovery:  Dark hallways make for unhappy colonists.  This allows colonists to build lighted walls.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Medicine</defName>
+		<label>Medicine</label>
+		<description>Minor Discovery:  This allows colonists the chemlab and agave tank.  The chemlab can be used to craft agave gel which when used with the agave tank can heal colonists at a rapid rate.  Also unlocks the Medical Bed</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>AgricultureII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>PneumaticPicks</defName>
+		<label>Mining</label>
+		<description>Minor Discovery:  Advancement in mining techniques grant miners a 20% increase in effectiveness.</description>
+		<totalCost>15000</totalCost>
+		<prerequisites>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>NutrientResynthesis</defName>
+		<label>Nutrient Resynthesis</label>
+		<description>Minor Discovery:  This increases the efficiency of the food synthesizer.  It now consumes 50% less organic feedstocks per meal produced.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>Stonecutting</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+			<specialAction>SuperiorCrafting.SCUpgrades.NutrientResynthesisII</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef>
+		<defName>ElectricSmelting</defName>
+		<label>Powered Machinery</label>
+		<description>Minor Discovery:  This allows colonists to build smelters, and powered crafting tables which are faster, and more effective than their non-powered counterparts.</description>
+		<totalCost>30000</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Machining</defName>
+		<label>Protein Replication</label>
+		<description>Minor Discovery:  This upgrades the food synthesizer's meal quality.  It will now create a simple meal instead of nutrient paste.</description>
+		<totalCost>45000</totalCost>
+		<prerequisites>
+			<li>NutrientResynthesis</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+			<specialAction>SuperiorCrafting.SCUpgrades.ProteinReplication</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
+	
+<!--========== Shipbuilding ==========-->
+	
+	<ResearchProjectDef>
+		<defName>ShipBasics</defName>
+		<label>Shipbuilding basics</label>
+		<description>Allows you to start researching more advanced shipbuilding technologies and eventually build a ship to escape the planet.</description>
+		<totalCost>30000</totalCost>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ShipCryptosleep</defName>
+		<label>Ship cryptosleep pods</label>
+		<description>Allows you to construct ship cryptosleep pods for transporting cryptosleeping colonists between the stars.</description>
+		<totalCost>120000</totalCost>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ShipReactor</defName>
+		<label>Ship antimatter reactor</label>
+		<description>Allows you to use an antimatter containment core to build a working antimatter reactor to power a ship.</description>
+		<totalCost>190000</totalCost>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ShipEngine</defName>
+		<label>Ship antimatter propulsion</label>
+		<description>Allows you to use an antimatter containment core to construct an antimatter drive for a ship.</description>
+		<totalCost>200000</totalCost>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ShipComputerCore</defName>
+		<label>Ship computer core</label>
+		<description>Allows coercing an existing AI persona into a usable AI computer core for ship guidance.</description>
+		<totalCost>120000</totalCost>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+  
+</ResearchProjectDefs>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkGivers>
+
+
+<WorkGiverDef>
+
+<defName>DoBillsReadWrite</defName>
+
+<giverClass>WorkGiver_DoBill</giverClass>
+
+<workType>readwrite</workType>
+
+<priorityInType>10</priorityInType>
+
+<workTableDef>desk</workTableDef>
+
+<verb>do</verb>
+
+<gerund>doing</gerund>
+
+</WorkGiverDef>
+
+</WorkGivers>

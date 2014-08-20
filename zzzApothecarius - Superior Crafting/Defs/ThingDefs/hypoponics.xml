@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+
+<ThingDef Abstract="True" Name="BuildingBase">
+
+<category>Building</category>
+
+<soundBulletHit>BulletImpactMetal</soundBulletHit>
+
+<selectable>true</selectable>
+
+<drawerType>MapMeshAndRealTime</drawerType>
+
+<surfaceNeeded>Light</surfaceNeeded>
+
+<constructionEffect>ConstructMetal</constructionEffect>
+
+<repairEffect>Repair</repairEffect>
+
+
+
+
+
+<eType>BuildingComplex</eType>
+
+
+
+<thingClass>Building_PlantGrower</thingClass>
+
+
+
+<altitudeLayer>Waist</altitudeLayer>
+
+<passability>Impassable</passability>
+
+<maxHealth>100</maxHealth>
+
+<flammability>1.0</flammability>
+
+
+
+<size>(2,1)</size>
+
+<workToBuild>2345</workToBuild>
+
+
+<costList>
+
+
+<li>
+
+<thingDef>SteelBars</thingDef>
+
+<count>20</count>
+
+</li>
+
+
+
+<li>
+
+<thingDef>WoodPlank</thingDef>
+
+<count>20</count>
+
+</li>
+
+
+
+<li>
+
+<thingDef>WoodMulch</thingDef>
+
+<count>5</count>
+
+</li>
+
+
+</costList>
+
+
+
+
+<overdraw>false</overdraw>
+
+<fertility>1.0</fertility>
+
+<designationCategory>Decoration</designationCategory>
+
+
+<sunShadowInfo>
+
+<basewidth>0.3</basewidth>
+
+<baseHeight>0.3</baseHeight>
+
+<tallness>0.6</tallness>
+
+</sunShadowInfo>
+
+<researchPrerequisite>mediccrafting</researchPrerequisite>
+
+<building>
+
+
+<plantsDestroyWithMe>true</plantsDestroyWithMe>
+
+<supportsPlants>true</supportsPlants>
+
+</building>
+
+<rotatable>false</rotatable>
+
+
+
+</ThingDef>
+
+
+
+
+
+
+
+
+
+<!-- Hypoponics red -->
+
+<ThingDef ParentName="BuildingBase">
+<defName>Hypoponicsred</defName>
+<label>Hypoponics Red</label>
+<description>A small Hydroponics basin ONLY for Red Medical Flowers</description>
+<building> <defaultPlantToGrow>mediplant</defaultPlantToGrow> </building>
+<texturePath>hypoponics</texturePath>
+
+</ThingDef>
+
+
+
+<!-- Hypoponics yellow -->
+
+<ThingDef ParentName="BuildingBase">
+<defName>Hypoponicsyellow</defName>
+<label>Hypoponics Yellow</label>
+<description>A small Hydroponics basin ONLY for Yellow Medical Flowers</description>
+<building> <defaultPlantToGrow>mediplanty</defaultPlantToGrow> </building>
+<texturePath>hypoponicsy</texturePath>
+
+</ThingDef>
+
+
+<!-- Hypoponics red -->
+
+<ThingDef ParentName="BuildingBase">
+<defName>Hypoponicsgreen</defName>
+<label>Hypoponics Green</label>
+<description>A small Hydroponics basin ONLY for Green Medical Flowers</description>
+<building> <defaultPlantToGrow>mediplantg</defaultPlantToGrow> </building>
+<texturePath>hypoponicsg</texturePath>
+
+</ThingDef>
+
+
+
+</ThingDefs>

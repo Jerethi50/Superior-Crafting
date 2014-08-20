@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="BaseGun" Abstract="True">
+		<category>Item</category>
+		<eType>Equipment</eType>
+		<thingClass>Equipment</thingClass>
+		<label>Gun</label>
+		<equipmentType>Primary</equipmentType>
+		<isGun>True</isGun>
+		<pathCost>10</pathCost>
+		<useStandardHealth>True</useStandardHealth>
+		<selectable>True</selectable>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Midworld</techLevel>
+		<storeCategories>
+			<li>Weapons</li>
+		</storeCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+		<verb>
+		<category>Nonnative</category>
+		<verbClass>Verb_Shoot</verbClass>
+		<cooldownTicks>40</cooldownTicks>
+		<label>VerbGun</label>
+		<description>Fire a bullet.</description>
+		<hasStandardCommand>true</hasStandardCommand>
+		<targetParams>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>true</canTargetBuildings>
+			<worldObjectTargetsMustBeAutoAttackable>true</worldObjectTargetsMustBeAutoAttackable>
+		</targetParams>
+		<canMiss>true</canMiss>
+		</verb>
+	</ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+  
+	<ThingDef Name="BaseBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>Bullet</label>
+		<useStandardHealth>False</useStandardHealth>
+		<neverMultiSelect>True</neverMultiSelect>
+		<baseMaterialType>Transparent</baseMaterialType>
+	</ThingDef>
+
+
+  <!-- ================ Improvised turret gun ============== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_TurretImprovised</defName>
+		<label>Improvised turret bullet</label>
+		<texturePath>Things/Projectile/Bullet_Small</texturePath>
+		<projectile>
+      <damageDef>Bullet</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_TurretBunker</defName>
+		<label>Bunker turret gun</label>
+		<menuHidden>true</menuHidden>
+		<description>Jury-rigged gun attached to a turret.</description>
+		<texturePath>Things/Item/Equipment/Default</texturePath>
+		<soundInteract>InteractRifle</soundInteract>
+		<canBeSpawningInventory>false</canBeSpawningInventory>
+		<weaponTags>
+			<li>TurretGun</li>
+		</weaponTags>
+		<verb>
+			<projectileDef>Bullet_TurretImprovised</projectileDef>
+			<warmupTicks>108</warmupTicks>
+			<range>38</range>
+			<accuracyTouch>0.9</accuracyTouch>
+			<accuracyShort>0.75</accuracyShort>
+			<accuracyMedium>0.5</accuracyMedium>
+			<accuracyLong>0.25</accuracyLong>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<burstShotCount>4</burstShotCount>
+			<fireSound>GunShotA</fireSound>
+		</verb>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>Gun_TurretSentry</defName>
+		<label>Sentry turret gun</label>
+		<menuHidden>true</menuHidden>
+		<description>Jury-rigged gun attached to a turret.</description>
+		<texturePath>Things/Item/Equipment/Default</texturePath>
+		<soundInteract>InteractRifle</soundInteract>
+		<canBeSpawningInventory>false</canBeSpawningInventory>
+		<weaponTags>
+			<li>TurretGun</li>
+		</weaponTags>
+		<verb>
+			<projectileDef>Bullet_TurretImprovised</projectileDef>
+			<warmupTicks>108</warmupTicks>
+			<range>35</range>
+			<accuracyTouch>0.89</accuracyTouch>
+			<accuracyShort>0.64</accuracyShort>
+			<accuracyMedium>0.41</accuracyMedium>
+			<accuracyLong>0.22</accuracyLong>
+			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			<burstShotCount>4</burstShotCount>
+			<fireSound>GunShotA</fireSound>
+		</verb>
+	</ThingDef>
+
+	
+</ThingDefs>
