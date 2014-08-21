@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Plants>
+
+
+<ThingDef Abstract="True" Name="PlantBase">
+
+<eType>Plant</eType>
+
+<category>Plant</category>
+
+<thingClass>Plant</thingClass>
+
+<altitudeLayer>LowPlant</altitudeLayer>
+
+<flammability>1.0</flammability>
+
+<useStandardHealth>True</useStandardHealth>
+
+<maxHealth>85</maxHealth>
+
+<tickerType>Rare</tickerType>
+
+
+
+<neverMultiSelect>True</neverMultiSelect>
+
+<drawerType>MapMeshOnly</drawerType>
+
+<baseMaterialType>PlantCutout</baseMaterialType>
+<beauty>Nice</beauty>
+
+<selectable>true</selectable>
+
+
+<!-- food value for animals?? -->
+<food>
+
+<quality>Plant</quality>
+
+<nutrition>40</nutrition>
+
+</food>
+
+
+
+<plant>
+
+<harvestTag>Food</harvestTag>
+
+<harvestDestroys>true</harvestDestroys>
+
+<harvestingSound>Harvest_Standard</harvestingSound>
+
+<harvestFinishSound>Harvest_Standard_Finish</harvestFinishSound>
+
+<sowWork>150</sowWork>
+
+<fertilityMin>0.5</fertilityMin>
+
+<fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+
+<topWindExposure>0.1</topWindExposure>
+
+<growthPer20kTicks>0.48</growthPer20kTicks>
+
+<growMinGlow>Overlit</growMinGlow>
+
+<lifeSpan>200000</lifeSpan>
+
+<shootsSeeds>false</shootsSeeds>
+
+<sowableGround>false</sowableGround>
+
+<sowableHydroponic>true</sowableHydroponic>
+
+
+<visualSizeRange>
+
+<min>0.3</min>
+
+<max>1.05</max>
+
+</visualSizeRange>
+
+
+<harvestYieldRange>
+
+<min>1</min>
+
+<max>2</max>
+
+</harvestYieldRange>
+
+
+
+
+
+
+
+
+</plant>
+
+</ThingDef>
+
+
+<!-- MEDIPLANT -->
+
+
+
+<ThingDef ParentName="PlantBase">
+
+<defName>mediplant</defName>
+<label>Red Medical Plant</label>
+<description>A red plant for 'medical' purposes. Only grows in Hydroponics!</description>
+<textureFolderPath>Apothecarius/mediflowerplant</textureFolderPath>
+
+
+<plant>
+<harvestedThingDef>mediflowerres</harvestedThingDef>
+</plant>
+
+</ThingDef>
+
+
+
+<!-- YELLOW -->
+
+<ThingDef ParentName="PlantBase">
+
+<defName>mediplanty</defName>
+<label>Yellow Medical Plant</label>
+<description>A yellow plant for 'medical' purposes. Only grows in Hydroponics!</description>
+<textureFolderPath>Apothecarius/mediflowerplanty</textureFolderPath>
+
+
+<plant>
+<harvestedThingDef>mediflowerresy</harvestedThingDef>
+</plant>
+
+</ThingDef>
+
+
+
+
+
+<!-- GREEN -->
+
+
+
+<ThingDef ParentName="PlantBase">
+<defName>mediplantg</defName>
+<label>Green Medical Plant</label>
+<description>A green plant for 'medical' purposes. Only grows in Hydroponics!</description>
+<textureFolderPath>Apothecarius/mediflowerplantg</textureFolderPath>
+
+
+<plant>
+<harvestedThingDef>mediflowerresg</harvestedThingDef>
+</plant>
+
+</ThingDef>
+
+
+
+
+</Plants>
