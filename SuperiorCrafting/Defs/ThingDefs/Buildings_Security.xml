@@ -120,7 +120,8 @@
 		<eType>Building_Turret</eType>
 		<label>Manned Turret</label>
 		<thingClass>Building_TurretGun</thingClass>
-		<texturePath>Things/Building/SCSecurity/TurretImprovisedBase</texturePath>
+		<texturePath>Things/Building/SCSecurity/MannedGun_bottom</texturePath>
+		<uiIconPath>Things/Building/SCSecurity/MannedGunIco</uiIconPath>
 		<altitudeLayer>Waist</altitudeLayer>
 		<hasInteractionSquare>True</hasInteractionSquare>
 		<interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
@@ -169,7 +170,7 @@
 		<building>
 			<turretGunDef>Gun_TurretImprovised</turretGunDef>
 			<turretburstCooldownTicks>400</turretburstCooldownTicks>
-			<turretTopTexturePath>Things/Building/Security/TurretImprovised_Top</turretTopTexturePath>
+			<turretTopTexturePath>Things/Building/SCSecurity/SentryGun_Top</turretTopTexturePath>
 		</building>
 		<designationHotKey>U</designationHotKey>
 		<researchPrerequisite>SecurityI</researchPrerequisite>
@@ -379,78 +380,6 @@
 		</placementRestricters>
 		<researchPrerequisite>Mortars</researchPrerequisite>
 	</ThingDef>
-	
-	
-<!--=============== Bunker ===============-->
-	
-	
-	<ThingDef ParentName="BuildingBase">
-		<defName>BunkerWeapon</defName>
-		<eType>Building_Turret</eType>
-		<label>Bunker</label>
-		<thingClass>Building_TurretGun</thingClass>
-		<texturePath>Things/Building/SCSecurity/Bunker</texturePath>
-		<uiIconPath>Things/Building/SCSecurity/Bunker_TopIco</uiIconPath>
-		<altitudeLayer>Waist</altitudeLayer>
-		<maxHealth>800</maxHealth>
-		<hasInteractionSquare>True</hasInteractionSquare> 
-		<interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
-		<tickerType>Normal</tickerType>
-		<comps>
-			<li>
-				<compClass>CompExplosive</compClass>
-				<explosiveRadius>1.9</explosiveRadius>
-				<explosiveDamageType>Bomb</explosiveDamageType>
-			</li>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-			<li>
-				<compClass>CompMannable</compClass>
-			</li>
-		</comps>
-		<description>A secure bunker with a built-in manned turret.
-		Health:  800</description>
-		<flammability>0.5</flammability>
-		<size>(3,2)</size>
-		<passability>Impassable</passability>
-		<castEdgeShadows>true</castEdgeShadows>
-		<fillPercent>0.9</fillPercent>
-		<costList>
-			<li>
-				<thingDef>SteelBars</thingDef>
-				<count>150</count>
-			</li>
-			<li>
-				<thingDef>StoneBlocks</thingDef>
-				<count>250</count>
-			</li>
-		</costList>
-		<workToBuild>30000</workToBuild>
-		<overdraw>true</overdraw>
-		<combatTargetBuilding>true</combatTargetBuilding>
-		<beauty>Ugly</beauty>
-		<filthLeavings>
-			<li>
-				<thingDef>RockRubble</thingDef>
-				<count>6</count>
-			</li>
-			<li>
-				<thingDef>SlagRubble</thingDef>
-				<count>2</count>
-			</li>
-		</filthLeavings>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-		<surfaceNeeded>Light</surfaceNeeded>
-		<designationCategory>Security</designationCategory>
-		<specialDisplayRadius>37.0</specialDisplayRadius>
-		<building>
-			<turretGunDef>Gun_TurretBunker</turretGunDef>
-			<turretburstCooldownTicks>240</turretburstCooldownTicks>
-			<turretTopTexturePath>Things/Building/SCSecurity/Bunker_Top</turretTopTexturePath>
-		</building>
-		<researchPrerequisite>SecurityIII</researchPrerequisite>
-	</ThingDef>
   
   
 <!--=============== AI turret ===============-->
@@ -459,9 +388,9 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>TurretGun</defName>
 		<eType>Building_Turret</eType>
-		<label>Sentry Turret</label>
+		<label>Sentry Turret (Standard)</label>
 		<thingClass>Building_TurretGun</thingClass>
-		<texturePath>Things/Building/SCSecurity/SentryGun</texturePath>
+		<texturePath>Things/Building/SCSecurity/SentryGun_bottom</texturePath>
 		<uiIconPath>Things/Building/SCSecurity/SentryGunIco</uiIconPath>
 		<altitudeLayer>Waist</altitudeLayer>
 		<maxHealth>200</maxHealth>
@@ -510,11 +439,139 @@
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<surfaceNeeded>Light</surfaceNeeded>
 		<designationCategory>Security</designationCategory>
-		<specialDisplayRadius>25.9</specialDisplayRadius>
+		<specialDisplayRadius>34.9</specialDisplayRadius>
 		<building>
 			<turretGunDef>Gun_TurretSentry</turretGunDef>
 			<turretburstCooldownTicks>300</turretburstCooldownTicks>
 			<turretTopTexturePath>Things/Building/SCSecurity/SentryGun_Top</turretTopTexturePath>
+		</building>
+		<designationHotKey>U</designationHotKey>
+		<researchPrerequisite>GunTurretCooling</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>TurretGunGattling</defName>
+		<eType>Building_Turret</eType>
+		<label>Sentry Turret (Gattling)</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<texturePath>Things/Building/SCSecurity/SentryGun_bottom</texturePath>
+		<uiIconPath>Things/Building/SCSecurity/SentryGunGattlingIco</uiIconPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>200</maxHealth>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li>
+				<compClass>CompExplosive</compClass>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+		</comps>
+		<description>A turret that automatically fires at nearby enemies. Must be powered. Explodes when damaged.
+		Health:  200</description>
+		<flammability>1.0</flammability>
+		<size>(1,1)</size>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>200</count>
+			</li>
+			<li>
+				<thingDef>AIChips</thingDef>
+				<count>1</count>
+			</li>
+		</costList>
+		<workToBuild>11250</workToBuild>
+		<overdraw>true</overdraw>
+		<combatTargetBuilding>true</combatTargetBuilding>
+		<beauty>Ugly</beauty>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>34.9</specialDisplayRadius>
+		<building>
+			<turretGunDef>Gun_TurretSentry</turretGunDef>
+			<turretburstCooldownTicks>300</turretburstCooldownTicks>
+			<turretTopTexturePath>Things/Building/SCSecurity/SentryGunGattling_Top</turretTopTexturePath>
+		</building>
+		<designationHotKey>U</designationHotKey>
+		<researchPrerequisite>GunTurretCooling</researchPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>TurretGunShotgun</defName>
+		<eType>Building_Turret</eType>
+		<label>Sentry Turret (Shotgun)</label>
+		<thingClass>Building_TurretGun</thingClass>
+		<texturePath>Things/Building/SCSecurity/SentryGun_bottom</texturePath>
+		<uiIconPath>Things/Building/SCSecurity/SentryGunShotgunIco</uiIconPath>
+		<altitudeLayer>Waist</altitudeLayer>
+		<maxHealth>200</maxHealth>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li>
+				<compClass>CompExplosive</compClass>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+		</comps>
+		<description>A turret that automatically fires at nearby enemies. Must be powered. Explodes when damaged.
+		Health:  200</description>
+		<flammability>1.0</flammability>
+		<size>(1,1)</size>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>200</count>
+			</li>
+			<li>
+				<thingDef>AIChips</thingDef>
+				<count>1</count>
+			</li>
+		</costList>
+		<workToBuild>11250</workToBuild>
+		<overdraw>true</overdraw>
+		<combatTargetBuilding>true</combatTargetBuilding>
+		<beauty>Ugly</beauty>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>34.9</specialDisplayRadius>
+		<building>
+			<turretGunDef>Gun_TurretSentry</turretGunDef>
+			<turretburstCooldownTicks>300</turretburstCooldownTicks>
+			<turretTopTexturePath>Things/Building/SCSecurity/SentryGunShotgun_Top</turretTopTexturePath>
 		</building>
 		<designationHotKey>U</designationHotKey>
 		<researchPrerequisite>GunTurretCooling</researchPrerequisite>

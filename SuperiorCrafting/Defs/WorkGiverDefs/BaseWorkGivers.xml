@@ -143,8 +143,19 @@
     <defName>HunterHunt</defName>
     <giverClass>WorkGiver_HunterHunt</giverClass>
     <workType>Hunting</workType>
+	<priorityInType>10</priorityInType>
     <verb>hunt</verb>
     <gerund>hunting</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoShooting</defName>
+    <giverClass>WorkGiver_ShootingRange</giverClass>
+    <workType>Hunting</workType>
+	<priorityInType>9</priorityInType>
+	<workTableDef>ShootingRange</workTableDef>
+    <verb>practice</verb>
+    <gerund>practicing</gerund>
   </WorkGiverDef>
 
 

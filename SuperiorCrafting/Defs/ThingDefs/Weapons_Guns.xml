@@ -72,38 +72,13 @@
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
-
-	<ThingDef ParentName="BaseHumanGun">
-		<defName>Gun_TurretBunker</defName>
-		<label>Bunker turret gun</label>
-		<menuHidden>true</menuHidden>
-		<description>Jury-rigged gun attached to a turret.</description>
-		<texturePath>Things/Item/Equipment/Default</texturePath>
-		<soundInteract>InteractRifle</soundInteract>
-		<canBeSpawningInventory>false</canBeSpawningInventory>
-		<weaponTags>
-			<li>TurretGun</li>
-		</weaponTags>
-		<verb>
-			<projectileDef>Bullet_TurretImprovised</projectileDef>
-			<warmupTicks>108</warmupTicks>
-			<range>38</range>
-			<accuracyTouch>0.9</accuracyTouch>
-			<accuracyShort>0.75</accuracyShort>
-			<accuracyMedium>0.5</accuracyMedium>
-			<accuracyLong>0.25</accuracyLong>
-			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-			<burstShotCount>4</burstShotCount>
-			<fireSound>GunShotA</fireSound>
-		</verb>
-	</ThingDef>
 	
 	<ThingDef ParentName="BaseHumanGun">
 		<defName>Gun_TurretSentry</defName>
 		<label>Sentry turret gun</label>
 		<menuHidden>true</menuHidden>
 		<description>Jury-rigged gun attached to a turret.</description>
-		<texturePath>Things/Item/Equipment/Default</texturePath>
+		<texturePath>Things/Building/SCSecurity/SentryGun_Top</texturePath>
 		<soundInteract>InteractRifle</soundInteract>
 		<canBeSpawningInventory>false</canBeSpawningInventory>
 		<weaponTags>

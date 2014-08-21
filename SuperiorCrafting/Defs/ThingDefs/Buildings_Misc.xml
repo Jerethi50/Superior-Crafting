@@ -450,6 +450,59 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="BuildingBase">
+		<defName>ShootingRange</defName>
+		<eType>BuildingComplex</eType>
+		<label>Shooting Range</label>
+		<thingClass>SuperiorCrafting.Building_ShootingRange</thingClass>
+		<texturePath>Things/Building/SCMisc/ShootingRange1x6</texturePath>
+		<hasInteractionSquare>True</hasInteractionSquare>
+		<interactionSquareOffset>(0,0,-3)</interactionSquareOffset>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>Standable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>.2</fillPercent>
+		<maxHealth>240</maxHealth>
+		<flammability>1.0</flammability>
+		<tickerType>Normal</tickerType>
+		<description>A healing tank that heals any colonist who interacts with it.  Requires a hopper filled with Agave Gel.</description>
+		<size>(1,6)</size>
+		<workToBuild>9000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>SteelBars</thingDef>
+				<count>60</count>
+			</li>
+			<li>
+				<thingDef>Glass</thingDef>
+				<count>60</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompMannable</compClass>
+			</li>
+		</comps>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<li>
+				<thingDef>ChunkSlag</thingDef>
+				<count>1</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>2</count>
+			</li>
+		</filthLeavings>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<designationCategory>Misc</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>false</blockLight>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
 		<defName>EquipmentRackWood</defName>
 		<eType>BuildingComplex</eType>
 		<label>Storage (Raw Food)</label>
