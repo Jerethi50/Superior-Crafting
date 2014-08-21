@@ -103,8 +103,6 @@ namespace SuperiorCrafting
                     this.healDelay = 180;
                     if (pawn.healthTracker.Wounded == true)
                     {
-                        pawn.healthTracker.bodyModel.GetMissingParts();
-                        MissingBodyPart.ReferenceEquals(pawn, false);
                         pawn.TakeDamage(new DamageInfo(DamageTypeDefOf.Healing, 10, this));
                         MoteMaker.ThrowHealingCross(pawn.Position);
                         int num = 0;
@@ -115,6 +113,7 @@ namespace SuperiorCrafting
                         list.Add(AgaveGelInHopper.def);
                         AgaveGelInHopper.SplitOff(num2);
                         AgaveGelInHopper = this.AgaveGelInHopper;
+
                     }
                 }
             }
