@@ -254,7 +254,7 @@
   <WorkGiverDef>
     <defName>DoBillsChemlab</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>apothecarius</workType>
+    <workType>Doctor</workType>
     <priorityInType>50</priorityInType>
     <workTableDef>TableChemlab</workTableDef>
     <verb>work on</verb>

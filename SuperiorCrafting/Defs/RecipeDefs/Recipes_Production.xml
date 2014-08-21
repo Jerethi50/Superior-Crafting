@@ -422,7 +422,7 @@
 		</skillGains>
 	</RecipeDef>
 	
-	<!-- <RecipeDef>
+	<RecipeDef>
 		<defName>MakeAgaveGel</defName>
 		<label>Make Agave Gel</label>
 		<description>Make Agave Gel from Raw Agave</description>
@@ -457,7 +457,7 @@
 			<xp>150</xp>
 			</li>
 		</skillGains>
-	</RecipeDef> -->
+	</RecipeDef>
   
   
 <!--============================== Weapon and Armor Smithing ==============================-->
