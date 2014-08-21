@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Resources>
+
+
+<ThingDef Abstract="True" Name="ResourceBase">
+
+<thingClass>ThingWithComponents</thingClass>
+
+<category>Item</category>
+
+<eType>Item</eType>
+
+<resourceReadoutPriority>Middle</resourceReadoutPriority>
+
+<selectable>true</selectable>
+
+<maxHealth>100</maxHealth>
+
+<altitudeLayer>Item</altitudeLayer>
+
+<stackLimit>75</stackLimit>
+
+<tradersCarry>true</tradersCarry>
+
+
+<comps>
+
+
+<li>
+
+<compClass>CompForbiddable</compClass>
+
+</li>
+
+</comps>
+
+<beauty>Nice</beauty>
+
+<alwaysHaulable>true</alwaysHaulable>
+
+<drawGUIOverlay>true</drawGUIOverlay>
+
+<rotatable>false</rotatable>
+
+<pathCost>15</pathCost>
+
+
+<soundInteract>Food_Drop</soundInteract>
+
+<soundDrop>Food_Drop</soundDrop>
+
+<useStandardHealth>false</useStandardHealth>
+
+
+<basePrice>2</basePrice>
+
+
+<storeCategories>
+
+<li>apothecarius</li>
+
+</storeCategories>
+
+
+
+
+</ThingDef>
+
+<!--Mediflower-->
+
+
+
+<ThingDef ParentName="ResourceBase">
+
+<defName>mediflowerres</defName>
+
+<label>Red Medical Flower</label>
+
+<description>Red flower for 'medical' purposes. </description>
+
+<texturePath>Apothecarius/mediflower</texturePath>
+
+
+
+
+
+</ThingDef>
+
+
+
+<!-- YELLOW -->
+
+
+
+<ThingDef ParentName="ResourceBase">
+
+<defName>mediflowerresy</defName>
+
+<label>Yellow Medical Flower</label>
+
+<description>Yellow flower for 'medical' purposes. </description>
+
+<texturePath>Apothecarius/mediflowery</texturePath>
+
+
+
+
+</ThingDef>
+
+
+
+
+<!-- GREEN -->
+
+
+<ThingDef ParentName="ResourceBase">
+
+<defName>mediflowerresg</defName>
+
+<label>Green Medical Flower</label>
+
+<description>Green flower for 'medical' purposes. </description>
+
+<texturePath>Apothecarius/mediflowerg</texturePath>
+
+
+
+
+
+</ThingDef>
+
+
+
+
+
+
+
+
+
+</Resources>

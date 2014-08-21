@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ResearchProjectDefs>
+
+
+<ResearchProjectDef>
+
+<defName>mediccrafting</defName>
+
+<label>Medical Crafting</label>
+
+<description>Allows you to build a Meditable to produce Medicine from 'Medical' Flowers and Hypoponics - a small low level version of the Hydroponics for Medical Flowers only</description>
+
+<totalCost>35000</totalCost>
+
+<prerequisites> <li>AgricultureII</li></prerequisites>
+</ResearchProjectDef>
+
+
+
+</ResearchProjectDefs>
