@@ -236,6 +236,7 @@
 						<li>Cloth</li>
 						<li>Glass</li>
 						<li>Leather</li>
+						<li>Medicine</li>
 						<li>SteelBars</li>
 						<li>WoodMulch</li>
 						<li>Sand</li>
@@ -504,13 +505,15 @@
 	
 	<ThingDef ParentName="BuildingBase">
 		<defName>EquipmentRackWood</defName>
-		<eType>BuildingComplex</eType>
+		<eType>BuildingInert</eType>
 		<label>Storage (Raw Food)</label>
 		<thingClass>Building_Storage</thingClass>
 		<texturePath>Things/Building/SCMisc/FoodRack1x1</texturePath>
 		<altitudeLayer>Waist</altitudeLayer>
-		<passability>Impassable</passability>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
 		<castEdgeShadows>true</castEdgeShadows>
+		<overdraw>false</overdraw>
 		<maxHealth>40</maxHealth>
 		<flammability>1.0</flammability>
 		<description>Haulers can carry raw food here for storage.</description>
@@ -522,7 +525,6 @@
 				<count>20</count>
 			</li>
 		</costList>
-		<overdraw>true</overdraw>
 		<killedLeavings>
 			<li>
 				<thingDef>WoodPlank</thingDef>
@@ -556,25 +558,25 @@
   
 	<ThingDef ParentName="BuildingBase">
 		<defName>EquipmentRack</defName>
-		<eType>BuildingComplex</eType>
+		<eType>BuildingInert</eType>
 		<label>Storage (Equipment)</label>
 		<thingClass>Building_Storage</thingClass>
-		<texturePath>Things/Building/Furniture/EquipmentRack</texturePath>
+		<texturePath>Things/Building/SCMisc/EquipmentRack1x1</texturePath>
 		<altitudeLayer>Waist</altitudeLayer>
 		<passability>Impassable</passability>
 		<castEdgeShadows>true</castEdgeShadows>
-		<maxHealth>80</maxHealth>
+		<overdraw>false</overdraw>
+		<maxHealth>40</maxHealth>
 		<flammability>0</flammability>
 		<description>Haulers can carry equipment here for storage.</description>
-		<size>(2,1)</size>
-		<workToBuild>2000</workToBuild>
+		<size>(1,1)</size>
+		<workToBuild>1000</workToBuild>
 		<costList>
 			<li>
 				<thingDef>SteelBars</thingDef>
-				<count>40</count>
+				<count>20</count>
 			</li>
 		</costList>
-		<overdraw>true</overdraw>
 		<killedLeavings>
 			<li>
 				<thingDef>ChunkSlag</thingDef>

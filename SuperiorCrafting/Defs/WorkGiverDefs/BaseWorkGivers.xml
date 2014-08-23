@@ -153,9 +153,17 @@
     <giverClass>WorkGiver_ShootingRange</giverClass>
     <workType>Hunting</workType>
 	<priorityInType>9</priorityInType>
-	<workTableDef>ShootingRange</workTableDef>
     <verb>practice</verb>
     <gerund>practicing</gerund>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoTanking</defName>
+    <giverClass>WorkGiver_AgaveTank</giverClass>
+    <workType>Patient</workType>
+	<priorityInType>100</priorityInType>
+    <verb>heal</verb>
+    <gerund>healing</gerund>
   </WorkGiverDef>
 
 
@@ -254,7 +262,7 @@
   <WorkGiverDef>
     <defName>DoBillsChemlab</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>apothecarius</workType>
+    <workType>Doctor</workType>
     <priorityInType>50</priorityInType>
     <workTableDef>TableChemlab</workTableDef>
     <verb>work on</verb>

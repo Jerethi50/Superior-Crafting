@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Plants>
 
+
 	<ThingDef Name="ShroomBase" Abstract="True">
 		<eType>Plant</eType>
 		<category>Plant</category>
@@ -32,6 +33,7 @@
 			</visualSizeRange>
 		</plant>
 	</ThingDef>
+	
 	<ThingDef ParentName="ShroomBase">
 		<defName>FarmedMushroom</defName>
 		<label>Patch of Mushrooms</label>
@@ -71,6 +73,7 @@
 			</visualSizeRange>
 		</plant>		
 	</ThingDef>
+	
 	<ThingDef ParentName="ShroomBase">
 		<defName>FarmedMushroomTwo</defName>
 		<label>Patch of Mushrooms</label>
@@ -110,4 +113,6 @@
 			</visualSizeRange>
 		</plant>		
 	</ThingDef>
+	
+	
 </Plants>

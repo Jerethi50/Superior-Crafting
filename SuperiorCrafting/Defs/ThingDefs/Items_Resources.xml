@@ -121,6 +121,25 @@
 		</storeCategories>
 	</ThingDef>
 	
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawShrooms</defName>
+		<label>Mushrooms</label>
+		<description>Wonderful Freshly Picked Mushrooms.</description>
+		<texturePath>Things/Item/Resource/ShroomsRaw</texturePath>
+		<soundInteract>Food_Drop</soundInteract>
+		<soundDrop>Food_Drop</soundDrop>
+		<basePrice>4.0</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatEffect>EatVegetarian</eatEffect>
+			<soundEat>RawVegetable_Eat</soundEat>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+	
 
   <!--=============== Raw Materials ====================-->
   
@@ -160,7 +179,7 @@
   
   
 	<ThingDef ParentName="ResourceBase">
-		<defName>Medicine</defName>
+		<defName>AgaveGel</defName>
 		<label>Agave Gel</label>
 		<description>Healing gel made from the agave plant.</description>
 		<texturePath>Things/Item/Resource/AgaveGel</texturePath>
@@ -220,6 +239,19 @@
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
 		<basePrice>4</basePrice>
+		<storeCategories>
+			<li>Manufactured</li>
+		</storeCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Medicine</defName>
+		<label>Medkit</label>
+		<description>Healing gel made from the agave plant.</description>
+		<texturePath>Things/Item/Resource/Medkit</texturePath>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<basePrice>10</basePrice>
 		<storeCategories>
 			<li>Manufactured</li>
 		</storeCategories>

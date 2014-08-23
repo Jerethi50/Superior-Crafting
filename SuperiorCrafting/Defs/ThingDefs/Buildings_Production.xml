@@ -303,7 +303,6 @@
 		<itemSurface>True</itemSurface>
 		<recipes>
 			<li>MakeAgaveGel</li>
-			<li>makemedicine</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -682,11 +681,11 @@
 			<li>MakeT9</li>
 			<li>MakeL15LMG</li>
 			<li>MakeR4Charged</li>
+			<li>MakeAIChips</li>
 			<li>MakeVestPlate</li>
 			<li>MakePoweredArmor</li>
 			<li>BreakVestPlate</li>
 			<li>BreakPoweredArmor</li>
-			<li>makeaichips</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>

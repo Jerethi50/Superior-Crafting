@@ -182,78 +182,119 @@
 	</ThingDef>
 
 
-	<!--=========================== Decorative ==============================-->
+	<!--=========================== Shrooms ==============================-->
 
 
-	<ThingDef ParentName="PlantBase">
-		<defName>PlantRose</defName>
-		<label>Rose</label>
-		<maxHealth>85</maxHealth>
-		<description>A beautiful cultivated flower.
-Beauty:  Gorgeous</description>
-		<beauty>Gorgeous</beauty>
-		<textureFolderPath>Things/Plant/Rose</textureFolderPath>
-		<overDraw>True</overDraw>
-		<altitudeLayer>Item</altitudeLayer>
-		<selectable>true</selectable>
-		<food>
-			<quality>Plant</quality>
-			<nutrition>20</nutrition>
-		</food>
+	<ThingDef Name="ShroomBase" Abstract="True">
+		<eType>Plant</eType>
+		<category>Plant</category>
+		<thingClass>PlantNight</thingClass>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<flammability>1.0</flammability>
+		<useStandardHealth>True</useStandardHealth>
+		<maxHealth>75</maxHealth>
+		<tickerType>Rare</tickerType>
+		<selectable>False</selectable>
+		<neverMultiSelect>True</neverMultiSelect>
+		<drawerType>MapMeshOnly</drawerType>
+		<baseMaterialType>PlantCutout</baseMaterialType>
 		<plant>
-      <shootsSeeds>false</shootsSeeds>
-      <harvestTag>Food</harvestTag>
-      <harvestDestroys>True</harvestDestroys>
-      <sowWork>400</sowWork>
-      <sowableGround>True</sowableGround>
-      <growMinGlow>Lit</growMinGlow>
-      <topWindExposure>0.1</topWindExposure>
-      <growthPer20kTicks>1.0</growthPer20kTicks>
-      <lifeSpan>140000</lifeSpan>
-      <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
-      <visualSizeRange>
+			<harvestDestroys>true</harvestDestroys>
+			<harvestingSound>Harvest_Standard</harvestingSound>
+			<harvestFinishSound>Harvest_Standard_Finish</harvestFinishSound>
+			<sowWork>150</sowWork>
+			<fertilityMin>0.5</fertilityMin>
+			<fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
+			<topWindExposure>0.3</topWindExposure>
+			<growthPer20kTicks>0.48</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<growMinGlow>Dark</growMinGlow>
+			<seedShootMinGrowthPercent>0.6</seedShootMinGrowthPercent>
+			<visualSizeRange>
 				<min>0.3</min>
-				<max>1.05</max>
+				<max>1.00</max>
 			</visualSizeRange>
 		</plant>
 	</ThingDef>
-
-
-	<ThingDef ParentName="PlantBase">
-		<defName>PlantDaylily</defName>
-		<label>Daylily</label>
+	
+	<ThingDef ParentName="ShroomBase">
+		<defName>FarmedMushroom</defName>
+		<label>Patch of Mushrooms</label>
 		<maxHealth>85</maxHealth>
-		<description>A beautiful cultivated flower.
-Beauty:  Gorgeous</description>
-		<beauty>Gorgeous</beauty>
-		<textureFolderPath>Things/Plant/Daylily</textureFolderPath>
-		<altitudeLayer>Item</altitudeLayer>
+		<description>A Patch of Tasty Mushrooms.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/ShroomPlant</textureFolderPath>
 		<selectable>true</selectable>
+		<pathCost>30</pathCost>
 		<sunShadowInfo>
-			<baseWidth>0.3</baseWidth>
-			<baseHeight>0.3</baseHeight>
-			<tallness>0.3</tallness>
+			<baseWidth>0.19</baseWidth>
+			<baseHeight>0.19</baseHeight>
+			<tallness>0.22</tallness>
 		</sunShadowInfo>
 		<food>
 			<quality>Plant</quality>
-			<nutrition>20</nutrition>
+			<nutrition>40</nutrition>
 		</food>
 		<plant>
-      <shootsSeeds>false</shootsSeeds>
-      <harvestTag>Food</harvestTag>
-      <harvestDestroys>true</harvestDestroys>
-      <sowWork>400</sowWork>
+			<harvestTag>Food</harvestTag>
+			<harvestedThingDef>RawShrooms</harvestedThingDef>
 			<sowableGround>true</sowableGround>
-			<growMinGlow>Lit</growMinGlow>
-			<topWindExposure>0.1</topWindExposure>
-			<growthPer20kTicks>1.0</growthPer20kTicks>
-			<lifeSpan>60000</lifeSpan>
-			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<harvestDestroys>true</harvestDestroys>
+			<harvestYieldRange>
+				<min>4</min>
+				<max>8</max>
+			</harvestYieldRange>
+			<sowableGround>false</sowableGround>
+			<sowableHydroponic>false</sowableHydroponic>
+			<topWindExposure>0.3</topWindExposure>
+			<growthPer20kTicks>0.48</growthPer20kTicks>
+			<lifeSpan>500000</lifeSpan>
+			<fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
 			<visualSizeRange>
-				<min>0.3</min>
-				<max>1.05</max>
+				<min>0.7</min>
+				<max>1.1</max>
 			</visualSizeRange>
-		</plant>
+		</plant>		
+	</ThingDef>
+	
+	<ThingDef ParentName="ShroomBase">
+		<defName>FarmedMushroomTwo</defName>
+		<label>Patch of Mushrooms</label>
+		<maxHealth>85</maxHealth>
+		<description>A Patch of Tasty Mushrooms.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/ShroomPlant</textureFolderPath>
+		<selectable>true</selectable>
+		<pathCost>30</pathCost>
+		<sunShadowInfo>
+			<baseWidth>0.19</baseWidth>
+			<baseHeight>0.19</baseHeight>
+			<tallness>0.22</tallness>
+		</sunShadowInfo>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>40</nutrition>
+		</food>
+		<plant>
+			<harvestTag>Food</harvestTag>
+			<harvestedThingDef>RawShrooms</harvestedThingDef>
+			<sowableGround>true</sowableGround>
+			<harvestDestroys>true</harvestDestroys>
+			<harvestYieldRange>
+				<min>4</min>
+				<max>8</max>
+			</harvestYieldRange>
+			<sowableGround>true</sowableGround>
+			<sowableHydroponic>true</sowableHydroponic>
+			<topWindExposure>0.3</topWindExposure>
+			<growthPer20kTicks>0.48</growthPer20kTicks>
+			<lifeSpan>500000</lifeSpan>
+			<fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
+			<visualSizeRange>
+				<min>0.7</min>
+				<max>1.1</max>
+			</visualSizeRange>
+		</plant>		
 	</ThingDef>
 
 

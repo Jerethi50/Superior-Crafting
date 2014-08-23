@@ -33,7 +33,11 @@ namespace SuperiorCrafting
             DefDatabase<ThingDef>.GetNamed("MealNutrientPaste").food.eatenDirectThought = ThoughtDef.Named("AteSimpleMeal");
             DefDatabase<ThingDef>.GetNamed("MealNutrientPaste").description = ("A replicated meal prepared quickly from one ingredient.  It's almost as good as home cooking!");
             DefDatabase<ThingDef>.GetNamed("MealNutrientPaste").label = ("Replicated Simple Meal");
-            DefDatabase<ThingDef>.GetNamed("MealNutrientPaste").texturePath = ("Things/Item/Meal/Simple");
+            DefDatabase<ThingDef>.GetNamed("MealNutrientPaste").texturePath = ("Salad");
+        }
+        public static void ConstructionIV()
+        {
+            DefDatabase<ThingDef>.GetNamed("WallMetal").texturePath = ("Things/Building/SCWalls/WallMetalUpgrade_Atlas");
         }
     }
 }

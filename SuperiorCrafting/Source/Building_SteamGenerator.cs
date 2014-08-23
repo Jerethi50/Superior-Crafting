@@ -124,7 +124,7 @@ namespace SuperiorCrafting
                 WoodLogInHopper = this.WoodLogInHopper;
                 this.powerComp.powerOutput = 1000f;
                 this.burnDelay = 3600;
-                MoteMaker.ThrowDustPuff(this.Position, 2);
+               MoteMaker.ThrowDustPuff(this.Position, 1);
                 }
             }
         }

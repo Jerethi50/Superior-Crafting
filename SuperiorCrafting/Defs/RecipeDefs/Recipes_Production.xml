@@ -422,7 +422,7 @@
 		</skillGains>
 	</RecipeDef>
 	
-	<!-- <RecipeDef>
+	<RecipeDef>
 		<defName>MakeAgaveGel</defName>
 		<label>Make Agave Gel</label>
 		<description>Make Agave Gel from Raw Agave</description>
@@ -457,7 +457,7 @@
 			<xp>150</xp>
 			</li>
 		</skillGains>
-	</RecipeDef> -->
+	</RecipeDef>
   
   
 <!--============================== Weapon and Armor Smithing ==============================-->
@@ -864,6 +864,58 @@
 			<li>
 				<skill>Crafting</skill>
 				<minLevel>18</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+	
+  	<RecipeDef>
+		<defName>MakeAIChips</defName>
+		<label>Craft AI Chips</label>
+		<description>Craft an AI Chip from sand and silver.</description>
+		<jobString>Making chips.</jobString>
+		<workAmount>3000</workAmount>
+		<workEffect>UseMetalRefinery</workEffect>
+		<sustainerSoundDef>Recipe_ExtractMetalFromSlag</sustainerSoundDef>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Sand</li>
+				</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>Silver</li>
+				</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>AIChips</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+		<thingDefs>
+			<li>Sand</li>
+			<li>Silver</li>
+		</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+		<li>
+			<skill>Crafting</skill>
+			<xp>300</xp>
+		</li>
+		</skillGains>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
 			</li>
 		</skillRequirements>
 	</RecipeDef>

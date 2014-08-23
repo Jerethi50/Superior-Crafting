@@ -75,8 +75,8 @@
 		Max Health:  75</description>
 		<workToBuild>600</workToBuild>
 		<maxHealth>75</maxHealth>
-		<texturePath>Things/Building/Door/DoorWood_Mover</texturePath>
-		<uiIconPath>Things/Building/Door/DoorWood_MenuIcon</uiIconPath>
+		<texturePath>Things/Building/SCDoors/DoorWood_Mover</texturePath>
+		<uiIconPath>Things/Building/SCDoors/DoorWood_MenuIcon</uiIconPath>
 		<constructionEffect>ConstructWood</constructionEffect>
 		<constructionAnimation>WoodTiles</constructionAnimation>
 		<costList>
@@ -96,8 +96,8 @@
 		Max Health:  75</description>
 		<workToBuild>660</workToBuild>
 		<maxHealth>75</maxHealth>
-		<texturePath>Things/Building/Door/DoorWood_Mover</texturePath>
-		<uiIconPath>Things/Building/Door/DoorWood_MenuIcon</uiIconPath>
+		<texturePath>Things/Building/SCDoors/DoorWoodPowered_Mover</texturePath>
+		<uiIconPath>Things/Building/SCDoors/DoorWoodPowered_MenuIcon</uiIconPath>
 		<constructionEffect>ConstructWood</constructionEffect>
 		<constructionAnimation>WoodTiles</constructionAnimation>
 		<costList>

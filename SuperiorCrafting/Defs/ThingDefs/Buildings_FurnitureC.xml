@@ -758,7 +758,7 @@ Beauty:  Nice "Tiny"</description>
 		<comps>
 			<li>
 				<compClass>CompGlower</compClass>
-				<glowRadius>12</glowRadius>
+				<glowRadius>6</glowRadius>
 				<glowColor>(217,112,33,0)</glowColor>
 			</li>
 		</comps>
