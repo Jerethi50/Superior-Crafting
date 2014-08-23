@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+<RecipeDef>
+		<defName>WashRaid</defName>
+		<label>Wash Raider jacket</label>
+		<description>It's generally not safe to put anything with pointy metal things in the wash.
+(Disassembles cloth into jacket and 2 metal)</description>
+		<jobString>Washing.</jobString>
+		<workAmount>300</workAmount>
+		<sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Skull</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Jacket</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>Metal</thingDef>
+				<count>2</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_Skull</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>1</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<RecipeDef>
+<defName>WashTshirt</defName>
+		<label>Wash a T-Shirt</label>
+		<description>Washing clothes won't possibly result in them coming out with same color they used to have.</description>
+		<jobString>Washing.</jobString>
+		<workAmount>300</workAmount>
+		<sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_BasicShirt</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_BasicShirt</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_BasicShirt</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>0</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+<RecipeDef>
+<defName>WashCollar</defName>
+		<label>Wash a button shirt</label>
+		<description>Washing clothes won't possibly result in them coming out with same color they used to have.</description>
+		<jobString>Washing.</jobString>
+		<workAmount>300</workAmount>
+		<sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_CollarShirt</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_CollarShirt</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_CollarShirt</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>0</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<RecipeDef>
+<defName>WashDuster</defName>
+		<label>Wash a Duster</label>
+		<description>these need washing often, the lower edges of this garment gathers a lot of dirt along the way.
+Washing clothes won't possibly result in them coming out with same color they used to have.
+possibly won't come out with the same color ir used to have.</description>
+		<jobString>Washing.</jobString>
+		<workAmount>300</workAmount>
+		<sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Duster</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Duster</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_Duster</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>0</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<RecipeDef>
+<defName>WashJack</defName>
+		<label>Wash a vest</label>
+		<description>Being often stained in blood, these kind of vests could use good scrubbing.
+Careful though! Washing clothes won't possibly result in them coming out with same color they used to have.
+possibly won't come out with the same color ir used to have.</description>
+		<jobString>Washing.</jobString>
+		<workAmount>300</workAmount>
+		<sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Jacket</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Jacket</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_Jacket</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>0</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<RecipeDef>
+<defName>WashSock</defName>
+		<label>Quick Wash Program</label>
+		<description>The most careless of all washing pre-sets. This is how all the socks vanish
+(Used for disposal of excess cloth scraps)</description>
+		<jobString>Opening the portal to oblivion.</jobString>
+		<workAmount>50</workAmount>
+		<sustainerSoundDef>Recipe_CookMeal</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Textile</li>
+						<li>Hyperweave</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+		</products>
+		<fixedIngredientFilter>
+					<thingDefs>
+						<li>Textile</li>
+						<li>Hyperweave</li>
+					</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>0</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+</RecipeDefs>

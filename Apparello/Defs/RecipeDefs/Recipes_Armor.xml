@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>MakeHA</defName>
+		<label>Assemble Hive Armor</label>
+		<description>Crafts piece of armor from mechanoid parts</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>1800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HiveSchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Hexcell</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_ha</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>HiveSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>HiveSchem</li>
+				<li>Hexcell</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeHiveHelmet</defName>
+		<label>Assemble Hive Helmet</label>
+		<description>Crafts piece of armor from mechanoid parts</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>1800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HiveHelmSchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Hexcell</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Hivehelm</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>HiveHelmSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>HiveHelmSchem</li>
+				<li>Hexcell</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<!--  -->
+
+
+
+<RecipeDef>
+		<defName>MakeScy</defName>
+		<label>Assemble Scyther frame</label>
+		<description>Crafts piece of armor from mechanoid parts</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>700</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ScySchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Hexcell</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Scy</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>ScySchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>ScySchem</li>
+				<li>Hexcell</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<!-- -->
+
+<RecipeDef>
+		<defName>MakeSteamhull</defName>
+		<label>Assemble Steamhull</label>
+		<description>Combine Hive armor and Scyther frame for slightly weaker but more mobile version of Hive armor</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>900</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Scy</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_ha</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Steamhull</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_ha</li>
+				<li>Apparel_Scy</li>
+
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+
+<!-- -->
+
+<RecipeDef>
+		<defName>CraftRaid</defName>
+		<label>Craft Raider jacket</label>
+		<description>upgrades piece of armor from vest and some metal</description>
+		<jobString>Crafting.</jobString>
+		<workAmount>800</workAmount>
+		<workEffect>CutStone</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_Jacket</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Skull</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>Apparel_Jacket</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>10</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<!-- -->
+
+<RecipeDef>
+		<defName>CraftSheet</defName>
+		<label>Craft Metal Sheet</label>
+		<description>Crafts wearable metal sheet.</description>
+		<jobString>Crafting.</jobString>
+		<workAmount>800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Sheet</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>100</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<RecipeDef>
+		<defName>CraftMojo</defName>
+		<label>Craft Tribal Mask</label>
+		<description>Crafts wearable Mask.</description>
+		<jobString>Crafting.</jobString>
+		<workAmount>800</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Mojo</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>50</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+<!-- DISASSEMBLING RECIPES -->
+
+<RecipeDef>
+		<defName>MakeHexcell</defName>
+		<label>Disassemble Power armor</label>
+		<description>Disassemble powerarmor for it's powersource</description>
+		<jobString>Dissing Powerarmor. (They're overrated!)</jobString>
+		<workAmount>700</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_PowerArmor</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+
+
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Hexcell</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>Metal</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Apparel_PowerArmor</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>15</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<!-- Glitterworlds armor -->
+
+	<RecipeDef>
+		<defName>MakeGSkin</defName>
+		<label>Craft jumpsuit</label>
+		<description>Crafts a jumpsuit.</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>1800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Hyperweave</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GlitterSchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Gskin</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>GlitterSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Hyperweave</li>
+				<li>GlitterSchem</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>180</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGSpot</defName>
+		<label>Craft Alloy vest</label>
+		<description>Crafts an vest made of alloys.</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>1800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GlitterSchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Gspot</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>GlitterSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>GlitterSchem</li>
+				<li>Silver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>180</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGShell</defName>
+		<label>Assemble powered light armor.</label>
+		<description>Crafts powered light infantry armor.</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>1800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GlitterSchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Gshell</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>GlitterSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>GlitterSchem</li>
+				<li>Silver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>180</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeLPow</defName>
+		<label>Assemble Light power helmet</label>
+		<description>Crafts light infantry powered helmet.</description>
+		<jobString>Assembling.</jobString>
+		<workAmount>1800</workAmount>
+		<workEffect>Repair</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GlitterSchem</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_LPow</thingDef>
+				<count>1</count>
+			</li>
+			<li>
+				<thingDef>GlitterSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+				<li>GlitterSchem</li>
+				<li>Silver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>180</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeMohat</defName>
+		<label>Craft Raider Light power helmet</label>
+		<description>Crafts light infantry powered helmet. With raidery flair</description>
+		<jobString>Crafting.</jobString>
+		<workAmount>800</workAmount>
+		<workEffect>CutStone</workEffect>
+    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>
+    <ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Textile</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Apparel_LPow</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>Apparel_Mohat</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Textile</li>
+				<li>Apparel_LPow</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>50</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+</RecipeDefs>

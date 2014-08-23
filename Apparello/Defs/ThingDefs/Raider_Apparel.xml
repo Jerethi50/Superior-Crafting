@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="ApparelBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<eType>Apparel</eType>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useStandardHealth>True</useStandardHealth>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<storeCategories>
+			<li>Apparel</li>
+		</storeCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Skull</defName>
+		<label>Raider Jacket</label>
+    <description>Your basic jacket modified with crude shoulderpads and spikes.</description>
+     <texturePath>BaseTextureModifications/Raiderjack/Jacket</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.09</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.09</absorption>
+				</li>
+				<li>
+					<injuryDef>Cut</injuryDef>
+					<absorption>0.06</absorption>
+				</li>
+				<li>
+					<injuryDef>Stab</injuryDef>
+					<absorption>0.06</absorption>
+				</li>
+				<li>
+					<injuryDef>Gunshot</injuryDef>
+					<absorption>0.03</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.04</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.06</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>-0.04</moveSpeed>
+			<graphicPath>BaseTextureModifications/Raiderjack/Jacket</graphicPath>
+			<layers>
+			    <li>Shell</li>
+			</layers>
+			<commonality>100</commonality>
+			<tags>
+				<li>Raider</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.60,0.25,0.10,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.6,0.45,0.18,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.80,0.70,0.80,1)</only>
+				</li>
+				<li>
+					<weight>15</weight>
+					<only>RGBA(0.40,0.40,0.40,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.0,0.80,1,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(0.80,0.80,0.80,1)</max>
+					<min>RGBA(0.50,0.50,0.50,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Sheet</defName>
+		<label>Metal Sheet</label>
+    <description>Crude metal sheet for added protection.</description>
+     <texturePath>Sheet/lp</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Burn</injuryDef>
+					<absorption>0.05</absorption>
+				</li>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.15</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.15</absorption>
+				</li>
+				<li>
+					<injuryDef>Cut</injuryDef>
+					<absorption>0.20</absorption>
+				</li>
+				<li>
+					<injuryDef>Stab</injuryDef>
+					<absorption>0.20</absorption>
+				</li>
+				<li>
+					<injuryDef>Gunshot</injuryDef>
+					<absorption>0.15</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.5</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.5</absorption>
+				</li>
+				<li>
+				  <injuryDef>Crack</injuryDef>
+				  <absorption>0.2</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>-0.06</moveSpeed>
+			<graphicPath>Sheet/lp</graphicPath>
+			<layers>
+			    <li>Middle</li>
+			</layers>
+			<commonality>25</commonality>
+			<tags>
+				<li>Raider</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(1,1,1,1)</max>
+					<min>RGBA(0.33,0.33,0.33,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+</ThingDefs>

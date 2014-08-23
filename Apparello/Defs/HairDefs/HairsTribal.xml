@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-HairDef>
+  
+<HairDef>
+    <label>Tribal Tattoo</label>
+    <hairGender>Any</hairGender>
+    <graphicPath>Hairs/TribalPaint</graphicPath>
+    <defName>TribalTattoo</defName>
+		<hairTags>
+			<li>Tribal</li>
+		</hairTags>
+  </HairDef>
+
+<HairDef>
+    <label>Skull Tattoo</label>
+    <hairGender>Any</hairGender>
+    <graphicPath>Hairs/SkullPaint</graphicPath>
+    <defName>SkullTattoo</defName>
+		<hairTags>
+			<li>Tribal</li>
+		</hairTags>
+  </HairDef>
+ 
+</DefPackage-HairDef>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="ApparelBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<eType>Apparel</eType>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useStandardHealth>True</useStandardHealth>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<storeCategories>
+			<li>Apparel</li>
+		</storeCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_ha</defName>
+		<label>Hive Armor</label>
+    <description>Constructed of disassembled centipede. This extremely bulky armor is nigh indestructable. The Sheer weight of this piece of armor drastically hinders mobility</description>
+     <texturePath>HA/ha</texturePath>
+		<apparel>
+				<damageAbsorption>
+				<li>
+					<injuryDef>Burn</injuryDef>
+					<absorption>1</absorption>
+				</li>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.80</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.70</absorption>
+				</li>
+				<li>
+					<injuryDef>Cut</injuryDef>
+					<absorption>0.70</absorption>
+				</li>
+				<li>
+					<injuryDef>Stab</injuryDef>
+					<absorption>0.50</absorption>
+				</li>
+				<li>
+					<injuryDef>Gunshot</injuryDef>
+					<absorption>0.80</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.80</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.90</absorption>
+				</li>
+				<li>
+				  <injuryDef>Crack</injuryDef>
+				  <absorption>0.80</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>-0.80</moveSpeed>
+			<graphicPath>HA/ha</graphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>0</commonality>
+			<tags>
+				<li>CraftedArmor</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+				<li>
+					<weight>5</weight>
+					<max>RGBA(1,1,1,1)</max>
+					<min>RGBA(0.30,0.30,0.30,1)</min>
+				</li>				
+			</options>
+		</colorGenerator>
+
+	</ThingDef>
+
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Scy</defName>
+		<label>Scyther frame</label>
+    <description>Mobility enhancing wireframe fashioned of dismantled scyther. Warning! Due to awkward adaptation to human bodystructure long usage may cause major muscle strains.
+Wearer will be rendered susceptible to unwanted side-effects including but not limited to; Complete loss of motor functions, Motion sickness, and nose bleed.</description>
+     <texturePath>Scy/Scy</texturePath>
+		<apparel>
+      <damageAbsorption>
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0</absorption>
+        </li>
+      </damageAbsorption>
+			<moveSpeed>+0.30</moveSpeed>
+			<graphicPath>Scy/Scy</graphicPath>
+			<layers>
+			    	<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>25</commonality>
+			<tags>
+				<li>CraftedArmor</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+				<li>
+					<weight>5</weight>
+					<max>RGBA(1,1,1,1)</max>
+					<min>RGBA(0.30,0.30,0.30,1)</min>
+				</li>				
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Steamhull</defName>
+		<label>Steamhull</label>
+    <description>Combination of mobility enhancing components of the Scyther frame and heavy plating of the Hive armor.
+The increased energy consumption from the added scyther frame servos has forced the shock dampeners work on lesser capacity
+thus rendering the wearer more vulnerable to injuries but the higher mobility under combat situations is well worth it.</description>
+     <texturePath>Steamhull/Steamhull</texturePath>
+		<apparel>
+			      <damageAbsorption>
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0.85</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0.70</absorption>
+        </li>
+      </damageAbsorption>
+			<moveSpeed>-0.45</moveSpeed>
+			<graphicPath>Steamhull/Steamhull</graphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>0</commonality>
+			<tags>
+				<li>CraftedArmor</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+				<li>
+					<weight>5</weight>
+					<max>RGBA(1,1,1,1)</max>
+					<min>RGBA(0.30,0.30,0.30,1)</min>
+				</li>
+				
+			</options>
+		</colorGenerator>
+
+	</ThingDef>
+
+</ThingDefs>

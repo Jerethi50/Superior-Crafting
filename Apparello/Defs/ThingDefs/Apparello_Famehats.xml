@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="ApparelBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <eType>Apparel</eType>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <maxHealth>100</maxHealth>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <storeCategories>
+      <li>Apparel</li>
+    </storeCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+<!-- Doom, Marine -->
+
+ <ThingDef ParentName="ApparelBase">
+    <defName>Apparel_Doom</defName>
+    <label>Marine helmet</label>
+	<description>The B4D-455 class infantry helmet used by the marines in the Mars incident. The production of these were since discontinued. A real relic of distant past</description>
+    <texturePath>Hats/Display/Doom</texturePath>
+    <apparel>
+      <damageAbsorption>
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.35</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0.25</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+      </damageAbsorption>
+      <moveSpeed>-0.04</moveSpeed>
+      <graphicPath>Hats/Doom</graphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>40</commonality>
+      <tags>
+        <li>Helmet</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.80,0.80,0.80,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+<!-- Mass Effect, Tali Zorah -->  
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>Apparel_Meffect</defName>
+    <label>Enviro-Headgear</label>
+	<description>Warm and cozy and most importantly airtight headgear designed for deep-space explorers to combat the hostile bacteria on uninhabitable planets</description>
+    <texturePath>Hats/Display/Tali</texturePath>
+    <apparel>
+      <damageAbsorption>
+<!-- Superpirson's compatibility bit below -->
+ <li>
+          <injuryDef>ExtendedInjuriesPoisoned</injuryDef>
+          <absorption>1.0</absorption>
+ </li>
+<!-- Superpirson's compatibility bit above -->
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.35</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0.25</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+      </damageAbsorption>
+      <moveSpeed>-0.04</moveSpeed>
+      <graphicPath>Hats/Tali</graphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>0.05</commonality>
+      <tags>
+        <li>Helmet</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.80,0.80,0.80,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+
+<!-- League of Legends, Master Yi (Close enough, anyway) -->
+
+ <ThingDef ParentName="ApparelBase">
+    <defName>Apparel_Yi</defName>
+    <label>Infiltrator Headgear</label>
+	<description>Equipped with very intricate target tracking system and pathing analyzer. The headgear was very popular among assassins and spies of all kinds. It's a real shame the type of batteries used in this haven't been manufactured in decades.</description>
+    <texturePath>Hats/Display/Yipot</texturePath>
+    <apparel>
+      <damageAbsorption>
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.35</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0.25</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+      </damageAbsorption>
+      <moveSpeed>-0.04</moveSpeed>
+      <graphicPath>Hats/Yipot</graphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>0.01</commonality>
+      <tags>
+        <li>Helmet</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.6,1,0.6,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.80,0.40,0.80,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(1,0.7,0.7,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(1,1,0.7,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+<!-- Borderlands, Psycho -->  
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>Apparel_Psymask</defName>
+    <label>Psy Co. Gasmask™</label>
+	<description>The Psy Company's Gasmask has to be their most profiting product of all times. 
+It's built in vision sensor technology allowed the wearer to operate in thickest of toxic clouds and more importantly, survive.</description>
+    <texturePath>Hats/Display/Psymask</texturePath>
+    <apparel>
+      <damageAbsorption>
+<!-- Superpirson's compatibility bit below -->
+ <li>
+          <injuryDef>ExtendedInjuriesPoisoned</injuryDef>
+          <absorption>1.0</absorption>
+ </li>
+<!-- Superpirson's compatibility bit above -->
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.35</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0.25</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.7</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0.3</absorption>
+        </li>
+      </damageAbsorption>
+      <moveSpeed>-0.04</moveSpeed>
+      <graphicPath>Hats/Psymask</graphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>0.01</commonality>
+      <tags>
+        <li>Helmet</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.80,0.80,0.80,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+
+<!-- Psychonauts, Razputin -->
+
+<ThingDef ParentName="ApparelBase">
+    <defName>Apparel_Raz</defName>
+    <label>Joywirer's Cap</label>
+	<description>Hardened leather and snazzy goggles. it's almost as if you could pilot your way through someone's psyche with this cap equipped!</description>
+    <texturePath>Hats/Display/Raznaut</texturePath>
+    <apparel>
+      <damageAbsorption>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+      </damageAbsorption>
+      <graphicPath>Hats/Raznaut</graphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>10</commonality>
+      <tags>
+        <li>HatCivilian</li>
+      </tags>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.8,0.8,0.8,1)</only>
+        </li>
+        <li>
+          <weight>12</weight>
+          <only>RGBA(1,1,1,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+</ThingDefs>

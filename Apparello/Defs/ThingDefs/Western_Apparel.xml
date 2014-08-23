@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="ApparelBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<eType>Apparel</eType>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useStandardHealth>True</useStandardHealth>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<storeCategories>
+			<li>Apparel</li>
+		</storeCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Ponpon</defName>
+		<label>Poncho</label>
+    <description>Gunslinger's second best friend, Right after the sixshooter and Ten-Gallon Stetson! No, wait make that the third best.</description>
+     <texturePath>Poncho/Ponpon</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.07</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.07</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.07</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.07</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>-0.01</moveSpeed>
+			<graphicPath>Poncho/Ponpon</graphicPath>
+			<layers>
+			    <li>Shell</li>
+			</layers>
+			<commonality>50</commonality>
+			<tags>
+				<li>Duster</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.80,0.45,0,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,0.20,0,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,0.90,1,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.60,0.40,0.40,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0,0.80,1,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(0.80,0.75,0.75,1)</max>
+					<min>RGBA(0.60,0.50,0.50,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Brocade</defName>
+		<label>Brocade Vest</label>
+    <description>Always keep calm and collected. And wear brocade.</description>
+     <texturePath>Brocade/Broc</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.03</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.04</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.04</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.04</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>0</moveSpeed>
+			<graphicPath>Brocade/Broc</graphicPath>
+			<layers>
+			    <li>Middle</li>
+			</layers>
+			<commonality>50</commonality>
+			<tags>
+				<li>ArmorVest</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.40,0.40,0.40,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(1,0.50,0.50,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.60,0.40,0.40,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0,0.80,1,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(0.80,0.75,0.75,1)</max>
+					<min>RGBA(0.60,0.50,0.50,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Suspender</defName>
+		<label>Stablehand Trousers</label>
+    <description>Ain't a chap on earf lookin' as honest as one wearin' these.</description>
+     <texturePath>Suspenders/Suspenders</texturePath>
+		<apparel>
+<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.01</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.04</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.03</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.01</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>0</moveSpeed>
+			<graphicPath>Suspenders/Suspenders</graphicPath>
+			<layers>
+			    <li>Middle</li>
+			</layers>
+			<commonality>50</commonality>
+			<tags>
+				<li>ArmorVest</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.4,0.3,0.15,1)</only>
+				</li>
+				<li>
+					<weight>15</weight>
+					<only>RGBA(0.6,0.45,0.18,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.8,0.6,0.23,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(1,1,0.90,1)</max>
+					<min>RGBA(1,0.90,0.75,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+</ThingDefs>

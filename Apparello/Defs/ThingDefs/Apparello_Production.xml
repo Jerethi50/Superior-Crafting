@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundBulletHit>BulletImpactMetal</soundBulletHit>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <surfaceNeeded>Light</surfaceNeeded>
+    <constructionEffect>ConstructMetal</constructionEffect>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <!-- ========================= Work tables ========================== -->
+
+
+  <ThingDef ParentName="BuildingBase">
+    <DefName>TableAdvancedArmor</DefName>
+   <EType>Building_WorkTable</EType>
+    <Label>Armor assembly</Label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A table and tools for assembling advanced armor. 
+
+The words "Singer Mark 8000 Deluxe (limited edition)" is inscribed on the side, Nobody knows why.</Description>
+    <TexturePath>Tables/AssemblyTable</TexturePath>
+    <CostList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>50</count>
+      </li>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <WorkToBuild>800</WorkToBuild>
+    <UseStandardHealth>True</UseStandardHealth>
+    <maxHealth>180</maxHealth>
+    <Size>(1,1)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      	<li>MakeHA</li>
+	<li>MakeScy</li>
+	<li>MakeSteamhull</li>
+	<li>MakeHiveHelmet</li>
+	<li>MakeGSkin</li>
+	<li>MakeGSpot</li>
+	<li>MakeGShell</li>
+	<li>MakeLPow</li>
+	<li>MakeHexcell</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>200</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>5</glowRadius>
+        <glowColor>(0,0,0,0)</glowColor>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>AdvancedArmor</researchPrerequisite>
+  </ThingDef>
+
+
+<!-- Basic armor -->
+
+
+<ThingDef ParentName="BuildingBase">
+    <DefName>TableBasicArmor</DefName>
+   <EType>Building_WorkTable</EType>
+    <Label>Armor Workbench</Label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A table and tools for crafting armor.</Description>
+    <TexturePath>Tables/SewingTable</TexturePath>
+    <CostList>
+      <li>
+        <thingDef>WoodLog</thingDef>
+        <count>25</count>
+      </li>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <WorkToBuild>1000</WorkToBuild>
+    <UseStandardHealth>True</UseStandardHealth>
+    <maxHealth>180</maxHealth>
+    <Size>(2,1)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      	<li>CraftRaid</li>
+	<li>CraftSheet</li>
+	<li>CraftMojo</li>
+	<li>MakeMohat</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+           <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>BasicArmor</researchPrerequisite>
+  </ThingDef>
+
+<!-- Washer -->
+
+<ThingDef ParentName="BuildingBase">
+    <DefName>washer</DefName>
+   <EType>Building_WorkTable</EType>
+    <Label>Washing machine</Label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>Washing machine for cleaning (mostly recoloring) clothes.</Description>
+    <TexturePath>Tables/Washmachine</TexturePath>
+    <CostList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>20</count>
+      </li>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <WorkToBuild>1000</WorkToBuild>
+    <UseStandardHealth>True</UseStandardHealth>
+    <maxHealth>180</maxHealth>
+    <Size>(1,1)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Misc</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>False</itemSurface>
+    <recipes>
+      	<li>WashRaid</li>
+      	<li>WashJack</li>
+      	<li>WashDuster</li>
+      	<li>WashCollar</li>
+      	<li>WashTshirt</li>
+	<li>WashSock</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>150</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>5</glowRadius>
+        <glowColor>(0,0,0,0)</glowColor>
+      </li>
+    </comps>
+       <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>BasicArmor</researchPrerequisite>
+  </ThingDef>
+
+<!-- Schematics table -->
+
+<ThingDef ParentName="BuildingBase">
+    <DefName>TableSchem</DefName>
+   <EType>Building_ResearchBench</EType>
+    <Label>Schematics Workbench</Label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A table and tools for drawing schematics.</Description>
+    <TexturePath>Tables/SchematicTable</TexturePath>
+    <CostList>
+      <li>
+        <thingDef>WoodLog</thingDef>
+        <count>25</count>
+      </li>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <WorkToBuild>1000</WorkToBuild>
+    <UseStandardHealth>True</UseStandardHealth>
+    <maxHealth>180</maxHealth>
+    <Size>(1,2)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(-1,0,0)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+	<li>MakeSchemKit</li>
+      	<li>MakeScySchem</li>
+	<li>MakeHiveSchem</li>
+	<li>MakeHiveHelmetSchem</li>
+	<li>MakeGlitterSchem</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+           <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>AdvancedArmor</researchPrerequisite>
+  </ThingDef>
+
+<!-- Schematic Shelf -->
+
+ <ThingDef ParentName="BuildingBase">
+    <defName>SchemRack</defName>
+    <eType>BuildingComplex</eType>
+    <label>Schematic shelf</label>
+    <thingClass>Building_Storage</thingClass>
+    <texturePath>Tables/SchemRack</texturePath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>False</castEdgeShadows>
+    <maxHealth>100</maxHealth>
+    <flammability>1.0</flammability>
+    <description>Haulers carry schematics here for storage.</description>
+    <size>(4,1)</size>
+    <workToBuild>580</workToBuild>
+    <costList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>40</count>
+      </li>
+    </costList>
+    <overdraw>False</overdraw>
+    <killedLeavings>
+      <li>
+        <thingDef>ChunkSlag</thingDef>
+        <count>1</count>
+      </li>
+    </killedLeavings>
+    <filthLeavings>
+      <li>
+        <thingDef>SlagRubble</thingDef>
+        <count>4</count>
+      </li>
+    </filthLeavings>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <allowances>
+          <categories>
+            <li>Schematic</li>
+          </categories>
+        </allowances>
+      </fixedStorageSettings> 
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <itemSurface>true</itemSurface>
+  </ThingDef>
+
+<!-- Hyper Loom -->
+
+<ThingDef ParentName="BuildingBase">
+    <DefName>TableLoom</DefName>
+   <EType>Building_WorkTable</EType>
+    <Label>Tailor's Workstation</Label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>Loom and various advanced tailors' equipment.</Description>
+    <TexturePath>Tables/Loom</TexturePath>
+    <CostList>
+      <li>
+        <thingDef>Metal</thingDef>
+        <count>95</count>
+      </li>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <WorkToBuild>1100</WorkToBuild>
+    <UseStandardHealth>True</UseStandardHealth>
+    <maxHealth>200</maxHealth>
+    <Size>(3,2)</Size>
+    <Overdraw>False</Overdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionSquare>True</hasInteractionSquare>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      	<li>MakeTextile</li>
+	<li>MakeHyperWeave</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>200</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>5</glowRadius>
+        <glowColor>(0,0,0,0)</glowColor>
+      </li>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisite>AdvancedArmor</researchPrerequisite>
+  </ThingDef>
+
+</ThingDefs>

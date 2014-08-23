@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>MakeScySchem</defName>
+		<label>Schematic: Scyther Frame</label>
+		<description>Design construction plans for Scyther frame.</description>
+		<jobString>Scheming... (Mwee hee hee!) *Lightning strikes*</jobString>
+		<workAmount>7000</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SchemKit</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+	</ingredients>
+		<products>
+			<li>
+				<thingDef>ScySchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SchemKit</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Research</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>MakeHiveSchem</defName>
+		<label>Schematic: Hive armor</label>
+		<description>Design construction plans for Hive armor.</description>
+		<jobString>Scheming... and daydreaming.</jobString>
+		<workAmount>7000</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SchemKit</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+	</ingredients>
+		<products>
+			<li>
+				<thingDef>HiveSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SchemKit</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Research</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>MakeSchemKit</defName>
+		<label>Craft Schematic kit</label>
+		<description>Craft Schematic kit</description>
+		<jobString>Scheming... and being crafty!</jobString>
+		<workAmount>500</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Metal</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+	</ingredients>
+		<products>
+			<li>
+				<thingDef>SchemKit</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Metal</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>80</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeHiveHelmetSchem</defName>
+		<label>Schematic: Hive helmet</label>
+		<description>Design construction plans for Hive helmet.</description>
+		<jobString>Scheming...</jobString>
+		<workAmount>7000</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SchemKit</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+	</ingredients>
+		<products>
+			<li>
+				<thingDef>HiveHelmSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SchemKit</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Research</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+<RecipeDef>
+		<defName>MakeGlitterSchem</defName>
+		<label>Schematic bundle: Light infantry armor</label>
+		<description>Design construction plans for Light infantry armor.</description>
+		<jobString>Scheming... (Bit of glitter heeere.. bit of glitter theeere..)</jobString>
+		<workAmount>7000</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SchemKit</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+	</ingredients>
+		<products>
+			<li>
+				<thingDef>GlitterSchem</thingDef>
+				<count>1</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SchemKit</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Research</skill>
+				<xp>250</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+</RecipeDefs>

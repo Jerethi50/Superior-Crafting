@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="ApparelBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <eType>Apparel</eType>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useStandardHealth>True</useStandardHealth>
+    <maxHealth>100</maxHealth>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <storeCategories>
+      <li>Apparel</li>
+    </storeCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+<ThingDef ParentName="ApparelBase">
+    <defName>Apparel_Vipergas</defName>
+    <label>Gasmask Mark 5</label>
+	<description>The 'Lefant Industries' Gasmask (Or the "Elephant mask" as it is more commonly known as) was heavily used by the most military outfits, until one very fatal design flaw was found.
+The air filters would get caught in closing elevator hatches and ladder steps or rungs while descending.</description>
+    <texturePath>AdditionalTextures/ViperlolsGasmask</texturePath>
+    <apparel>
+      <damageAbsorption>
+<!-- Superpirson's compatibility bit below -->
+ <li>
+          <injuryDef>ExtendedInjuriesPoisoned</injuryDef>
+          <absorption>1.0</absorption>
+ </li>
+<!-- Superpirson's compatibility bit above -->
+        <li>
+          <injuryDef>Burn</injuryDef>
+          <absorption>0.03</absorption>
+        </li>
+        <li>
+          <injuryDef>Bruise</injuryDef>
+          <absorption>0.15</absorption>
+        </li>
+        <li>
+          <injuryDef>Shredded</injuryDef>
+          <absorption>0.25</absorption>
+        </li>
+        <li>
+          <injuryDef>Cut</injuryDef>
+          <absorption>0.2</absorption>
+        </li>
+        <li>
+          <injuryDef>Stab</injuryDef>
+          <absorption>0.2</absorption>
+        </li>
+        <li>
+          <injuryDef>Gunshot</injuryDef>
+          <absorption>0.20</absorption>
+        </li>
+        <li>
+          <injuryDef>Scratch</injuryDef>
+          <absorption>0.6</absorption>
+        </li>
+        <li>
+          <injuryDef>Bite</injuryDef>
+          <absorption>0.6</absorption>
+        </li>
+        <li>
+          <injuryDef>Crack</injuryDef>
+          <absorption>0.2</absorption>
+        </li>
+      </damageAbsorption>
+      <moveSpeed>-0.04</moveSpeed>
+      <graphicPath>AdditionalTextures/ViperlolsGasmask</graphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>40</commonality>
+      <tags>
+        <li>Helmet</li>
+      </tags>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.80,0.80,0.80,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+</ThingDefs>

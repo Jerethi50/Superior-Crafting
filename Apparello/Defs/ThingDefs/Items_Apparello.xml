@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameData>
+
+
+  <ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComponents</thingClass>
+    <label>Unspecified resource</label>
+    <category>Item</category>
+    <eType>Item</eType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <tradersCarry>false</tradersCarry>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <beauty>Neutral</beauty>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>True</rotatable>
+    <pathCost>0</pathCost>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Hexcell</defName>
+    <label>Hex-Cell</label>
+    <description>A compact energy storing device, generally used for powering advanced weaponry or the shock absorbers in powered armor</description>
+    <texturePath>Tables/HexCell</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>4</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>100</maxHealth>
+    <storeCategories>
+      <li>Items</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Textile</defName>
+    <label>Textile</label>
+    <description>A scrap of cloth, useful for simple tailoring.</description>
+    <texturePath>Tables/TextileScrap</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <basePrice>1</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>100</maxHealth>
+    <storeCategories>
+      <li>Items</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Hyperweave</defName>
+    <label>Hyperweave</label>
+    <description>Hyperweave, Highly advanced space-age clothing material.</description>
+    <texturePath>Tables/Hyperweave</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <basePrice>3</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>100</maxHealth>
+    <storeCategories>
+      <li>Items</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+  <!--=============== Schematics ====================-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ScySchem</defName>
+    <label>Schematic: Scyther frame</label>
+    <description>Schematic required for the construction of Scyther frame</description>
+    <texturePath>Tables/Schematic2</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>5</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <storeCategories>
+      <li>Schematic</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>HiveSchem</defName>
+    <label>Schematic: Hive armor</label>
+    <description>Schematic required for the construction of Hive armor</description>
+    <texturePath>Tables/Schematic</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>5</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <storeCategories>
+      <li>Schematic</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+    <defName>HiveHelmSchem</defName>
+    <label>Schematic: Hive helmet</label>
+    <description>Schematic required for the construction of Hive helmet</description>
+    <texturePath>Tables/Schematic3</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>5</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <storeCategories>
+      <li>Schematic</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>SchemKit</defName>
+    <label>Schematic kit</label>
+    <description>Tools required for making schematics </description>
+    <texturePath>Tables/SchematicsKit</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>5</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <storeCategories>
+      <li>Schematic</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GlitterSchem</defName>
+    <label>Schematic bundle: Light infantry armor</label>
+    <description>Schematic required for the construction of all pieces of light infantry armor</description>
+    <texturePath>Tables/SchematicGlitter</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>5</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <storeCategories>
+      <li>Schematic</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+<!-- WIP schematics
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>AdvSchem</defName>
+    <label>Schematic: ???</label>
+    <description>Schematic required for the construction of ???</description>
+    <texturePath>Tables/Schematic</texturePath>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <basePrice>5</basePrice>
+    <useStandardHealth>true</useStandardHealth>
+    <maxHealth>15</maxHealth>
+    <storeCategories>
+      <li>Schematic</li>
+    </storeCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+  </ThingDef>
+
+-->
+
+</GameData>

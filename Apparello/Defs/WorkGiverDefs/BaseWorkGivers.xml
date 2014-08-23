@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+  <WorkGiverDef>
+    <defName>DoBillsAssemble</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>120</priorityInType>
+    <workTableDef>TableAdvancedArmor</workTableDef>
+    <verb>Assemble</verb>
+    <gerund>Assembling</gerund>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>DoBillsbAsarmor</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>120</priorityInType>
+    <workTableDef>TableBasicArmor</workTableDef>
+    <verb>Craft</verb>
+    <gerund>Crafting</gerund>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>DoBillsApparelloTailoring</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <workTableDef>TableLoom</workTableDef>
+    <verb>Tailor</verb>
+    <gerund>Tailoringing</gerund>
+  </WorkGiverDef>
+
+
+<WorkGiverDef>
+    <defName>DoBillsWash</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>5</priorityInType>
+    <workTableDef>washer</workTableDef>
+    <verb>Wash</verb>
+    <gerund>Washing</gerund>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>DoBillsScheme</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Research</workType>
+    <priorityInType>15</priorityInType>
+    <workTableDef>TableSchem</workTableDef>
+    <verb>Scheme</verb>
+    <gerund>Scheming</gerund>
+  </WorkGiverDef>
+
+</WorkGivers>

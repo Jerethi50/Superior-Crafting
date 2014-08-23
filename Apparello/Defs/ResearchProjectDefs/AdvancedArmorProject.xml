@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>AdvancedArmor</defName>
+		<label>Advanced Armoring</label>
+		<description>Allows you to assemble various suits of armor using the Armor assembly
+And to scrap old apparel into textiles, used for creation of Hyperweave</description>
+		<totalCost>17000</totalCost>
+		<prerequisites>
+		<li>Machining</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BasicArmor</defName>
+		<label>Basic Armoring</label>
+		<description>Allows you to craft various pieces of armor</description>
+		<totalCost>11000</totalCost>
+		<prerequisites>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-HairDef>
+  
+<HairDef>
+    <label>Wolf</label>
+    <hairGender>Male</hairGender>
+    <graphicPath>Hairs/Wolf</graphicPath>
+    <defName>Wulf</defName>
+		<hairTags>
+			<li>Urban</li>
+			<li>Punk</li>
+			<li>Rural</li>
+		</hairTags>
+  </HairDef>
+
+<HairDef>
+    <label>Senorita</label>
+    <hairGender>Female</hairGender>
+    <graphicPath>Hairs/Senorita</graphicPath>
+    <defName>Wolf</defName>
+		<hairTags>
+			<li>Urban</li>
+			<li>Rural</li>
+		</hairTags>
+  </HairDef>
+ 
+</DefPackage-HairDef>

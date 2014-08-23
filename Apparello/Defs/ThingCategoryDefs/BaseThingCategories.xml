@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+
+
+  <ThingCategoryDef>
+    <defName>Root</defName>
+    <label>Root</label>
+  </ThingCategoryDef>
+
+
+  
+
+  <ThingCategoryDef>
+    <defName>Schematic</defName>
+    <label>Schematics</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+
+</ThingCategoryDefs>

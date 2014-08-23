@@ -1,0 +1,104 @@
+Apparello   v1.3.1
+	23.8.2014
+----------------
+
+Added - Enviro-Headgear
+	Infiltrator headgear
+	Psy Co. Gasmask™
+	Joywirer's Cap
+	Gasmask mark 5 (Textures by Viperlol)
+	Raider version of Light Powered helmet (Craftable)
+	
+Gasmasks should now provide protection from the poison in Superpirson's Trap pack mod
+
+Added - Tribal Shield 
+
+Fixed the 'Wolf' hair, it wouldn't ever spawn before now (Oops)
+
+Tribal masks have more colours beside the usual orange!
+
+
+
+Apparello   v1.3
+	19.8.2014
+----------------
+
+Hats should all have their own icons now! (Dipsy's Hatstore shares plummeted! He's out of business now, poor thing)
+
+Added - Glitterworld armor set
+	Jumpsuit
+	Alloy vest
+	Powered light armor
+	Light Power armor helmet
+
+Added - "Hairs"
+	Tribal tattoos x2
+
+Added Schematics: Glitterworld bundle
+
+Added Loom and Textile scraps and 'Hyperweave' mostly to prepare 
+for Alpha 7's large scale apparel factoring/crafting/cloths/etc.
+
+
+
+Apparello   v1.2
+	14.8.2014
+----------------
+
+Made compatible with Alpha 6
+The new damage absorption system
+demands lot of tweaking to be done with each bit of apparel
+I will be tinkering with those in the future!
+
+Added - Hats!
+	Hardhat
+	Science Goggles -> with added baldness (sorry!)
+	Tophat
+	Beret
+	Furhat
+	Headset w/ bandana
+	Sunshades w/ bandana
+	Doom Marine helmet
+	Cardshark hat
+	Hive Helmet
+	Tricorn
+	Woolcap
+	Tribal mask
+	Fedora
+
+Added - Hairs
+	"Senorita"
+	"Messy"
+	"Wolf"
+
+
+Display image for hats while on floor is currently just "Dipsy's Hatstore" box
+Will fix individual one for each hat next update
+
+Other stuff may have been done?
+	
+
+
+Apparello   v1.1.1
+	3.8.2014
+----------------
+Traders carrying schematics/Hex-Cells switched from true to false.
+
+
+Apparello   v1.1
+	2.8.2014
+----------------
+
+
+Added - Poncho
+
+Added - Brocade Vest
+
+Added - Steamhull
+
+Added - Stablehand Trousers
+
+'Schematic: Scyther frame' now has it's own texture
+
+Advanced armors have a small chance of spawning with random color instead of the usual "Mechanoid" color scheme
+& Other minor tweaks like that.

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>MakeTextile</defName>
+		<label>Scrap apparel</label>
+		<description>Turn excess clothing into textile scraps</description>
+		<jobString>Detailoring</jobString>
+		<workAmount>200</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Apparel</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Apparel</li>
+      </categories>
+    </fixedIngredientFilter>
+		<products>
+			<li>
+				<thingDef>Textile</thingDef>
+				<count>5</count>
+			</li>
+		</products>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>5</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>MakeHyperWeave</defName>
+		<label>Craft Hyperweave cloth</label>
+		<description>Turn textiles into Hyperweave</description>
+		<jobString>Weaving.</jobString>
+		<workAmount>1000</workAmount>
+<!--		<workEffect>Repair</workEffect>-->
+<!--    <sustainerSoundDef>Recipe_MakeStoneBlocks</sustainerSoundDef>-->
+	<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Textile</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+	</ingredients>
+		<products>
+			<li>
+				<thingDef>Hyperweave</thingDef>
+				<count>2</count>
+			</li>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Textile</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillGains>
+			<li>
+				<skill>Crafting</skill>
+				<xp>15</xp>
+			</li>
+		</skillGains>
+	</RecipeDef>
+
+</RecipeDefs>

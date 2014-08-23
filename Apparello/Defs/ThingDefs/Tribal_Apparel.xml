@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<ThingDef Name="ApparelBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<eType>Apparel</eType>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useStandardHealth>True</useStandardHealth>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<storeCategories>
+			<li>Apparel</li>
+		</storeCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Pl</defName>
+		<label>Leather Tunic</label>
+    <description>Very sleek and skillfully crafted leather suit capable of protecting the wearer from formidable threats. 
+Variants of these - crafted of finest Muffalo leather - are often seen worn by the most fearsome hunters of tribal communities.</description>
+     <texturePath>LP/lp</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.10</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.08</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.05</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.05</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>-0.03</moveSpeed>
+			<graphicPath>LP/lp</graphicPath>
+			<layers>
+			    <li>OnSkin</li>
+			</layers>
+			<commonality>25</commonality>
+			<tags>
+				<li>Tribal</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.4,0.3,0.15,1)</only>
+				</li>
+				<li>
+					<weight>15</weight>
+					<only>RGBA(0.6,0.45,0.18,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.8,0.6,0.23,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(1,1,0.90,1)</max>
+					<min>RGBA(1,0.90,0.75,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Mogo</defName>
+		<label>Tunica El Mógo</label>
+    <description>Ritual vestments of the ancient, now extinct tribe - Chéw Õn Tuna Sãmmich - 
+El Mógo for short. The El Mógoan Muffalo Prophets' prophecied of a day when three meteors, bearing sleeping gods would descent from the skies. Common belief was that the gods would build a lift to the spirit realms.
+These vestments were created in the intent of binding the soul of slain gods to the wearer and thus gaining passage on the lift.
+
+</description>
+     <texturePath>Mogo/lp</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.15</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.09</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.09</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.09</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>0</moveSpeed>
+			<graphicPath>Mogo/lp</graphicPath>
+			<layers>
+
+				<li>OnSkin</li>		
+				<li>Middle</li>	   
+				<li>Shell</li>
+
+			</layers>
+			<commonality>0.01</commonality>
+			<tags>
+				<li>Tribal</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.90,0.3,0.15,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.6,0.90,0.18,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0,0.50,1,1)</only>
+				</li>
+				
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Shield</defName>
+		<label>Tribal Shield</label>
+    <description>Used by native tribes in hopes to deflect bullets and to summon the courage of the great 'Shiled-Sheild Téh Gaurdian' A Godly protector of the tribes.</description>
+     <texturePath>Shield/Shield</texturePath>
+		<apparel>
+			<damageAbsorption>
+				<li>
+					<injuryDef>Bruise</injuryDef>
+					<absorption>0.40</absorption>
+				</li>
+				<li>
+					<injuryDef>Shredded</injuryDef>
+					<absorption>0.03</absorption>
+				</li>
+				<li>
+				  <injuryDef>Scratch</injuryDef>
+				  <absorption>0.15</absorption>
+				</li>
+				<li>
+				  <injuryDef>Bite</injuryDef>
+				  <absorption>0.15</absorption>
+				</li>
+			</damageAbsorption>
+			<moveSpeed>0</moveSpeed>
+			<graphicPath>Shield/Shield</graphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.01</commonality>
+			<tags>
+				<li>Tribal</li>
+			</tags>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.90,0.3,0.15,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.6,0.90,0.18,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0,0.50,1,1)</only>
+				</li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.54,0.15,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.6,0.18,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.42,0.23,1)</only>
+        </li>
+				
+			</options>
+		</colorGenerator>
+	</ThingDef>
+</ThingDefs>
