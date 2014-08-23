@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ThoughtDefs>
+
+
+<ThoughtDef>
+
+<defName>drugs</defName>
+
+<label>I can fly!</label>
+
+<description>You can fly like an eagle!! Fly as high as the sun!! (mind-expanding substance)</description>
+
+<baseMoodEffect>30</baseMoodEffect>
+
+<duration>20000</duration>
+
+<stackLimit>2</stackLimit>
+
+</ThoughtDef>
+
+</ThoughtDefs>
