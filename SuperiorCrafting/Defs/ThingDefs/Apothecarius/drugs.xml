@@ -76,7 +76,8 @@
 
 <nutrition>0</nutrition>
 
-<eatEffect>drugs</eatEffect>
+<eatenDirectThought>drugs</eatenDirectThought>
+<eatEffect>EatVegetarian</eatEffect>
 
 <ticksBeforeSpoil>80000000</ticksBeforeSpoil>
 
